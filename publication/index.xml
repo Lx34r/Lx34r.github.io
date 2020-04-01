@@ -6,17 +6,17 @@
   xmlns:sy="http://purl.org/rss/1.0/modules/syndication/" 
   xmlns:media="http://search.yahoo.com/mrss/">
   <channel>
-    <title>Publications on Hugo Zzo Theme</title>
-    <link>https://lynm3k.coding-pages.com/publication/</link>
-    <description>Recent content in Publications on Hugo Zzo Theme</description>
+    <title>Publications on Lx34r&#39;s Blog</title>
+    <link>http://lx34r.coding.me/publication/</link>
+    <description>Recent content in Publications on Lx34r&#39;s Blog</description>
     <generator>Hugo -- gohugo.io</generator>
-    <language>en</language>
-    <managingEditor>zzossig@gmail.com (zzossig)</managingEditor>
-    <webMaster>zzossig@gmail.com (zzossig)</webMaster>
+    <language>zh</language>
+    <managingEditor>zyssmart@live.com (Lx34r)</managingEditor>
+    <webMaster>zyssmart@live.com (Lx34r)</webMaster>
     <copyright>&amp;copy;{year}, All Rights Reserved</copyright>
     <lastBuildDate>Thu, 05 Mar 2020 14:08:48 +0000</lastBuildDate>
     
-        <atom:link href="https://lynm3k.coding-pages.com/publication/index.xml" rel="self" type="application/rss+xml" />
+        <atom:link href="http://lx34r.coding.me/publication/index.xml" rel="self" type="application/rss+xml" />
     
     
     
@@ -24,14 +24,14 @@
       
       <item>
         <title>article</title>
-        <link>https://lynm3k.coding-pages.com/publication/article/</link>
+        <link>http://lx34r.coding.me/publication/article/</link>
         <pubDate>Thu, 05 Mar 2020 14:08:48 +0000</pubDate>
-        <author>zzossig@gmail.com (zzossig)</author>
+        <author>zyssmart@live.com (Lx34r)</author>
         <atom:modified>Thu, 05 Mar 2020 14:08:48 +0000</atom:modified>
-        <guid>https://lynm3k.coding-pages.com/publication/article/</guid>
+        <guid>http://lx34r.coding.me/publication/article/</guid>
         <description></description>
         
-        <dc:creator>zzossig</dc:creator>
+        <dc:creator>Lx34r</dc:creator>
         
         
         
@@ -42,14 +42,14 @@
       
       <item>
         <title>book</title>
-        <link>https://lynm3k.coding-pages.com/publication/book/</link>
+        <link>http://lx34r.coding.me/publication/book/</link>
         <pubDate>Thu, 05 Mar 2020 14:08:48 +0000</pubDate>
-        <author>zzossig@gmail.com (zzossig)</author>
+        <author>zyssmart@live.com (Lx34r)</author>
         <atom:modified>Thu, 05 Mar 2020 14:08:48 +0000</atom:modified>
-        <guid>https://lynm3k.coding-pages.com/publication/book/</guid>
+        <guid>http://lx34r.coding.me/publication/book/</guid>
         <description></description>
         
-        <dc:creator>zzossig</dc:creator>
+        <dc:creator>Lx34r</dc:creator>
         
         
         
@@ -60,14 +60,14 @@
       
       <item>
         <title>misc</title>
-        <link>https://lynm3k.coding-pages.com/publication/misc/</link>
+        <link>http://lx34r.coding.me/publication/misc/</link>
         <pubDate>Thu, 05 Mar 2020 14:08:48 +0000</pubDate>
-        <author>zzossig@gmail.com (zzossig)</author>
+        <author>zyssmart@live.com (Lx34r)</author>
         <atom:modified>Thu, 05 Mar 2020 14:08:48 +0000</atom:modified>
-        <guid>https://lynm3k.coding-pages.com/publication/misc/</guid>
+        <guid>http://lx34r.coding.me/publication/misc/</guid>
         <description></description>
         
-        <dc:creator>zzossig</dc:creator>
+        <dc:creator>Lx34r</dc:creator>
         
         
         

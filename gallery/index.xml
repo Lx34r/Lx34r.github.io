@@ -6,17 +6,17 @@
   xmlns:sy="http://purl.org/rss/1.0/modules/syndication/" 
   xmlns:media="http://search.yahoo.com/mrss/">
   <channel>
-    <title>Galleries on Hugo Zzo Theme</title>
-    <link>https://lynm3k.coding-pages.com/gallery/</link>
-    <description>Recent content in Galleries on Hugo Zzo Theme</description>
+    <title>Galleries on Lx34r&#39;s Blog</title>
+    <link>http://lx34r.coding.me/gallery/</link>
+    <description>Recent content in Galleries on Lx34r&#39;s Blog</description>
     <generator>Hugo -- gohugo.io</generator>
-    <language>en</language>
-    <managingEditor>zzossig@gmail.com (zzossig)</managingEditor>
-    <webMaster>zzossig@gmail.com (zzossig)</webMaster>
+    <language>zh</language>
+    <managingEditor>zyssmart@live.com (Lx34r)</managingEditor>
+    <webMaster>zyssmart@live.com (Lx34r)</webMaster>
     <copyright>&amp;copy;{year}, All Rights Reserved</copyright>
     <lastBuildDate>Thu, 31 Oct 2019 10:20:16 +0900</lastBuildDate>
     
-        <atom:link href="https://lynm3k.coding-pages.com/gallery/index.xml" rel="self" type="application/rss+xml" />
+        <atom:link href="http://lx34r.coding.me/gallery/index.xml" rel="self" type="application/rss+xml" />
     
     
     
@@ -24,15 +24,15 @@
       
       <item>
         <title>Cartoon</title>
-        <link>https://lynm3k.coding-pages.com/gallery/cartoon/</link>
+        <link>http://lx34r.coding.me/gallery/cartoon/</link>
         <pubDate>Thu, 31 Oct 2019 10:20:16 +0900</pubDate>
-        <author>zzossig@gmail.com (zzossig)</author>
+        <author>zyssmart@live.com (Lx34r)</author>
         <atom:modified>Thu, 31 Oct 2019 10:20:16 +0900</atom:modified>
-        <guid>https://lynm3k.coding-pages.com/gallery/cartoon/</guid>
+        <guid>http://lx34r.coding.me/gallery/cartoon/</guid>
         <description>Sample images from Pixabay</description>
         
-        <dc:creator>zzossig</dc:creator>
-        <media:content url="https://lynm3k.coding-pages.com/images/feature2/bam.png" medium="image"><media:title type="html">featured image</media:title></media:content>
+        <dc:creator>Lx34r</dc:creator>
+        <media:content url="http://lx34r.coding.me/images/feature2/bam.png" medium="image"><media:title type="html">featured image</media:title></media:content>
         
         
         
@@ -42,15 +42,15 @@
       
       <item>
         <title>Photo</title>
-        <link>https://lynm3k.coding-pages.com/gallery/photo/</link>
+        <link>http://lx34r.coding.me/gallery/photo/</link>
         <pubDate>Thu, 31 Oct 2019 10:20:16 +0900</pubDate>
-        <author>zzossig@gmail.com (zzossig)</author>
+        <author>zyssmart@live.com (Lx34r)</author>
         <atom:modified>Thu, 31 Oct 2019 10:20:16 +0900</atom:modified>
-        <guid>https://lynm3k.coding-pages.com/gallery/photo/</guid>
+        <guid>http://lx34r.coding.me/gallery/photo/</guid>
         <description>Sample images from Pixabay</description>
         
-        <dc:creator>zzossig</dc:creator>
-        <media:content url="https://lynm3k.coding-pages.com/images/feature2/gallery.png" medium="image"><media:title type="html">featured image</media:title></media:content>
+        <dc:creator>Lx34r</dc:creator>
+        <media:content url="http://lx34r.coding.me/images/feature2/gallery.png" medium="image"><media:title type="html">featured image</media:title></media:content>
         
         
         

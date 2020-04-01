@@ -6,17 +6,17 @@
   xmlns:sy="http://purl.org/rss/1.0/modules/syndication/" 
   xmlns:media="http://search.yahoo.com/mrss/">
   <channel>
-    <title>Hugo on Hugo Zzo Theme</title>
-    <link>https://lynm3k.coding-pages.com/showcase/hugo/</link>
-    <description>Recent content in Hugo on Hugo Zzo Theme</description>
+    <title>Hugo on Lx34r&#39;s Blog</title>
+    <link>http://lx34r.coding.me/showcase/hugo/</link>
+    <description>Recent content in Hugo on Lx34r&#39;s Blog</description>
     <generator>Hugo -- gohugo.io</generator>
-    <language>en</language>
-    <managingEditor>zzossig@gmail.com (zzossig)</managingEditor>
-    <webMaster>zzossig@gmail.com (zzossig)</webMaster>
+    <language>zh</language>
+    <managingEditor>zyssmart@live.com (Lx34r)</managingEditor>
+    <webMaster>zyssmart@live.com (Lx34r)</webMaster>
     <copyright>&amp;copy;{year}, All Rights Reserved</copyright>
     <lastBuildDate>Sun, 19 Jan 2020 21:04:11 +0900</lastBuildDate>
     
-        <atom:link href="https://lynm3k.coding-pages.com/showcase/hugo/index.xml" rel="self" type="application/rss+xml" />
+        <atom:link href="http://lx34r.coding.me/showcase/hugo/index.xml" rel="self" type="application/rss+xml" />
     
     
     
@@ -24,14 +24,14 @@
       
       <item>
         <title>Hugo Zzo Theme</title>
-        <link>https://lynm3k.coding-pages.com/showcase/hugo/hugo-theme-zzo/</link>
+        <link>http://lx34r.coding.me/showcase/hugo/hugo-theme-zzo/</link>
         <pubDate>Sun, 19 Jan 2020 21:13:42 +0900</pubDate>
-        <author>zzossig@gmail.com (zzossig)</author>
+        <author>zyssmart@live.com (Lx34r)</author>
         <atom:modified>Sun, 19 Jan 2020 21:13:42 +0900</atom:modified>
-        <guid>https://lynm3k.coding-pages.com/showcase/hugo/hugo-theme-zzo/</guid>
+        <guid>http://lx34r.coding.me/showcase/hugo/hugo-theme-zzo/</guid>
         <description></description>
         
-        <dc:creator>zzossig</dc:creator>
+        <dc:creator>Lx34r</dc:creator>
         
         
         
@@ -42,14 +42,14 @@
       
       <item>
         <title>Hugo zDoc Theme</title>
-        <link>https://lynm3k.coding-pages.com/showcase/hugo/hugo-theme-zdoc/</link>
+        <link>http://lx34r.coding.me/showcase/hugo/hugo-theme-zdoc/</link>
         <pubDate>Sun, 19 Jan 2020 21:13:42 +0900</pubDate>
-        <author>zzossig@gmail.com (zzossig)</author>
+        <author>zyssmart@live.com (Lx34r)</author>
         <atom:modified>Sun, 19 Jan 2020 21:13:42 +0900</atom:modified>
-        <guid>https://lynm3k.coding-pages.com/showcase/hugo/hugo-theme-zdoc/</guid>
+        <guid>http://lx34r.coding.me/showcase/hugo/hugo-theme-zdoc/</guid>
         <description></description>
         
-        <dc:creator>zzossig</dc:creator>
+        <dc:creator>Lx34r</dc:creator>
         
         
         

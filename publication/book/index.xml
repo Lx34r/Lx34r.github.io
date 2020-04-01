@@ -6,17 +6,17 @@
   xmlns:sy="http://purl.org/rss/1.0/modules/syndication/" 
   xmlns:media="http://search.yahoo.com/mrss/">
   <channel>
-    <title>book on Hugo Zzo Theme</title>
-    <link>https://lynm3k.coding-pages.com/publication/book/</link>
-    <description>Recent content in book on Hugo Zzo Theme</description>
+    <title>book on Lx34r&#39;s Blog</title>
+    <link>http://lx34r.coding.me/publication/book/</link>
+    <description>Recent content in book on Lx34r&#39;s Blog</description>
     <generator>Hugo -- gohugo.io</generator>
-    <language>en</language>
-    <managingEditor>zzossig@gmail.com (zzossig)</managingEditor>
-    <webMaster>zzossig@gmail.com (zzossig)</webMaster>
+    <language>zh</language>
+    <managingEditor>zyssmart@live.com (Lx34r)</managingEditor>
+    <webMaster>zyssmart@live.com (Lx34r)</webMaster>
     <copyright>&amp;copy;{year}, All Rights Reserved</copyright>
     <lastBuildDate>Thu, 05 Mar 2020 14:08:48 +0000</lastBuildDate>
     
-        <atom:link href="https://lynm3k.coding-pages.com/publication/book/index.xml" rel="self" type="application/rss+xml" />
+        <atom:link href="http://lx34r.coding.me/publication/book/index.xml" rel="self" type="application/rss+xml" />
     
     
     
@@ -24,14 +24,14 @@
       
       <item>
         <title>Donec vel ipsum vulputate, dapibus magna quis</title>
-        <link>https://lynm3k.coding-pages.com/publication/book/book_any_folder_name_1/</link>
+        <link>http://lx34r.coding.me/publication/book/book_any_folder_name_1/</link>
         <pubDate>Thu, 01 Jun 2017 00:00:00 +0000</pubDate>
-        <author>zzossig@gmail.com (zzossig)</author>
+        <author>zyssmart@live.com (Lx34r)</author>
         <atom:modified>Thu, 01 Jun 2017 00:00:00 +0000</atom:modified>
-        <guid>https://lynm3k.coding-pages.com/publication/book/book_any_folder_name_1/</guid>
+        <guid>http://lx34r.coding.me/publication/book/book_any_folder_name_1/</guid>
         <description></description>
         
-        <dc:creator>zzossig</dc:creator>
+        <dc:creator>Lx34r</dc:creator>
         
         
         

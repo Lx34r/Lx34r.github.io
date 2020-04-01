@@ -6,17 +6,17 @@
   xmlns:sy="http://purl.org/rss/1.0/modules/syndication/" 
   xmlns:media="http://search.yahoo.com/mrss/">
   <channel>
-    <title>bamoji on Hugo Zzo Theme</title>
-    <link>https://lynm3k.coding-pages.com/tags/bamoji/</link>
-    <description>Recent content in bamoji on Hugo Zzo Theme</description>
+    <title>bamoji on Lx34r&#39;s Blog</title>
+    <link>http://lx34r.coding.me/tags/bamoji/</link>
+    <description>Recent content in bamoji on Lx34r&#39;s Blog</description>
     <generator>Hugo -- gohugo.io</generator>
-    <language>en</language>
-    <managingEditor>zzossig@gmail.com (zzossig)</managingEditor>
-    <webMaster>zzossig@gmail.com (zzossig)</webMaster>
+    <language>zh</language>
+    <managingEditor>zyssmart@live.com (Lx34r)</managingEditor>
+    <webMaster>zyssmart@live.com (Lx34r)</webMaster>
     <copyright>&amp;copy;{year}, All Rights Reserved</copyright>
     <lastBuildDate>Mon, 16 Dec 2019 12:00:06 +0900</lastBuildDate>
     
-        <atom:link href="https://lynm3k.coding-pages.com/tags/bamoji/index.xml" rel="self" type="application/rss+xml" />
+        <atom:link href="http://lx34r.coding.me/tags/bamoji/index.xml" rel="self" type="application/rss+xml" />
     
     
     
@@ -24,11 +24,11 @@
       
       <item>
         <title>Emoji Support</title>
-        <link>https://lynm3k.coding-pages.com/posts/emoji-support/</link>
+        <link>http://lx34r.coding.me/posts/emoji-support/</link>
         <pubDate>Mon, 16 Dec 2019 12:00:06 +0900</pubDate>
-        <author>zzossig@gmail.com (zzossig)</author>
+        <author>zyssmart@live.com (Lx34r)</author>
         <atom:modified>Mon, 16 Dec 2019 12:00:06 +0900</atom:modified>
-        <guid>https://lynm3k.coding-pages.com/posts/emoji-support/</guid>
+        <guid>http://lx34r.coding.me/posts/emoji-support/</guid>
         <description>&lt;p&gt;Emoji can be enabled in a Hugo project in a number of ways.&lt;/p&gt;</description>
         
         <dc:creator>Kim</dc:creator>

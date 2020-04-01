@@ -6,16 +6,16 @@
   xmlns:sy="http://purl.org/rss/1.0/modules/syndication/" 
   xmlns:media="http://search.yahoo.com/mrss/">
   <channel>
-    <title>index on Hugo Zzo Theme</title>
-    <link>https://lynm3k.coding-pages.com/tags/index/</link>
-    <description>Recent content in index on Hugo Zzo Theme</description>
+    <title>index on Lx34r&#39;s Blog</title>
+    <link>http://lx34r.coding.me/tags/index/</link>
+    <description>Recent content in index on Lx34r&#39;s Blog</description>
     <generator>Hugo -- gohugo.io</generator>
-    <language>en</language>
-    <managingEditor>zzossig@gmail.com (zzossig)</managingEditor>
-    <webMaster>zzossig@gmail.com (zzossig)</webMaster>
+    <language>zh</language>
+    <managingEditor>zyssmart@live.com (Lx34r)</managingEditor>
+    <webMaster>zyssmart@live.com (Lx34r)</webMaster>
     <copyright>&amp;copy;{year}, All Rights Reserved</copyright>
     
-        <atom:link href="https://lynm3k.coding-pages.com/tags/index/index.xml" rel="self" type="application/rss+xml" />
+        <atom:link href="http://lx34r.coding.me/tags/index/index.xml" rel="self" type="application/rss+xml" />
     
     
     
@@ -23,11 +23,11 @@
       
       <item>
         <title>Posts</title>
-        <link>https://lynm3k.coding-pages.com/posts/</link>
+        <link>http://lx34r.coding.me/posts/</link>
         <pubDate>Sat, 25 Jan 2020 06:40:51 +0900</pubDate>
-        <author>zzossig@gmail.com (zzossig)</author>
+        <author>zyssmart@live.com (Lx34r)</author>
         
-        <guid>https://lynm3k.coding-pages.com/posts/</guid>
+        <guid>http://lx34r.coding.me/posts/</guid>
         <description></description>
         
         <dc:creator>Hugo Authors</dc:creator>
