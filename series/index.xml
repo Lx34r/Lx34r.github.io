@@ -7,7 +7,7 @@
   xmlns:media="http://search.yahoo.com/mrss/">
   <channel>
     <title>Series on Lx34r&#39;s Blog</title>
-    <link>http://lx34r.coding.me/series/</link>
+    <link>https://lynm3k.coding-pages.com/series/</link>
     <description>Recent content in Series on Lx34r&#39;s Blog</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>zh</language>
@@ -16,7 +16,7 @@
     <copyright>&amp;copy;{year},Lx34r, All Rights Reserved</copyright>
     <lastBuildDate>Fri, 20 Dec 2019 12:00:06 +0900</lastBuildDate>
     
-        <atom:link href="http://lx34r.coding.me/series/index.xml" rel="self" type="application/rss+xml" />
+        <atom:link href="https://lynm3k.coding-pages.com/series/index.xml" rel="self" type="application/rss+xml" />
     
     
     
@@ -24,11 +24,11 @@
       
       <item>
         <title>Themes Guide</title>
-        <link>http://lx34r.coding.me/series/themes-guide/</link>
+        <link>https://lynm3k.coding-pages.com/series/themes-guide/</link>
         <pubDate>Fri, 20 Dec 2019 12:00:06 +0900</pubDate>
         <author>zyssmart@live.com (Lx34r)</author>
         
-        <guid>http://lx34r.coding.me/series/themes-guide/</guid>
+        <guid>https://lynm3k.coding-pages.com/series/themes-guide/</guid>
         <description></description>
         
         <dc:creator>Lx34r</dc:creator>

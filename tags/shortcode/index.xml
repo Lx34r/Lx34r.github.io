@@ -7,7 +7,7 @@
   xmlns:media="http://search.yahoo.com/mrss/">
   <channel>
     <title>shortcode on Lx34r&#39;s Blog</title>
-    <link>http://lx34r.coding.me/tags/shortcode/</link>
+    <link>https://lynm3k.coding-pages.com/tags/shortcode/</link>
     <description>Recent content in shortcode on Lx34r&#39;s Blog</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>zh</language>
@@ -16,7 +16,7 @@
     <copyright>&amp;copy;{year},Lx34r, All Rights Reserved</copyright>
     <lastBuildDate>Sat, 25 Jan 2020 06:40:51 +0900</lastBuildDate>
     
-        <atom:link href="http://lx34r.coding.me/tags/shortcode/index.xml" rel="self" type="application/rss+xml" />
+        <atom:link href="https://lynm3k.coding-pages.com/tags/shortcode/index.xml" rel="self" type="application/rss+xml" />
     
     
     
@@ -24,16 +24,16 @@
       
       <item>
         <title>Shortcodes</title>
-        <link>http://lx34r.coding.me/posts/shortcodes/</link>
+        <link>https://lynm3k.coding-pages.com/posts/shortcodes/</link>
         <pubDate>Sat, 25 Jan 2020 06:40:51 +0900</pubDate>
         <author>zyssmart@live.com (Lx34r)</author>
         <atom:modified>Sat, 25 Jan 2020 06:40:51 +0900</atom:modified>
-        <guid>http://lx34r.coding.me/posts/shortcodes/</guid>
+        <guid>https://lynm3k.coding-pages.com/posts/shortcodes/</guid>
         <description>Markdownify box This is boxmd shortcode Simple box This is **box** shortcode Code tabs Make it easy to switch between different code
 javajavascript1  System.out.println(&amp;#39;Hello World!&amp;#39;);  1  console.log(&amp;#39;Hello World!&amp;#39;);  &#39;use strict&#39;;var containerId = JSON.parse(&#34;\&#34;c3a7395d19726e47\&#34;&#34;);var containerElem = document.getElementById(containerId);var codetabLinks = null;var codetabContents = null;var ids = [];if (containerElem) {codetabLinks = containerElem.</description>
         
         <dc:creator>Lx34r</dc:creator>
-        <media:content url="http://lx34r.coding.me/images/feature3/code-file.png" medium="image"><media:title type="html">featured image</media:title></media:content>
+        <media:content url="https://lynm3k.coding-pages.com/images/feature3/code-file.png" medium="image"><media:title type="html">featured image</media:title></media:content>
         
         
         

@@ -7,7 +7,7 @@
   xmlns:media="http://search.yahoo.com/mrss/">
   <channel>
     <title>namoji on Lx34r&#39;s Blog</title>
-    <link>http://lx34r.coding.me/tags/namoji/</link>
+    <link>https://lynm3k.coding-pages.com/tags/namoji/</link>
     <description>Recent content in namoji on Lx34r&#39;s Blog</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>zh</language>
@@ -16,7 +16,7 @@
     <copyright>&amp;copy;{year},Lx34r, All Rights Reserved</copyright>
     <lastBuildDate>Mon, 16 Dec 2019 12:00:06 +0900</lastBuildDate>
     
-        <atom:link href="http://lx34r.coding.me/tags/namoji/index.xml" rel="self" type="application/rss+xml" />
+        <atom:link href="https://lynm3k.coding-pages.com/tags/namoji/index.xml" rel="self" type="application/rss+xml" />
     
     
     
@@ -24,11 +24,11 @@
       
       <item>
         <title>Emoji Support</title>
-        <link>http://lx34r.coding.me/posts/emoji-support/</link>
+        <link>https://lynm3k.coding-pages.com/posts/emoji-support/</link>
         <pubDate>Mon, 16 Dec 2019 12:00:06 +0900</pubDate>
         <author>zyssmart@live.com (Lx34r)</author>
         <atom:modified>Mon, 16 Dec 2019 12:00:06 +0900</atom:modified>
-        <guid>http://lx34r.coding.me/posts/emoji-support/</guid>
+        <guid>https://lynm3k.coding-pages.com/posts/emoji-support/</guid>
         <description>&lt;p&gt;Emoji can be enabled in a Hugo project in a number of ways.&lt;/p&gt;</description>
         
         <dc:creator>Kim</dc:creator>
