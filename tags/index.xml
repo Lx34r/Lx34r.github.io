@@ -14,7 +14,7 @@
     <managingEditor>zyssmart@live.com (Lx34r)</managingEditor>
     <webMaster>zyssmart@live.com (Lx34r)</webMaster>
     <copyright>&amp;copy;{year},Lx34r, All Rights Reserved</copyright>
-    <lastBuildDate>Sat, 25 Jan 2020 06:40:51 +0900</lastBuildDate>
+    <lastBuildDate>Sun, 08 Dec 2019 12:00:06 +0900</lastBuildDate>
     
         <atom:link href="https://lynm3k.coding-pages.com/tags/index.xml" rel="self" type="application/rss+xml" />
     
@@ -23,12 +23,12 @@
 
       
       <item>
-        <title>shortcode</title>
-        <link>https://lynm3k.coding-pages.com/tags/shortcode/</link>
-        <pubDate>Sat, 25 Jan 2020 06:40:51 +0900</pubDate>
+        <title>python</title>
+        <link>https://lynm3k.coding-pages.com/tags/python/</link>
+        <pubDate>Sun, 08 Dec 2019 12:00:06 +0900</pubDate>
         <author>zyssmart@live.com (Lx34r)</author>
         
-        <guid>https://lynm3k.coding-pages.com/tags/shortcode/</guid>
+        <guid>https://lynm3k.coding-pages.com/tags/python/</guid>
         <description></description>
         
         <dc:creator>Lx34r</dc:creator>
@@ -41,192 +41,12 @@
       </item>
       
       <item>
-        <title>css</title>
-        <link>https://lynm3k.coding-pages.com/tags/css/</link>
-        <pubDate>Fri, 20 Dec 2019 12:00:06 +0900</pubDate>
+        <title>word</title>
+        <link>https://lynm3k.coding-pages.com/tags/word/</link>
+        <pubDate>Sun, 08 Dec 2019 12:00:06 +0900</pubDate>
         <author>zyssmart@live.com (Lx34r)</author>
         
-        <guid>https://lynm3k.coding-pages.com/tags/css/</guid>
-        <description></description>
-        
-        <dc:creator>Lx34r</dc:creator>
-        
-        
-        
-        
-        
-        
-      </item>
-      
-      <item>
-        <title>html</title>
-        <link>https://lynm3k.coding-pages.com/tags/html/</link>
-        <pubDate>Fri, 20 Dec 2019 12:00:06 +0900</pubDate>
-        <author>zyssmart@live.com (Lx34r)</author>
-        
-        <guid>https://lynm3k.coding-pages.com/tags/html/</guid>
-        <description></description>
-        
-        <dc:creator>Lx34r</dc:creator>
-        
-        
-        
-        
-        
-        
-      </item>
-      
-      <item>
-        <title>markdown</title>
-        <link>https://lynm3k.coding-pages.com/tags/markdown/</link>
-        <pubDate>Fri, 20 Dec 2019 12:00:06 +0900</pubDate>
-        <author>zyssmart@live.com (Lx34r)</author>
-        
-        <guid>https://lynm3k.coding-pages.com/tags/markdown/</guid>
-        <description></description>
-        
-        <dc:creator>Lx34r</dc:creator>
-        
-        
-        
-        
-        
-        
-      </item>
-      
-      <item>
-        <title>themes</title>
-        <link>https://lynm3k.coding-pages.com/tags/themes/</link>
-        <pubDate>Fri, 20 Dec 2019 12:00:06 +0900</pubDate>
-        <author>zyssmart@live.com (Lx34r)</author>
-        
-        <guid>https://lynm3k.coding-pages.com/tags/themes/</guid>
-        <description></description>
-        
-        <dc:creator>Lx34r</dc:creator>
-        
-        
-        
-        
-        
-        
-      </item>
-      
-      <item>
-        <title>hugo</title>
-        <link>https://lynm3k.coding-pages.com/tags/hugo/</link>
-        <pubDate>Wed, 18 Dec 2019 10:33:41 +0900</pubDate>
-        <author>zyssmart@live.com (Lx34r)</author>
-        
-        <guid>https://lynm3k.coding-pages.com/tags/hugo/</guid>
-        <description></description>
-        
-        <dc:creator>Lx34r</dc:creator>
-        
-        
-        
-        
-        
-        
-      </item>
-      
-      <item>
-        <title>amoji</title>
-        <link>https://lynm3k.coding-pages.com/tags/amoji/</link>
-        <pubDate>Mon, 16 Dec 2019 12:00:06 +0900</pubDate>
-        <author>zyssmart@live.com (Lx34r)</author>
-        
-        <guid>https://lynm3k.coding-pages.com/tags/amoji/</guid>
-        <description></description>
-        
-        <dc:creator>Lx34r</dc:creator>
-        
-        
-        
-        
-        
-        
-      </item>
-      
-      <item>
-        <title>bamoji</title>
-        <link>https://lynm3k.coding-pages.com/tags/bamoji/</link>
-        <pubDate>Mon, 16 Dec 2019 12:00:06 +0900</pubDate>
-        <author>zyssmart@live.com (Lx34r)</author>
-        
-        <guid>https://lynm3k.coding-pages.com/tags/bamoji/</guid>
-        <description></description>
-        
-        <dc:creator>Lx34r</dc:creator>
-        
-        
-        
-        
-        
-        
-      </item>
-      
-      <item>
-        <title>emoji</title>
-        <link>https://lynm3k.coding-pages.com/tags/emoji/</link>
-        <pubDate>Mon, 16 Dec 2019 12:00:06 +0900</pubDate>
-        <author>zyssmart@live.com (Lx34r)</author>
-        
-        <guid>https://lynm3k.coding-pages.com/tags/emoji/</guid>
-        <description></description>
-        
-        <dc:creator>Lx34r</dc:creator>
-        
-        
-        
-        
-        
-        
-      </item>
-      
-      <item>
-        <title>gamoji</title>
-        <link>https://lynm3k.coding-pages.com/tags/gamoji/</link>
-        <pubDate>Mon, 16 Dec 2019 12:00:06 +0900</pubDate>
-        <author>zyssmart@live.com (Lx34r)</author>
-        
-        <guid>https://lynm3k.coding-pages.com/tags/gamoji/</guid>
-        <description></description>
-        
-        <dc:creator>Lx34r</dc:creator>
-        
-        
-        
-        
-        
-        
-      </item>
-      
-      <item>
-        <title>namoji</title>
-        <link>https://lynm3k.coding-pages.com/tags/namoji/</link>
-        <pubDate>Mon, 16 Dec 2019 12:00:06 +0900</pubDate>
-        <author>zyssmart@live.com (Lx34r)</author>
-        
-        <guid>https://lynm3k.coding-pages.com/tags/namoji/</guid>
-        <description></description>
-        
-        <dc:creator>Lx34r</dc:creator>
-        
-        
-        
-        
-        
-        
-      </item>
-      
-      <item>
-        <title>diagram</title>
-        <link>https://lynm3k.coding-pages.com/tags/diagram/</link>
-        <pubDate>Sun, 17 Nov 2019 12:00:06 +0900</pubDate>
-        <author>zyssmart@live.com (Lx34r)</author>
-        
-        <guid>https://lynm3k.coding-pages.com/tags/diagram/</guid>
+        <guid>https://lynm3k.coding-pages.com/tags/word/</guid>
         <description></description>
         
         <dc:creator>Lx34r</dc:creator>
