@@ -1600,6 +1600,7 @@
     codetabContents[0].style.display = 'block';
   }
 </script>
+<p><code>Python-docx</code>简单示例</p>
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
 <pre class="chroma"><code><span class="lnt"> 1
@@ -1631,7 +1632,7 @@
 </code></pre></td></tr></table>
 </div>
 </div><h3 id="获取特定文本">获取特定文本</h3>
-<p>拿到几份判决书看了下，需要的文本前后有明显的起始截止标识，直接<strong>正则表达式</strong>。</p>
+<p>通过跟学妹沟通，拿到几份判决书看了下，需要的文本就是<span style="color: #0DABA0">绿框</span>部分。前后有明显的<span style="color: #F1414D">起始截止</span>标识，直接<strong>正则表达式</strong>。</p>
 <div class="expand">
   <button type="button" class="expand__button" aria-label="Expand Button">
     <span class="expand-icon expand-icon__right">
@@ -1710,8 +1711,6 @@
 </span><span class="lnt">51
 </span><span class="lnt">52
 </span><span class="lnt">53
-</span><span class="lnt">54
-</span><span class="lnt">55
 </span></code></pre></td>
 <td class="lntd">
 <pre class="chroma"><code class="language-python" data-lang="python"><span class="ch">#!/usr/bin/env python3</span>
@@ -1724,7 +1723,6 @@
 <span class="kn">from</span> <span class="nn">docx</span> <span class="kn">import</span> <span class="n">Document</span>
 
 <span class="n">data_files</span><span class="o">=</span><span class="p">[(</span><span class="s2">&#34;&#34;</span><span class="p">,[</span><span class="s2">&#34;MSVCR100.dll&#34;</span><span class="p">])]</span>
-
 
 <span class="n">file_path</span> <span class="o">=</span> <span class="n">Path</span><span class="p">(</span><span class="n">sys</span><span class="o">.</span><span class="n">path</span><span class="p">[</span><span class="mi">0</span><span class="p">])</span>                 <span class="c1"># 调试使用脚本路径</span>
 <span class="c1">#file_path = Path(os.getcwd())                # 打包使用程序路径</span>
@@ -1765,7 +1763,6 @@
     <span class="n">rule</span> <span class="o">=</span> <span class="sa">r</span><span class="s1">&#39;判决如下：(.*?)如不服本判决，&#39;</span>
     <span class="n">slotList</span> <span class="o">=</span> <span class="n">re</span><span class="o">.</span><span class="n">findall</span><span class="p">(</span><span class="n">rule</span><span class="p">,</span> <span class="n">temp</span><span class="p">)</span>
     <span class="k">return</span> <span class="n">slotList</span>
-
 
 <span class="k">if</span> <span class="vm">__name__</span> <span class="o">==</span> <span class="s1">&#39;__main__&#39;</span><span class="p">:</span>
     <span class="n">searchFiles</span><span class="p">()</span>
