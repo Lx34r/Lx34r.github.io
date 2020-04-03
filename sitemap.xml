@@ -3,22 +3,42 @@
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   
   <url>
+    <loc>https://lynm3k.coding-pages.com/categories/blog/</loc>
+    <lastmod>2020-04-03T14:47:45+09:00</lastmod>
+  </url>
+  
+  <url>
     <loc>https://lynm3k.coding-pages.com/categories/</loc>
-    <lastmod>2019-12-08T12:00:06+09:00</lastmod>
+    <lastmod>2020-04-03T14:47:45+09:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://lynm3k.coding-pages.com/tags/hugo/</loc>
+    <lastmod>2020-04-03T14:47:45+09:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://lynm3k.coding-pages.com/posts/blog-searchengineoptimizing/</loc>
+    <lastmod>2020-04-03T14:47:45+09:00</lastmod>
   </url>
   
   <url>
     <loc>https://lynm3k.coding-pages.com/posts/</loc>
-    <lastmod>2019-12-08T12:00:06+09:00</lastmod>
+    <lastmod>2020-04-03T14:47:45+09:00</lastmod>
   </url>
   
   <url>
-    <loc>https://lynm3k.coding-pages.com/tags/python/</loc>
-    <lastmod>2019-12-08T12:00:06+09:00</lastmod>
+    <loc>https://lynm3k.coding-pages.com/tags/seo/</loc>
+    <lastmod>2020-04-03T14:47:45+09:00</lastmod>
   </url>
   
   <url>
     <loc>https://lynm3k.coding-pages.com/tags/</loc>
+    <lastmod>2020-04-03T14:47:45+09:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://lynm3k.coding-pages.com/tags/python/</loc>
     <lastmod>2019-12-08T12:00:06+09:00</lastmod>
   </url>
   
@@ -50,6 +70,10 @@
   <url>
     <loc>https://lynm3k.coding-pages.com/about/</loc>
     <lastmod>2018-02-28T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://lynm3k.coding-pages.com/tags/index/</loc>
   </url>
   
   <url>
