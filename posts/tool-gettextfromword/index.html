@@ -1612,7 +1612,7 @@
 <h3 id="读取word">读取word</h3>
 <p>这里我使用<code>Python-docx</code>模块来操作word。</p>
 
-<div id="ee90c5cbed9fecd5" class="codetab">
+<div id="5f3c848fa68df499" class="codetab">
   <div class="codetab__links">
     
       <button class="codetab__link" aria-label="Tab link">使用pip安装</button>
@@ -1635,7 +1635,7 @@
 </div>
 
   
-<div id="b4d301b1db5efce9" class="codetab__content">
+<div id="e48b10706a7eecf6" class="codetab__content">
   <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
 <pre class="chroma"><code><span class="lnt">1
@@ -1652,7 +1652,7 @@
 <script>
   'use strict';
 
-  var containerId = JSON.parse("\"ee90c5cbed9fecd5\"");
+  var containerId = JSON.parse("\"5f3c848fa68df499\"");
   var containerElem = document.getElementById(containerId);
   var codetabLinks = null;
   var codetabContents = null;
@@ -1724,10 +1724,18 @@
     <span class="expand-icon expand-icon__right">
         <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"><path fill="currentColor" d="M9.29 15.88L13.17 12 9.29 8.12c-.39-.39-.39-1.02 0-1.41.39-.39 1.02-.39 1.41 0l4.59 4.59c.39.39.39 1.02 0 1.41L10.7 17.3c-.39.39-1.02.39-1.41 0-.38-.39-.39-1.03 0-1.42z"/></svg>
     </span>
-    正则表达式
+    regexp
   </button>
   <div class="expand__content">
-    正则表达式(regular expression)描述了一种字符串匹配的模式（pattern），可以用来检查一个串是否含有某种子串、将匹配的子串替换或者从某个串中取出符合某个条件的子串等。
+    <pre><code class="language-regexp" data-lang="regexp">判决如下：(.*?)如不服本判决，
+</code></pre><p>匹配任意除换行符“\n”外的字符；</p>
+<ul>
+<li>*表示匹配前一个字符0次或无限次；</li>
+<li>+或<em>后跟？表示非贪婪匹配，即尽可能少的匹配，如</em>？重复任意次，但尽可能少重复；</li>
+<li>.<em>? 表示匹配任意数量的重复，但是在能使整个匹配成功的前提下使用最少的重复。<br />
+如：a.</em>?b匹配最短的，以a开始，以b结束的字符串。如果把它应用于aabab的话，它会匹配aab和ab。</li>
+</ul>
+
   </div>
 </div>
 
