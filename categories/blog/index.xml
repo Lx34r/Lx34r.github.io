@@ -79,7 +79,7 @@
   
 &lt;/figure&gt;
 
-&lt;div class=&#34;alert alert-info&#34; role=&#34;alert&#34; data-dir=&#34;ltr&#34;&gt;逗号分隔值（Comma-Separated Values，CSV，有时也称为字符分隔值，因为分隔字符也可以不是逗号），其文件以纯文本形式存储表格数据（数字和文本）。CSV文件由任意数目的记录组成，记录间以某种换行符分隔；每条记录由字段组成，字段间的分隔符是其它字符或字符串，最常见的是逗号或制表符。通常，所有记录都有完全相同的字段序列。&lt;/div&gt;</description>
+&lt;div class=&#34;alert alert-info&#34; role=&#34;alert&#34; data-dir=&#34;ltr&#34;&gt;CSV 文件（Comma Separated Values file，即逗号分隔值文件）是一种纯文本文件，它使用特定的结构来排列表格数据。&lt;/div&gt;</description>
         
         <dc:creator>Lx34r</dc:creator>
         <media:content url="https://lynm3k.coding-pages.com/images/posts/blog-pythonOperateCsv/icon.png" medium="image"><media:title type="html">featured image</media:title></media:content>
