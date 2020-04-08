@@ -1609,14 +1609,14 @@
 </ul>
 <p>一般为每行开头不空格，第一行是属性列，数据列之间以间隔符为间隔无空格，<strong>行之间无空行</strong>。</p>
 <p>如果有空行或者数据集中行末有空格，读取数据时一般会出错，引发[<code>list index out of range</code>]错误。</p>
-<h2 id="使用csv库读写-csv-文件">🌊使用csv库读写 CSV 文件</h2>
+<h2 id="使用csv库读写csv文件">🌊使用csv库读写csv文件</h2>
 <p><code>reader</code>对象可以通过指定附加参数，处理不同风格的 CSV 文件，其中一些如下所示：</p>
 <ul>
 <li>delimiter指定用于分隔每个字段的字符，默认值为逗号（,）。</li>
 <li>quotechar指定用于包围包含分隔符字符的字段的字符，默认值为双引号（&quot;）。</li>
 <li>escapechar指定用于转义分隔符的字符，以防引号未使用。默认值为无转义字符。</li>
 </ul>
-<h3 id="读取-csv-文件并直接输出">读取 CSV 文件并直接输出</h3>
+<h3 id="读取csv文件并直接输出">读取csv文件并直接输出</h3>
 <p>如果csv文件不是很复杂则可以直接输出文件中每行的数据</p>
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
@@ -1640,7 +1640,7 @@
     <span class="n">f</span><span class="o">.</span><span class="n">close</span><span class="p">()</span>
 </code></pre></td></tr></table>
 </div>
-</div><h3 id="将-csv-文件并输出为字典">将 CSV 文件并输出为字典</h3>
+</div><h3 id="将csv文件并输出为字典">将csv文件并输出为字典</h3>
 <p>如果想要获取某列的数据，在上面的代码中用数组指定索引即可得到，但是如果较复杂的话采用下面的形式更好，输出字典。这样还有个好处是有时需要反复读取csv文件，但是第一次读取后文件对象已经指向文件末尾了，所以需要将数据存入普通数组，方便后面处理：</p>
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
@@ -1672,7 +1672,7 @@
     <span class="k">return</span> <span class="n">data_lines</span>
 </code></pre></td></tr></table>
 </div>
-</div><h3 id="写入-csv-文件">写入 CSV 文件</h3>
+</div><h3 id="写入csv文件">写入csv文件</h3>
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
 <pre class="chroma"><code><span class="lnt"> 1
@@ -1703,7 +1703,7 @@
     <span class="n">f</span><span class="o">.</span><span class="n">close</span><span class="p">()</span>
 </code></pre></td></tr></table>
 </div>
-</div><h2 id="输出csv文件某列的匹配不匹配的记录">🌊输出CSV文件某列的匹配/不匹配的记录</h2>
+</div><h2 id="输出csv文件某列的匹配不匹配的记录">🌊输出csv文件某列的匹配/不匹配的记录</h2>
 <p>主要用于从csv文件中抽取出匹配特定列的特定字段集合的记录，比如现有这么一个csv文件（表格化后）</p>
 <table>
 <thead>
@@ -2660,14 +2660,14 @@ document.addEventListener('DOMContentLoaded', function () {
     <nav id="TableOfContents">
   <ul>
     <li><a href="#写在前面">📝写在前面</a></li>
-    <li><a href="#使用csv库读写-csv-文件">🌊使用csv库读写 CSV 文件</a>
+    <li><a href="#使用csv库读写csv文件">🌊使用csv库读写csv文件</a>
       <ul>
-        <li><a href="#读取-csv-文件并直接输出">读取 CSV 文件并直接输出</a></li>
-        <li><a href="#将-csv-文件并输出为字典">将 CSV 文件并输出为字典</a></li>
-        <li><a href="#写入-csv-文件">写入 CSV 文件</a></li>
+        <li><a href="#读取csv文件并直接输出">读取csv文件并直接输出</a></li>
+        <li><a href="#将csv文件并输出为字典">将csv文件并输出为字典</a></li>
+        <li><a href="#写入csv文件">写入csv文件</a></li>
       </ul>
     </li>
-    <li><a href="#输出csv文件某列的匹配不匹配的记录">🌊输出CSV文件某列的匹配/不匹配的记录</a></li>
+    <li><a href="#输出csv文件某列的匹配不匹配的记录">🌊输出csv文件某列的匹配/不匹配的记录</a></li>
     <li><a href="#调整csv文件的列的顺序">🌊调整csv文件的列的顺序</a></li>
     <li><a href="#抽取特定列">🌊抽取特定列</a>
       <ul>
