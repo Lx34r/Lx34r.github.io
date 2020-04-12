@@ -1601,9 +1601,9 @@
 <h2 id="写在前面">📝写在前面</h2>
 <p><strong>csv特点</strong></p>
 <ul>
-<li>纯文本，使用某个字符集，比如ASCII、Unicode、EBCDIC或GB2312；</li>
+<li>纯文本，使用某个字符集，比如<code>ASCII</code>、<code>Unicode</code>、<code>EBCDIC</code>或<code>GB2312</code>；</li>
 <li>由记录组成（典型的是每行一条记录）；</li>
-<li>每条记录被分隔符分隔为字段，常用分隔符：逗号（,）、制表符（\t）、冒号（:)和分号（;）有时分隔符可以包括可选的空格；</li>
+<li>每条记录被分隔符分隔为字段，常用分隔符：逗号（<code>,</code>）、制表符（<code>\t</code>）、冒号（<code>:</code>)和分号（<code>;</code>）有时分隔符可以包括可选的空格；</li>
 <li>每行末尾是CR回车符和LF换行符（请注意，Linux系统以LF结尾，MacOS系统以CR结尾）。</li>
 <li>每条记录都有同样的字段序列。</li>
 </ul>
@@ -1612,9 +1612,9 @@
 <h2 id="使用csv库读写csv文件">🌊使用csv库读写csv文件</h2>
 <p><code>reader</code>对象可以通过指定附加参数，处理不同风格的 CSV 文件，其中一些如下所示：</p>
 <ul>
-<li>delimiter指定用于分隔每个字段的字符，默认值为逗号（,）。</li>
-<li>quotechar指定用于包围包含分隔符字符的字段的字符，默认值为双引号（&quot;）。</li>
-<li>escapechar指定用于转义分隔符的字符，以防引号未使用。默认值为无转义字符。</li>
+<li><code>delimiter</code>指定用于分隔每个字段的字符，默认值为逗号（,）。</li>
+<li><code>quotechar</code>指定用于包围包含分隔符字符的字段的字符，默认值为双引号（&quot;）。</li>
+<li><code>escapechar</code>指定用于转义分隔符的字符，以防引号未使用。默认值为无转义字符。</li>
 </ul>
 <h3 id="读取csv文件并直接输出">读取csv文件并直接输出</h3>
 <p>如果csv文件不是很复杂则可以直接输出文件中每行的数据</p>
