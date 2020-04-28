@@ -1550,7 +1550,7 @@
             
             
 
-<main class="single__main main-main">
+<main class="single__main main">
   
     <nav class="breadcrumb hide" aria-label="breadcrumbs">
   <script>document.querySelector('.breadcrumb').classList.remove('hide')</script>
@@ -2667,53 +2667,6 @@ document.addEventListener('DOMContentLoaded', function () {
 </main>
 
 
-<aside class="single__side main-side">
-  
-
-
-<section class="sidebar hide">
-  <script>document.querySelector('.sidebar').classList.remove('hide')</script>
-  <div class="toc__flexbox" data-position="fixed">
-    <h6 class="toc__title" data-ani="true">目录</h6>
-    
-      <label class="switch" data-ani="true">
-        <input id="toggle-toc" aria-label="Toggle TOC" type="checkbox" checked>
-        <span class="slider round"></span>
-      </label>
-    
-  </div>
-  <div class="toc " data-dir="ltr" data-folding="true" data-ani="true">
-    <nav id="TableOfContents">
-  <ul>
-    <li><a href="#写在前面">📝写在前面</a></li>
-    <li><a href="#使用csv库读写csv文件">🌊使用csv库读写csv文件</a>
-      <ul>
-        <li><a href="#读取csv文件并直接输出">读取csv文件并直接输出</a></li>
-        <li><a href="#将csv文件并输出为字典">将csv文件并输出为字典</a></li>
-        <li><a href="#写入csv文件">写入csv文件</a></li>
-      </ul>
-    </li>
-    <li><a href="#输出某列的匹配不匹配的记录">🌊输出某列的匹配/不匹配的记录</a></li>
-    <li><a href="#调整列的顺序">🌊调整列的顺序</a></li>
-    <li><a href="#抽取特定列">🌊抽取特定列</a>
-      <ul>
-        <li><a href="#抽取特定列的所有值并存储于列表">抽取特定列的所有值并存储于列表</a></li>
-        <li><a href="#根据下标抽取特定列到某个新的csv文件">根据下标抽取特定列到某个新的csv文件</a></li>
-      </ul>
-    </li>
-    <li><a href="#除去完全重复的记录">🌊除去完全重复的记录</a></li>
-    <li><a href="#对csv文件按照某一列排序">🌊对csv文件按照某一列排序</a></li>
-    <li><a href="#键值互换">🌊键值互换</a></li>
-    <li><a href="#参考资料">🌊参考资料</a></li>
-  </ul>
-</nav>
-  </div>
-</section>
-
-
-
-</aside>
-
 <script>
   
   
@@ -2721,7 +2674,7 @@ document.addEventListener('DOMContentLoaded', function () {
 
   var enableToc = JSON.parse("true");
   var toc = JSON.parse("null");
-  var tocPosition = JSON.parse("\"inner\"");
+  var tocPosition = JSON.parse("\"outer\"");
   
   var singleMainElem = document.querySelector('.single__main');
   var singleSideElem = document.querySelector('.single__side');
@@ -3415,6 +3368,46 @@ document.addEventListener('DOMContentLoaded', function () {
 
 <div class="wrapper__right hide" data-pad="true" dir="ltr">
   <script>document.querySelector('.wrapper__right').classList.remove('hide')</script>
+  
+    
+      
+        <div class="toc__flexbox--outer" data-position="fixed" data-dir="ltr" data-ani="true">
+          <h6 class="toc__title toc__title--outer" data-ani="true">目录</h6>
+          
+          <label class="switch" data-ani="true">
+            <input id="visible-toc" aria-label="Visible TOC" type="checkbox" checked>
+            <span class="slider round"></span>
+          </label>
+          
+        </div>
+        <div class="toc toc__outer " data-dir="ltr" data-folding="true" data-ani="true">
+          <nav id="TableOfContents">
+  <ul>
+    <li><a href="#写在前面">📝写在前面</a></li>
+    <li><a href="#使用csv库读写csv文件">🌊使用csv库读写csv文件</a>
+      <ul>
+        <li><a href="#读取csv文件并直接输出">读取csv文件并直接输出</a></li>
+        <li><a href="#将csv文件并输出为字典">将csv文件并输出为字典</a></li>
+        <li><a href="#写入csv文件">写入csv文件</a></li>
+      </ul>
+    </li>
+    <li><a href="#输出某列的匹配不匹配的记录">🌊输出某列的匹配/不匹配的记录</a></li>
+    <li><a href="#调整列的顺序">🌊调整列的顺序</a></li>
+    <li><a href="#抽取特定列">🌊抽取特定列</a>
+      <ul>
+        <li><a href="#抽取特定列的所有值并存储于列表">抽取特定列的所有值并存储于列表</a></li>
+        <li><a href="#根据下标抽取特定列到某个新的csv文件">根据下标抽取特定列到某个新的csv文件</a></li>
+      </ul>
+    </li>
+    <li><a href="#除去完全重复的记录">🌊除去完全重复的记录</a></li>
+    <li><a href="#对csv文件按照某一列排序">🌊对csv文件按照某一列排序</a></li>
+    <li><a href="#键值互换">🌊键值互换</a></li>
+    <li><a href="#参考资料">🌊参考资料</a></li>
+  </ul>
+</nav>
+        </div>
+      
+    
   
 </div>
 
