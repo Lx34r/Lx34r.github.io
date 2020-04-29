@@ -1412,20 +1412,22 @@
 
       
         <li class="navbarm__menu--item ">
-          <a href="/posts">Posts</a>
+          <a href="/doc">
+            Doc
+            <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24"><path fill="currentColor" d="M8.12 9.29L12 13.17l3.88-3.88c.39-.39 1.02-.39 1.41 0 .39.39.39 1.02 0 1.41l-4.59 4.59c-.39.39-1.02.39-1.41 0L6.7 10.7c-.39-.39-.39-1.02 0-1.41.39-.38 1.03-.39 1.42 0z"/></svg>
+          </a>
         </li>
-      
-      
-    
-      
-      
-      
-      
 
-      
-        <li class="navbarm__menu--item ">
-          <a href="/notes">Notes</a>
-        </li>
+        
+          <li class="navbarm__menu--item navbarm__menu--subitem">
+            <a href="/doc/note">Note</a>
+          </li>
+        
+          <li class="navbarm__menu--item navbarm__menu--subitem">
+            <a href="/doc/post">Post</a>
+          </li>
+        
+
       
       
     
@@ -1513,15 +1515,20 @@
   
   
   
-  <a href="/posts" class="navbar__menu-item navbar__slide-down " dir="ltr" data-ani="true">Posts</a>
-  
-  
-  
-  
-  
-  
-  
-  <a href="/notes" class="navbar__menu-item navbar__slide-down " dir="ltr" data-ani="true">Notes</a>
+  <div class="navbar__dropdown navbar__slide-down" data-ani="true">
+    <a href="/doc" class="navbar__menu-item "
+      dir="ltr">
+      Doc
+      <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24"><path fill="currentColor" d="M8.12 9.29L12 13.17l3.88-3.88c.39-.39 1.02-.39 1.41 0 .39.39.39 1.02 0 1.41l-4.59 4.59c-.39.39-1.02.39-1.41 0L6.7 10.7c-.39-.39-.39-1.02 0-1.41.39-.38 1.03-.39 1.42 0z"/></svg>
+    </a>
+    <div class="navbar__dropdown--content">
+      
+      <a href="/doc/note" class="navbar__dropdown--item" dir="ltr">Note</a>
+      
+      <a href="/doc/post" class="navbar__dropdown--item" dir="ltr">Post</a>
+      
+    </div>
+  </div>
   
   
   
@@ -1573,21 +1580,21 @@
       <li class="archive__li" data-dir="ltr">
         <span class="archive__meta" data-ani="true">
           
-            <span class="archive__type">notes</span>
+            <span class="archive__type">doc</span>
             <span class="archive__date">04-19</span>
           
         </span>
-        <a href="https://lx34r.cn/notes/gamedesign_yu-gi-ohroundprocess/" class="archive__title" data-title-wrap="wrap" data-dir="ltr">游戏王中的回合流程</a>        
+        <a href="https://lx34r.cn/doc/note/gamedesign_yu-gi-ohroundprocess/" class="archive__title" data-title-wrap="wrap" data-dir="ltr">游戏王中的回合流程</a>        
       </li>
       
       <li class="archive__li" data-dir="ltr">
         <span class="archive__meta" data-ani="true">
           
-            <span class="archive__type">posts</span>
+            <span class="archive__type">doc</span>
             <span class="archive__date">04-03</span>
           
         </span>
-        <a href="https://lx34r.cn/posts/blog_searchengineoptimizing/" class="archive__title" data-title-wrap="wrap" data-dir="ltr">Hugo博客的搜索引擎优化(SEO)</a>        
+        <a href="https://lx34r.cn/doc/post/blog_searchengineoptimizing/" class="archive__title" data-title-wrap="wrap" data-dir="ltr">Hugo博客的搜索引擎优化(SEO)</a>        
       </li>
       
     </ul>
@@ -1598,21 +1605,21 @@
       <li class="archive__li" data-dir="ltr">
         <span class="archive__meta" data-ani="true">
           
-            <span class="archive__type">posts</span>
+            <span class="archive__type">doc</span>
             <span class="archive__date">12-08</span>
           
         </span>
-        <a href="https://lx34r.cn/posts/tool_gettextfromword/" class="archive__title" data-title-wrap="wrap" data-dir="ltr">获取Word特定内容</a>        
+        <a href="https://lx34r.cn/doc/post/tool_gettextfromword/" class="archive__title" data-title-wrap="wrap" data-dir="ltr">获取Word特定内容</a>        
       </li>
       
       <li class="archive__li" data-dir="ltr">
         <span class="archive__meta" data-ani="true">
           
-            <span class="archive__type">notes</span>
+            <span class="archive__type">doc</span>
             <span class="archive__date">01-08</span>
           
         </span>
-        <a href="https://lx34r.cn/notes/regexp_javascriptregexp/" class="archive__title" data-title-wrap="wrap" data-dir="ltr">JavaScript常用的正则表达式</a>        
+        <a href="https://lx34r.cn/doc/note/regexp_javascriptregexp/" class="archive__title" data-title-wrap="wrap" data-dir="ltr">JavaScript常用的正则表达式</a>        
       </li>
       
     </ul>
@@ -1623,11 +1630,11 @@
       <li class="archive__li" data-dir="ltr">
         <span class="archive__meta" data-ani="true">
           
-            <span class="archive__type">posts</span>
+            <span class="archive__type">doc</span>
             <span class="archive__date">08-20</span>
           
         </span>
-        <a href="https://lx34r.cn/posts/blog_pythonoperatecsv/" class="archive__title" data-title-wrap="wrap" data-dir="ltr">python处理csv文件</a>        
+        <a href="https://lx34r.cn/doc/post/blog_pythonoperatecsv/" class="archive__title" data-title-wrap="wrap" data-dir="ltr">python处理csv文件</a>        
       </li>
       
     </ul>
