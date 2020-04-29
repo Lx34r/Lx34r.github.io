@@ -6,9 +6,9 @@
   xmlns:sy="http://purl.org/rss/1.0/modules/syndication/" 
   xmlns:media="http://search.yahoo.com/mrss/">
   <channel>
-    <title>regexp on Lx34r&#39;s Blog</title>
-    <link>https://lx34r.cn/categories/regexp/</link>
-    <description>Recent content in regexp on Lx34r&#39;s Blog</description>
+    <title>note on Lx34r&#39;s Blog</title>
+    <link>https://lx34r.cn/categories/note/</link>
+    <description>Recent content in note on Lx34r&#39;s Blog</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>zh</language>
     <managingEditor>zyssmart@live.com (Lx34r)</managingEditor>
@@ -16,7 +16,7 @@
     <copyright>&amp;copy;{year},Lx34r, All Rights Reserved</copyright>
     <lastBuildDate>Tue, 08 Jan 2019 11:20:05 +0900</lastBuildDate>
     
-        <atom:link href="https://lx34r.cn/categories/regexp/index.xml" rel="self" type="application/rss+xml" />
+        <atom:link href="https://lx34r.cn/categories/note/index.xml" rel="self" type="application/rss+xml" />
     
     
     
@@ -54,7 +54,7 @@
         
           
             
-              <category>regexp</category>
+              <category>note</category>
             
           
         
