@@ -23,7 +23,7 @@
   </url>
   
   <url>
-    <loc>https://lx34r.cn/notes/</loc>
+    <loc>https://lx34r.cn/note/</loc>
     <lastmod>2020-04-19T15:28:52+09:00</lastmod>
   </url>
   
@@ -48,7 +48,7 @@
   </url>
   
   <url>
-    <loc>https://lx34r.cn/notes/gamedesign_yu-gi-oh/</loc>
+    <loc>https://lx34r.cn/2020/04/19/gamedesign_yu-gi-ohroundprocess/</loc>
     <lastmod>2020-04-19T15:28:52+09:00</lastmod>
   </url>
   
@@ -63,12 +63,12 @@
   </url>
   
   <url>
-    <loc>https://lx34r.cn/posts/blog-searchengineoptimizing/</loc>
+    <loc>https://lx34r.cn/2020/04/03/blog_searchengineoptimizing/</loc>
     <lastmod>2020-04-03T14:47:45+09:00</lastmod>
   </url>
   
   <url>
-    <loc>https://lx34r.cn/posts/</loc>
+    <loc>https://lx34r.cn/post/</loc>
     <lastmod>2020-04-03T14:47:45+09:00</lastmod>
   </url>
   
@@ -78,12 +78,27 @@
   </url>
   
   <url>
-    <loc>https://lx34r.cn/tags/python/</loc>
-    <lastmod>2019-12-08T12:00:06+09:00</lastmod>
+    <loc>https://lx34r.cn/2020/02/21/new-features-in-c_sharp/</loc>
+    <lastmod>2020-02-21T11:20:05+09:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://lx34r.cn/tags/javascript/</loc>
+    <lastmod>2020-02-21T11:20:05+09:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://lx34r.cn/categories/note/</loc>
+    <lastmod>2020-02-21T11:20:05+09:00</lastmod>
   </url>
   
   <url>
     <loc>https://lx34r.cn/tags/regexp/</loc>
+    <lastmod>2020-02-21T11:20:05+09:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://lx34r.cn/tags/python/</loc>
     <lastmod>2019-12-08T12:00:06+09:00</lastmod>
   </url>
   
@@ -98,7 +113,7 @@
   </url>
   
   <url>
-    <loc>https://lx34r.cn/posts/tool-gettextfromword/</loc>
+    <loc>https://lx34r.cn/2019/12/08/tool_gettextfromword/</loc>
     <lastmod>2019-12-08T12:00:06+09:00</lastmod>
   </url>
   
@@ -108,17 +123,7 @@
   </url>
   
   <url>
-    <loc>https://lx34r.cn/tags/javascript/</loc>
-    <lastmod>2019-01-08T11:20:05+09:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://lx34r.cn/notes/regexp-javascriptregexp/</loc>
-    <lastmod>2019-01-08T11:20:05+09:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://lx34r.cn/categories/regexp/</loc>
+    <loc>https://lx34r.cn/2019/01/08/regexp_javascriptregexp/</loc>
     <lastmod>2019-01-08T11:20:05+09:00</lastmod>
   </url>
   
@@ -128,7 +133,7 @@
   </url>
   
   <url>
-    <loc>https://lx34r.cn/posts/blog-pythonoperatecsv/</loc>
+    <loc>https://lx34r.cn/2018/08/20/blog_pythonoperatecsv/</loc>
     <lastmod>2018-08-20T10:56:43+09:00</lastmod>
   </url>
   
