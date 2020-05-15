@@ -14,13 +14,56 @@
     <managingEditor>zyssmart@live.com (Lx34r)</managingEditor>
     <webMaster>zyssmart@live.com (Lx34r)</webMaster>
     <copyright>&amp;copy;{year},Lx34r, All Rights Reserved</copyright>
-    <lastBuildDate>Sun, 08 Dec 2019 12:00:06 +0900</lastBuildDate>
+    <lastBuildDate>Fri, 21 Feb 2020 11:20:05 +0900</lastBuildDate>
     
         <atom:link href="https://lx34r.cn/tags/regexp/index.xml" rel="self" type="application/rss+xml" />
     
     
     
 
+      
+      <item>
+        <title>C# 各版本新功能列表</title>
+        <link>https://lx34r.cn/2020/02/21/new-features-in-c_sharp/</link>
+        <pubDate>Fri, 21 Feb 2020 11:20:05 +0900</pubDate>
+        <author>zyssmart@live.com (Lx34r)</author>
+        <atom:modified>Fri, 21 Feb 2020 11:20:05 +0900</atom:modified>
+        <guid>https://lx34r.cn/2020/02/21/new-features-in-c_sharp/</guid>
+        <description>&lt;figure &gt;
+  
+    &lt;img data-src=&#34;https://lx34r.cn/images/note/new-features-in-C_Sharp/more-bg.jpg&#34;  data-caption=&#34;&#34; src=&#34;data:image/svg+xml,%0A%3Csvg xmlns=&#39;http://www.w3.org/2000/svg&#39; width=&#39;&#39; height=&#39;&#39; viewBox=&#39;0 0 24 24&#39;%3E%3Cpath fill=&#39;none&#39; d=&#39;M0 0h24v24H0V0z&#39;/%3E%3Cpath fill=&#39;%23aaa&#39; d=&#39;M19 3H5c-1.1 0-2 .9-2 2v14c0 1.1.9 2 2 2h14c1.1 0 2-.9 2-2V5c0-1.1-.9-2-2-2zm-1 16H6c-.55 0-1-.45-1-1V6c0-.55.45-1 1-1h12c.55 0 1 .45 1 1v12c0 .55-.45 1-1 1zm-4.44-6.19l-2.35 3.02-1.56-1.88c-.2-.25-.58-.24-.78.01l-1.74 2.23c-.26.33-.02.81.39.81h8.98c.41 0 .65-.47.4-.8l-2.55-3.39c-.19-.26-.59-.26-.79 0z&#39;/%3E%3C/svg%3E&#34; class=&#34;lazyload&#34; style=&#34;width:;height:;&#34;/&gt;
+    
+  
+&lt;/figure&gt;</description>
+        
+        <dc:creator>Lx34r</dc:creator>
+        <media:content url="https://lx34r.cnimages/note/new-features-in-C_Sharp/icon.png" medium="image"><media:title type="html">featured image</media:title></media:content>
+        
+        
+        
+          
+            
+              <category>JavaScript</category>
+            
+          
+            
+              <category>regexp</category>
+            
+          
+        
+        
+          
+            
+              <category>note</category>
+            
+          
+        
+        
+          
+            
+          
+        
+      </item>
       
       <item>
         <title>获取Word特定内容</title>
