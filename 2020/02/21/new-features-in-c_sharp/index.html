@@ -5,7 +5,7 @@
     <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <title>C# 各版本新功能列表 – Lx34r&#39;s Blog</title>
+    <title> – Lx34r&#39;s Blog</title>
     
 
 
@@ -529,20 +529,12 @@
           }
         }
 
-        var utterances = document.getElementById('utterances');
+        var utterances = document.querySelector('iframe');
         if (utterances) {
-          utterances.querySelector('iframe').contentWindow.postMessage({
+          utterances.contentWindow.postMessage({
             type: 'set-theme',
             theme: selectedThemeVariant === "dark" || selectedThemeVariant === "hacker" ? 'photon-dark' : selectedThemeVariant === 'kimbie' ? 'github-dark-orange' : 'github-light',
           }, 'https://utteranc.es');
-        }
-
-        var twitterCards = document.querySelectorAll('.twitter-timeline');
-        if (twitterCards) {
-          window.postMessage({
-            type: 'set-twitter-theme',
-            theme: selectedThemeVariant === 'light' || selectedThemeVariant === 'solarized' ? 'light' : 'dark',
-          });
         }
       });
     }) : null;
@@ -1216,7 +1208,7 @@
 
 
 <meta property="og:site_name" content="Lx34r&#39;s Blog">
-<meta property="og:title" content="C# 各版本新功能列表">
+<meta property="og:title" content="">
 <meta property="og:url" content="https://lx34r.cn/2020/02/21/new-features-in-c_sharp/">
 <meta property="og:type" content="article">
 <meta property="og:description" content="基于官网的C#发展历史，通过非常简短的代码将每个新特性演示出来。">
@@ -1226,7 +1218,7 @@
     <meta property="og:image:url" content="https://lx34r.cn/images/note/new-features-in-C_Sharp/icon.png">
     <meta name="twitter:card" content="summary_large_image">
     <meta name="twitter:app:name:iphone" content="Lx34r&#39;s Blog">
-    <meta property="twitter:title" content="C# 各版本新功能列表">
+    <meta property="twitter:title" content="Lx34r&#39;s Blog">
     <meta property="twitter:description" content="基于官网的C#发展历史，通过非常简短的代码将每个新特性演示出来。">
   
 
@@ -1265,7 +1257,7 @@
   {
     "@context": "https://schema.org",
     "@type": "WebPage",
-    "headline": "C# 各版本新功能列表",
+    "headline": "",
     "datePublished": "2020-02-21T11:20:05+09:00",
     "dateModified": "2020-02-21T11:20:05+09:00",
     "url" : "https://lx34r.cn/2020/02/21/new-features-in-c_sharp/",
@@ -1300,7 +1292,7 @@
   <script>
     var dataLayer = window.dataLayer = window.dataLayer || [];
     dataLayer.push({
-      page:'C# 各版本新功能列表',
+      page:'',
       categories:'only examples about your dataLayer'
     });
   </script>
@@ -1458,19 +1450,19 @@
     
       <li class="navbarm__menu--item ">
         <a href="/tags" class="navbarm__menu--term" data-index="0">
-          标签
+          tags
         </a>
       </li>
     
       <li class="navbarm__menu--item ">
         <a href="/categories" class="navbarm__menu--term" data-index="1">
-          分类
+          categories
         </a>
       </li>
     
       <li class="navbarm__menu--item ">
         <a href="/series" class="navbarm__menu--term" data-index="2">
-          系列
+          series
         </a>
       </li>
     
@@ -1577,7 +1569,7 @@
   
   <li  class="is-active" >
     
-      <span>C# 各版本新功能列表</span>
+      <a href="https://lx34r.cn/2020/02/21/new-features-in-c_sharp/" class="capitalize">Lx34r&#39;s Blog</a>
     
   </li>
   
@@ -1589,13 +1581,13 @@
   <div class="single ">
     <div class="single__nojs">Please enable Javascript to view the contents</div>
     <script>document.querySelector('.single').classList.remove('hide'); document.querySelector('.single__nojs').classList.add('hide');</script>
-    <h2 class="single__title" data-ani="true">C# 各版本新功能列表</h2>
+    <h2 class="single__title" data-ani="true"></h2>
     <div class="single__meta">
       
 <div class="single__infos">
   <time class="single__info" title="创建日期">📅&nbsp;2020年02月21日 </time>
   
-  &nbsp;&middot;&nbsp; <span class="single__info" title="阅读时长"> ☕&nbsp;4&nbsp;分钟 </span>
+  &nbsp;&middot;&nbsp; <span class="single__info" title="阅读时长"> ☕&nbsp;11&nbsp;分钟 </span>
   
   <span class="single__info">
      &middot; 👀<span id="busuanzi_value_page_pv">...</span> 阅读
@@ -2076,6 +2068,1104 @@
 <td class="lntd">
 <pre class="chroma"><code class="language-C#" data-lang="C#"><span class="kt">var</span> <span class="n">i</span> <span class="p">=</span> <span class="m">10</span><span class="p">;</span> <span class="c1">// Implicitly typed.
 </span><span class="c1"></span><span class="kt">int</span> <span class="n">i</span> <span class="p">=</span> <span class="m">10</span><span class="p">;</span> <span class="c1">// Explicitly typed.
+</span></code></pre></td></tr></table>
+</div>
+</div><h3 id="分部方法">分部方法</h3>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><code><span class="lnt"> 1
+</span><span class="lnt"> 2
+</span><span class="lnt"> 3
+</span><span class="lnt"> 4
+</span><span class="lnt"> 5
+</span><span class="lnt"> 6
+</span><span class="lnt"> 7
+</span><span class="lnt"> 8
+</span><span class="lnt"> 9
+</span><span class="lnt">10
+</span><span class="lnt">11
+</span><span class="lnt">12
+</span><span class="lnt">13
+</span><span class="lnt">14
+</span><span class="lnt">15
+</span><span class="lnt">16
+</span><span class="lnt">17
+</span><span class="lnt">18
+</span></code></pre></td>
+<td class="lntd">
+<pre class="chroma"><code class="language-C#" data-lang="C#"><span class="k">namespace</span> <span class="nn">PM</span>
+<span class="p">{</span>
+    <span class="k">partial</span> <span class="k">class</span> <span class="nc">A</span>
+    <span class="p">{</span>
+        <span class="k">partial</span> <span class="k">void</span> <span class="n">OnSomethingHappened</span><span class="p">(</span><span class="kt">string</span> <span class="n">s</span><span class="p">);</span>
+    <span class="p">}</span>
+
+    <span class="c1">// This part can be in a separate file.
+</span><span class="c1"></span>    <span class="k">partial</span> <span class="k">class</span> <span class="nc">A</span>
+    <span class="p">{</span>
+        <span class="c1">// Comment out this method and the program
+</span><span class="c1"></span>        <span class="c1">// will still compile.
+</span><span class="c1"></span>        <span class="k">partial</span> <span class="k">void</span> <span class="n">OnSomethingHappened</span><span class="p">(</span><span class="n">String</span> <span class="n">s</span><span class="p">)</span>
+        <span class="p">{</span>
+            <span class="n">Console</span><span class="p">.</span><span class="n">WriteLine</span><span class="p">(</span><span class="s">&#34;Something happened: {0}&#34;</span><span class="p">,</span> <span class="n">s</span><span class="p">);</span>
+        <span class="p">}</span>
+    <span class="p">}</span>
+<span class="p">}</span>
+</code></pre></td></tr></table>
+</div>
+</div><h3 id="对象和集合初始值设定项">对象和集合初始值设定项</h3>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><code><span class="lnt"> 1
+</span><span class="lnt"> 2
+</span><span class="lnt"> 3
+</span><span class="lnt"> 4
+</span><span class="lnt"> 5
+</span><span class="lnt"> 6
+</span><span class="lnt"> 7
+</span><span class="lnt"> 8
+</span><span class="lnt"> 9
+</span><span class="lnt">10
+</span><span class="lnt">11
+</span><span class="lnt">12
+</span><span class="lnt">13
+</span><span class="lnt">14
+</span><span class="lnt">15
+</span></code></pre></td>
+<td class="lntd">
+<pre class="chroma"><code class="language-C#" data-lang="C#"><span class="k">public</span> <span class="k">class</span> <span class="nc">Cat</span>
+<span class="p">{</span>
+    <span class="c1">// Auto-implemented properties.
+</span><span class="c1"></span>    <span class="k">public</span> <span class="kt">int</span> <span class="n">Age</span> <span class="p">{</span> <span class="k">get</span><span class="p">;</span> <span class="k">set</span><span class="p">;</span> <span class="p">}</span>
+    <span class="k">public</span> <span class="kt">string</span> <span class="n">Name</span> <span class="p">{</span> <span class="k">get</span><span class="p">;</span> <span class="k">set</span><span class="p">;</span> <span class="p">}</span>
+
+    <span class="k">public</span> <span class="n">Cat</span><span class="p">()</span>
+    <span class="p">{</span>
+    <span class="p">}</span>
+
+    <span class="k">public</span> <span class="n">Cat</span><span class="p">(</span><span class="kt">string</span> <span class="n">name</span><span class="p">)</span>
+    <span class="p">{</span>
+        <span class="k">this</span><span class="p">.</span><span class="n">Name</span> <span class="p">=</span> <span class="n">name</span><span class="p">;</span>
+    <span class="p">}</span>
+<span class="p">}</span>
+</code></pre></td></tr></table>
+</div>
+</div><h2 id="c-40版---2010">C# 4.0版 - 2010</h2>
+<h3 id="dynamic">dynamic</h3>
+<div class="alert alert-info" role="alert" data-dir="ltr">这个是特性使得CLR不得不进行一次修改。有了这个，C#也能像js、php、python等弱类型语言一样写代码了。</div>
+
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span><span class="lnt">3
+</span><span class="lnt">4
+</span><span class="lnt">5
+</span><span class="lnt">6
+</span><span class="lnt">7
+</span></code></pre></td>
+<td class="lntd">
+<pre class="chroma"><code class="language-C#" data-lang="C#"><span class="kt">dynamic</span> <span class="n">a</span> <span class="p">=</span> <span class="m">3</span><span class="p">;</span>
+<span class="n">a</span> <span class="p">=</span> <span class="m">3.14</span><span class="p">;</span>
+<span class="n">a</span> <span class="p">=</span> <span class="s">&#34;Hello World&#34;</span><span class="p">;</span>
+<span class="n">a</span> <span class="p">=</span> <span class="k">new</span><span class="p">[]</span> <span class="p">{</span> <span class="m">1</span><span class="p">,</span> <span class="m">2</span><span class="p">,</span> <span class="m">3</span><span class="p">,</span> <span class="m">4</span><span class="p">,</span> <span class="m">5</span> <span class="p">};</span>
+<span class="n">a</span> <span class="p">=</span> <span class="k">new</span> <span class="n">Func</span><span class="p">&lt;</span><span class="kt">int</span><span class="p">&gt;(()</span> <span class="p">=&gt;</span> <span class="m">3</span><span class="p">);</span>
+<span class="n">a</span> <span class="p">=</span> <span class="k">new</span> <span class="n">StringBuilder</span><span class="p">();</span>
+<span class="n">Console</span><span class="p">.</span><span class="n">WriteLine</span><span class="p">(</span><span class="n">a</span><span class="p">.</span><span class="n">GetType</span><span class="p">().</span><span class="n">Name</span><span class="p">);</span> <span class="c1">// StringBuilder
+</span></code></pre></td></tr></table>
+</div>
+</div><div class="notices warning" >
+  注意：dynamic可以表示任何东西，包含数组、委托等等。滥用dynamic容易让程序变得很难维护。
+</div>
+<h3 id="命名参数可选参数">命名参数/可选参数</h3>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span><span class="lnt">3
+</span></code></pre></td>
+<td class="lntd">
+<pre class="chroma"><code class="language-C#" data-lang="C#"><span class="n">PrintOrderDetails</span><span class="p">(</span><span class="n">productName</span><span class="p">:</span> <span class="s">&#34;Red Mug&#34;</span><span class="p">,</span> <span class="n">sellerName</span><span class="p">:</span> <span class="s">&#34;Gift Shop&#34;</span><span class="p">,</span> <span class="n">orderNum</span><span class="p">:</span> <span class="m">31</span><span class="p">);</span>
+<span class="k">public</span> <span class="k">void</span> <span class="n">ExampleMethod</span><span class="p">(</span><span class="kt">int</span> <span class="n">required</span><span class="p">,</span> <span class="kt">string</span> <span class="n">optionalstr</span> <span class="p">=</span> <span class="s">&#34;default string&#34;</span><span class="p">,</span>
+    <span class="kt">int</span> <span class="n">optionalint</span> <span class="p">=</span> <span class="m">10</span><span class="p">)</span>
+</code></pre></td></tr></table>
+</div>
+</div><h3 id="泛型中的协变和逆变">泛型中的协变和逆变</h3>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span><span class="lnt">3
+</span><span class="lnt">4
+</span><span class="lnt">5
+</span></code></pre></td>
+<td class="lntd">
+<pre class="chroma"><code class="language-C#" data-lang="C#"><span class="n">IEnumerable</span><span class="p">&lt;</span><span class="n">Derived</span><span class="p">&gt;</span> <span class="n">d</span> <span class="p">=</span> <span class="k">new</span> <span class="n">List</span><span class="p">&lt;</span><span class="n">Derived</span><span class="p">&gt;();</span>
+<span class="n">IEnumerable</span><span class="p">&lt;</span><span class="n">Base</span><span class="p">&gt;</span> <span class="n">b</span> <span class="p">=</span> <span class="n">d</span><span class="p">;</span>
+<span class="n">Action</span><span class="p">&lt;</span><span class="n">Base</span><span class="p">&gt;</span> <span class="n">b</span> <span class="p">=</span> <span class="p">(</span><span class="n">target</span><span class="p">)</span> <span class="p">=&gt;</span> <span class="p">{</span> <span class="n">Console</span><span class="p">.</span><span class="n">WriteLine</span><span class="p">(</span><span class="n">target</span><span class="p">.</span><span class="n">GetType</span><span class="p">().</span><span class="n">Name</span><span class="p">);</span> <span class="p">};</span>
+<span class="n">Action</span><span class="p">&lt;</span><span class="n">Derived</span><span class="p">&gt;</span> <span class="n">d</span> <span class="p">=</span> <span class="n">b</span><span class="p">;</span>
+<span class="n">d</span><span class="p">(</span><span class="k">new</span> <span class="n">Derived</span><span class="p">());</span>
+</code></pre></td></tr></table>
+</div>
+</div><h3 id="类型等效内置互操作类型">类型等效、内置互操作类型</h3>
+<div class="alert alert-info" role="alert" data-dir="ltr">这个主要是为了和COM进行交互。之前需要引用一些COM类型相关的程序集，现在可以直接引用COM。 具体可以参见：https://docs.microsoft.com/zh-cn/dotnet/framework/interop/type-equivalence-and-embedded-interop-types</div>
+
+<h2 id="c-50版---2012">C# 5.0版 - 2012</h2>
+<h3 id="asyncawait">async/await</h3>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><code><span class="lnt"> 1
+</span><span class="lnt"> 2
+</span><span class="lnt"> 3
+</span><span class="lnt"> 4
+</span><span class="lnt"> 5
+</span><span class="lnt"> 6
+</span><span class="lnt"> 7
+</span><span class="lnt"> 8
+</span><span class="lnt"> 9
+</span><span class="lnt">10
+</span><span class="lnt">11
+</span><span class="lnt">12
+</span><span class="lnt">13
+</span><span class="lnt">14
+</span><span class="lnt">15
+</span></code></pre></td>
+<td class="lntd">
+<pre class="chroma"><code class="language-C#" data-lang="C#"><span class="k">private</span> <span class="n">DamageResult</span> <span class="n">CalculateDamageDone</span><span class="p">()</span>
+<span class="p">{</span>
+    <span class="c1">// Code omitted:
+</span><span class="c1"></span>    <span class="c1">//
+</span><span class="c1"></span>    <span class="c1">// Does an expensive calculation and returns
+</span><span class="c1"></span>    <span class="c1">// the result of that calculation.
+</span><span class="c1"></span><span class="p">}</span>
+
+<span class="n">calculateButton</span><span class="p">.</span><span class="n">Clicked</span> <span class="p">+=</span> <span class="k">async</span> <span class="p">(</span><span class="n">o</span><span class="p">,</span> <span class="n">e</span><span class="p">)</span> <span class="p">=&gt;</span>
+<span class="p">{</span>
+    <span class="c1">// This line will yield control to the UI while CalculateDamageDone()
+</span><span class="c1"></span>    <span class="c1">// performs its work.  The UI thread is free to perform other work.
+</span><span class="c1"></span>    <span class="kt">var</span> <span class="n">damageResult</span> <span class="p">=</span> <span class="k">await</span> <span class="n">Task</span><span class="p">.</span><span class="n">Run</span><span class="p">(()</span> <span class="p">=&gt;</span> <span class="n">CalculateDamageDone</span><span class="p">());</span>
+    <span class="n">DisplayDamage</span><span class="p">(</span><span class="n">damageResult</span><span class="p">);</span>
+<span class="p">};</span>
+</code></pre></td></tr></table>
+</div>
+</div><div class="alert alert-info" role="alert" data-dir="ltr"><p>async/await的本质是状态机，像IEnumerable<T>一样。以前游戏引擎Unity只支持C# 3.0，因此当时它用状态机发Http请求是用的IEnumerable<T>。</p>
+<p>async/await有两个好处，一是可以避免UI线程卡顿，二是提高系统吞吐率，最终提高性能。</p>
+</div>
+
+<h3 id="调用方信息">调用方信息</h3>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><code><span class="lnt"> 1
+</span><span class="lnt"> 2
+</span><span class="lnt"> 3
+</span><span class="lnt"> 4
+</span><span class="lnt"> 5
+</span><span class="lnt"> 6
+</span><span class="lnt"> 7
+</span><span class="lnt"> 8
+</span><span class="lnt"> 9
+</span><span class="lnt">10
+</span><span class="lnt">11
+</span><span class="lnt">12
+</span><span class="lnt">13
+</span><span class="lnt">14
+</span><span class="lnt">15
+</span><span class="lnt">16
+</span><span class="lnt">17
+</span><span class="lnt">18
+</span><span class="lnt">19
+</span><span class="lnt">20
+</span><span class="lnt">21
+</span></code></pre></td>
+<td class="lntd">
+<pre class="chroma"><code class="language-C#" data-lang="C#"><span class="k">public</span> <span class="k">void</span> <span class="n">DoProcessing</span><span class="p">()</span>
+<span class="p">{</span>
+    <span class="n">TraceMessage</span><span class="p">(</span><span class="s">&#34;Something happened.&#34;</span><span class="p">);</span>
+<span class="p">}</span>
+
+<span class="k">public</span> <span class="k">void</span> <span class="n">TraceMessage</span><span class="p">(</span><span class="kt">string</span> <span class="n">message</span><span class="p">,</span>
+<span class="na">        [CallerMemberName]</span> <span class="kt">string</span> <span class="n">memberName</span> <span class="p">=</span> <span class="s">&#34;&#34;</span><span class="p">,</span>
+<span class="na">        [CallerFilePath]</span> <span class="kt">string</span> <span class="n">sourceFilePath</span> <span class="p">=</span> <span class="s">&#34;&#34;</span><span class="p">,</span>
+<span class="na">        [CallerLineNumber]</span> <span class="kt">int</span> <span class="n">sourceLineNumber</span> <span class="p">=</span> <span class="m">0</span><span class="p">)</span>
+<span class="p">{</span>
+    <span class="n">System</span><span class="p">.</span><span class="n">Diagnostics</span><span class="p">.</span><span class="n">Trace</span><span class="p">.</span><span class="n">WriteLine</span><span class="p">(</span><span class="s">&#34;message: &#34;</span> <span class="p">+</span> <span class="n">message</span><span class="p">);</span>
+    <span class="n">System</span><span class="p">.</span><span class="n">Diagnostics</span><span class="p">.</span><span class="n">Trace</span><span class="p">.</span><span class="n">WriteLine</span><span class="p">(</span><span class="s">&#34;member name: &#34;</span> <span class="p">+</span> <span class="n">memberName</span><span class="p">);</span>
+    <span class="n">System</span><span class="p">.</span><span class="n">Diagnostics</span><span class="p">.</span><span class="n">Trace</span><span class="p">.</span><span class="n">WriteLine</span><span class="p">(</span><span class="s">&#34;source file path: &#34;</span> <span class="p">+</span> <span class="n">sourceFilePath</span><span class="p">);</span>
+    <span class="n">System</span><span class="p">.</span><span class="n">Diagnostics</span><span class="p">.</span><span class="n">Trace</span><span class="p">.</span><span class="n">WriteLine</span><span class="p">(</span><span class="s">&#34;source line number: &#34;</span> <span class="p">+</span> <span class="n">sourceLineNumber</span><span class="p">);</span>
+<span class="p">}</span>
+
+<span class="c1">// Sample Output:
+</span><span class="c1">//  message: Something happened.
+</span><span class="c1">//  member name: DoProcessing
+</span><span class="c1">//  source file path: c:\Visual Studio Projects\CallerInfoCS\CallerInfoCS\Form1.cs
+</span><span class="c1">//  source line number: 31
+</span></code></pre></td></tr></table>
+</div>
+</div><p>注意这个是编译期生成的，因此比StackTrace更能保证性能。</p>
+<h2 id="c-60版---2015">C# 6.0版 - 2015</h2>
+<h3 id="静态导入">静态导入</h3>
+<p>终于可以不用写静态类名了。</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span><span class="lnt">3
+</span><span class="lnt">4
+</span></code></pre></td>
+<td class="lntd">
+<pre class="chroma"><code class="language-C#" data-lang="C#"><span class="k">using</span> <span class="nn">static</span> <span class="n">System</span><span class="p">.</span><span class="n">Math</span><span class="p">;</span>
+<span class="k">using</span> <span class="nn">static</span> <span class="n">System</span><span class="p">.</span><span class="n">Console</span><span class="p">;</span>
+
+<span class="n">WriteLine</span><span class="p">(</span><span class="n">Sin</span><span class="p">(</span><span class="m">3.14</span><span class="p">));</span> <span class="c1">// 0.00159265291648683
+</span></code></pre></td></tr></table>
+</div>
+</div><h3 id="异常筛选器">异常筛选器</h3>
+<p>在try-catch时，可以按指定的条件进行catch，其它条件不catch。</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><code><span class="lnt"> 1
+</span><span class="lnt"> 2
+</span><span class="lnt"> 3
+</span><span class="lnt"> 4
+</span><span class="lnt"> 5
+</span><span class="lnt"> 6
+</span><span class="lnt"> 7
+</span><span class="lnt"> 8
+</span><span class="lnt"> 9
+</span><span class="lnt">10
+</span><span class="lnt">11
+</span><span class="lnt">12
+</span><span class="lnt">13
+</span><span class="lnt">14
+</span><span class="lnt">15
+</span><span class="lnt">16
+</span><span class="lnt">17
+</span><span class="lnt">18
+</span></code></pre></td>
+<td class="lntd">
+<pre class="chroma"><code class="language-C#" data-lang="C#"><span class="k">public</span> <span class="k">static</span> <span class="k">async</span> <span class="n">Task</span><span class="p">&lt;</span><span class="kt">string</span><span class="p">&gt;</span> <span class="n">MakeRequest</span><span class="p">()</span>
+<span class="p">{</span>
+    <span class="n">WebRequestHandler</span> <span class="n">webRequestHandler</span> <span class="p">=</span> <span class="k">new</span> <span class="n">WebRequestHandler</span><span class="p">();</span>
+    <span class="n">webRequestHandler</span><span class="p">.</span><span class="n">AllowAutoRedirect</span> <span class="p">=</span> <span class="k">false</span><span class="p">;</span>
+    <span class="k">using</span> <span class="p">(</span><span class="n">HttpClient</span> <span class="n">client</span> <span class="p">=</span> <span class="k">new</span> <span class="n">HttpClient</span><span class="p">(</span><span class="n">webRequestHandler</span><span class="p">))</span>
+    <span class="p">{</span>
+        <span class="kt">var</span> <span class="n">stringTask</span> <span class="p">=</span> <span class="n">client</span><span class="p">.</span><span class="n">GetStringAsync</span><span class="p">(</span><span class="s">&#34;https://docs.microsoft.com/en-us/dotnet/about/&#34;</span><span class="p">);</span>
+        <span class="k">try</span>
+        <span class="p">{</span>
+            <span class="kt">var</span> <span class="n">responseText</span> <span class="p">=</span> <span class="k">await</span> <span class="n">stringTask</span><span class="p">;</span>
+            <span class="k">return</span> <span class="n">responseText</span><span class="p">;</span>
+        <span class="p">}</span>
+        <span class="k">catch</span> <span class="p">(</span><span class="n">System</span><span class="p">.</span><span class="n">Net</span><span class="p">.</span><span class="n">Http</span><span class="p">.</span><span class="n">HttpRequestException</span> <span class="n">e</span><span class="p">)</span> <span class="n">when</span> <span class="p">(</span><span class="n">e</span><span class="p">.</span><span class="n">Message</span><span class="p">.</span><span class="n">Contains</span><span class="p">(</span><span class="s">&#34;301&#34;</span><span class="p">))</span>
+        <span class="p">{</span>
+            <span class="k">return</span> <span class="s">&#34;Site Moved&#34;</span><span class="p">;</span>
+        <span class="p">}</span>
+    <span class="p">}</span>
+<span class="p">}</span>
+</code></pre></td></tr></table>
+</div>
+</div><h3 id="自动初始化表达式">自动初始化表达式</h3>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><code><span class="lnt">1
+</span></code></pre></td>
+<td class="lntd">
+<pre class="chroma"><code class="language-C#" data-lang="C#"><span class="k">public</span> <span class="n">ICollection</span><span class="p">&lt;</span><span class="kt">double</span><span class="p">&gt;</span> <span class="n">Grades</span> <span class="p">{</span> <span class="k">get</span><span class="p">;</span> <span class="p">}</span> <span class="p">=</span> <span class="k">new</span> <span class="n">List</span><span class="p">&lt;</span><span class="kt">double</span><span class="p">&gt;();</span>
+</code></pre></td></tr></table>
+</div>
+</div><h3 id="expression-bodied-函数成员">Expression-bodied 函数成员</h3>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><code><span class="lnt">1
+</span></code></pre></td>
+<td class="lntd">
+<pre class="chroma"><code class="language-C#" data-lang="C#"><span class="k">public</span> <span class="k">override</span> <span class="kt">string</span> <span class="n">ToString</span><span class="p">()</span> <span class="p">=&gt;</span> <span class="s">$&#34;{LastName}, {FirstName}&#34;</span><span class="p">;</span>
+</code></pre></td></tr></table>
+</div>
+</div><h3 id="null传播器">Null传播器</h3>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><code><span class="lnt">1
+</span></code></pre></td>
+<td class="lntd">
+<pre class="chroma"><code class="language-C#" data-lang="C#"><span class="kt">var</span> <span class="n">first</span> <span class="p">=</span> <span class="n">person</span><span class="p">?.</span><span class="n">FirstName</span><span class="p">;</span>
+</code></pre></td></tr></table>
+</div>
+</div><h3 id="字符串内插">字符串内插</h3>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span></code></pre></td>
+<td class="lntd">
+<pre class="chroma"><code class="language-C#" data-lang="C#"><span class="k">public</span> <span class="kt">string</span> <span class="n">GetGradePointPercentage</span><span class="p">()</span> <span class="p">=&gt;</span>
+    <span class="s">$&#34;Name: {LastName}, {FirstName}. G.P.A: {Grades.Average():F2}&#34;</span><span class="p">;</span>
+</code></pre></td></tr></table>
+</div>
+</div><h3 id="nameof表达式">nameof表达式</h3>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span></code></pre></td>
+<td class="lntd">
+<pre class="chroma"><code class="language-C#" data-lang="C#"><span class="k">if</span> <span class="p">(</span><span class="n">IsNullOrWhiteSpace</span><span class="p">(</span><span class="n">lastName</span><span class="p">))</span>
+    <span class="k">throw</span> <span class="k">new</span> <span class="n">ArgumentException</span><span class="p">(</span><span class="n">message</span><span class="p">:</span> <span class="s">&#34;Cannot be blank&#34;</span><span class="p">,</span> <span class="n">paramName</span><span class="p">:</span> <span class="n">nameof</span><span class="p">(</span><span class="n">lastName</span><span class="p">));</span>
+</code></pre></td></tr></table>
+</div>
+</div><h3 id="索引初始值设定项">索引初始值设定项</h3>
+<div class="alert alert-info" role="alert" data-dir="ltr">使集合初始化更容易的另一个功能是对 Add 方法使用扩展方法 。 添加此功能的目的是进行 Visual Basic 的奇偶校验。 如果自定义集合类的方法具有通过语义方式添加新项的名称，则此功能非常有用。</div>
+
+<h2 id="c-70版本---2017">C# 7.0版本 - 2017</h2>
+<h3 id="out变量">out变量</h3>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span><span class="lnt">3
+</span><span class="lnt">4
+</span></code></pre></td>
+<td class="lntd">
+<pre class="chroma"><code class="language-C#" data-lang="C#"><span class="k">if</span> <span class="p">(</span><span class="kt">int</span><span class="p">.</span><span class="n">TryParse</span><span class="p">(</span><span class="n">input</span><span class="p">,</span> <span class="k">out</span> <span class="kt">int</span> <span class="n">result</span><span class="p">))</span>
+    <span class="n">Console</span><span class="p">.</span><span class="n">WriteLine</span><span class="p">(</span><span class="n">result</span><span class="p">);</span>
+<span class="k">else</span>
+    <span class="n">Console</span><span class="p">.</span><span class="n">WriteLine</span><span class="p">(</span><span class="s">&#34;Could not parse input&#34;</span><span class="p">);</span>
+</code></pre></td></tr></table>
+</div>
+</div><h3 id="元组和解构">元组和解构</h3>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span></code></pre></td>
+<td class="lntd">
+<pre class="chroma"><code class="language-C#" data-lang="C#"><span class="p">(</span><span class="kt">string</span> <span class="n">Alpha</span><span class="p">,</span> <span class="kt">string</span> <span class="n">Beta</span><span class="p">)</span> <span class="n">namedLetters</span> <span class="p">=</span> <span class="p">(</span><span class="s">&#34;a&#34;</span><span class="p">,</span> <span class="s">&#34;b&#34;</span><span class="p">);</span>
+<span class="n">Console</span><span class="p">.</span><span class="n">WriteLine</span><span class="p">(</span><span class="s">$&#34;{namedLetters.Alpha}, {namedLetters.Beta}&#34;</span><span class="p">);</span>
+</code></pre></td></tr></table>
+</div>
+</div><p>如上代码所示，解构可以将元组拆分为多个变量。</p>
+<h3 id="模式匹配">模式匹配</h3>
+<p>现在可以在匹配一个类型时，自动转换为这个类型的变量，如果转换失败，这个变量就赋值为默认值（null或0）。</p>
+<p>极简版：</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span></code></pre></td>
+<td class="lntd">
+<pre class="chroma"><code class="language-C#" data-lang="C#"><span class="k">if</span> <span class="p">(</span><span class="n">input</span> <span class="k">is</span> <span class="kt">int</span> <span class="n">count</span><span class="p">)</span>
+    <span class="n">sum</span> <span class="p">+=</span> <span class="n">count</span><span class="p">;</span>
+</code></pre></td></tr></table>
+</div>
+</div><p>switch/case版：</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><code><span class="lnt"> 1
+</span><span class="lnt"> 2
+</span><span class="lnt"> 3
+</span><span class="lnt"> 4
+</span><span class="lnt"> 5
+</span><span class="lnt"> 6
+</span><span class="lnt"> 7
+</span><span class="lnt"> 8
+</span><span class="lnt"> 9
+</span><span class="lnt">10
+</span><span class="lnt">11
+</span><span class="lnt">12
+</span><span class="lnt">13
+</span><span class="lnt">14
+</span><span class="lnt">15
+</span><span class="lnt">16
+</span><span class="lnt">17
+</span><span class="lnt">18
+</span><span class="lnt">19
+</span><span class="lnt">20
+</span><span class="lnt">21
+</span><span class="lnt">22
+</span><span class="lnt">23
+</span><span class="lnt">24
+</span><span class="lnt">25
+</span><span class="lnt">26
+</span></code></pre></td>
+<td class="lntd">
+<pre class="chroma"><code class="language-C#" data-lang="C#"><span class="k">public</span> <span class="k">static</span> <span class="kt">int</span> <span class="n">SumPositiveNumbers</span><span class="p">(</span><span class="n">IEnumerable</span><span class="p">&lt;</span><span class="kt">object</span><span class="p">&gt;</span> <span class="n">sequence</span><span class="p">)</span>
+<span class="p">{</span>
+    <span class="kt">int</span> <span class="n">sum</span> <span class="p">=</span> <span class="m">0</span><span class="p">;</span>
+    <span class="k">foreach</span> <span class="p">(</span><span class="kt">var</span> <span class="n">i</span> <span class="k">in</span> <span class="n">sequence</span><span class="p">)</span>
+    <span class="p">{</span>
+        <span class="k">switch</span> <span class="p">(</span><span class="n">i</span><span class="p">)</span>
+        <span class="p">{</span>
+            <span class="k">case</span> <span class="m">0</span><span class="p">:</span>
+                <span class="k">break</span><span class="p">;</span>
+            <span class="k">case</span> <span class="n">IEnumerable</span><span class="p">&lt;</span><span class="kt">int</span><span class="p">&gt;</span> <span class="n">childSequence</span><span class="p">:</span>
+            <span class="p">{</span>
+                <span class="k">foreach</span><span class="p">(</span><span class="kt">var</span> <span class="n">item</span> <span class="k">in</span> <span class="n">childSequence</span><span class="p">)</span>
+                    <span class="n">sum</span> <span class="p">+=</span> <span class="p">(</span><span class="n">item</span> <span class="p">&gt;</span> <span class="m">0</span><span class="p">)</span> <span class="p">?</span> <span class="n">item</span> <span class="p">:</span> <span class="m">0</span><span class="p">;</span>
+                <span class="k">break</span><span class="p">;</span>
+            <span class="p">}</span>
+            <span class="k">case</span> <span class="kt">int</span> <span class="n">n</span> <span class="n">when</span> <span class="n">n</span> <span class="p">&gt;</span> <span class="m">0</span><span class="p">:</span>
+                <span class="n">sum</span> <span class="p">+=</span> <span class="n">n</span><span class="p">;</span>
+                <span class="k">break</span><span class="p">;</span>
+            <span class="k">case</span> <span class="k">null</span><span class="p">:</span>
+                <span class="k">throw</span> <span class="k">new</span> <span class="n">NullReferenceException</span><span class="p">(</span><span class="s">&#34;Null found in sequence&#34;</span><span class="p">);</span>
+            <span class="k">default</span><span class="p">:</span>
+                <span class="k">throw</span> <span class="k">new</span> <span class="n">InvalidOperationException</span><span class="p">(</span><span class="s">&#34;Unrecognized type&#34;</span><span class="p">);</span>
+        <span class="p">}</span>
+    <span class="p">}</span>
+    <span class="k">return</span> <span class="n">sum</span><span class="p">;</span>
+<span class="p">}</span>
+</code></pre></td></tr></table>
+</div>
+</div><h3 id="本地函数">本地函数</h3>
+<p>这个主要是方便，javascript就能这样写。<br />
+比lambda的好处在于，这个可以定义在后面，而lambda必须定义在前面。</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><code><span class="lnt"> 1
+</span><span class="lnt"> 2
+</span><span class="lnt"> 3
+</span><span class="lnt"> 4
+</span><span class="lnt"> 5
+</span><span class="lnt"> 6
+</span><span class="lnt"> 7
+</span><span class="lnt"> 8
+</span><span class="lnt"> 9
+</span><span class="lnt">10
+</span><span class="lnt">11
+</span><span class="lnt">12
+</span><span class="lnt">13
+</span><span class="lnt">14
+</span><span class="lnt">15
+</span><span class="lnt">16
+</span><span class="lnt">17
+</span><span class="lnt">18
+</span></code></pre></td>
+<td class="lntd">
+<pre class="chroma"><code class="language-C#" data-lang="C#"><span class="k">public</span> <span class="k">static</span> <span class="n">IEnumerable</span><span class="p">&lt;</span><span class="kt">char</span><span class="p">&gt;</span> <span class="n">AlphabetSubset3</span><span class="p">(</span><span class="kt">char</span> <span class="n">start</span><span class="p">,</span> <span class="kt">char</span> <span class="n">end</span><span class="p">)</span>
+<span class="p">{</span>
+    <span class="k">if</span> <span class="p">(</span><span class="n">start</span> <span class="p">&lt;</span> <span class="sc">&#39;a&#39;</span> <span class="p">||</span> <span class="n">start</span> <span class="p">&gt;</span> <span class="sc">&#39;z&#39;</span><span class="p">)</span>
+        <span class="k">throw</span> <span class="k">new</span> <span class="n">ArgumentOutOfRangeException</span><span class="p">(</span><span class="n">paramName</span><span class="p">:</span> <span class="n">nameof</span><span class="p">(</span><span class="n">start</span><span class="p">),</span> <span class="n">message</span><span class="p">:</span> <span class="s">&#34;start must be a letter&#34;</span><span class="p">);</span>
+    <span class="k">if</span> <span class="p">(</span><span class="n">end</span> <span class="p">&lt;</span> <span class="sc">&#39;a&#39;</span> <span class="p">||</span> <span class="n">end</span> <span class="p">&gt;</span> <span class="sc">&#39;z&#39;</span><span class="p">)</span>
+        <span class="k">throw</span> <span class="k">new</span> <span class="n">ArgumentOutOfRangeException</span><span class="p">(</span><span class="n">paramName</span><span class="p">:</span> <span class="n">nameof</span><span class="p">(</span><span class="n">end</span><span class="p">),</span> <span class="n">message</span><span class="p">:</span> <span class="s">&#34;end must be a letter&#34;</span><span class="p">);</span>
+
+    <span class="k">if</span> <span class="p">(</span><span class="n">end</span> <span class="p">&lt;=</span> <span class="n">start</span><span class="p">)</span>
+        <span class="k">throw</span> <span class="k">new</span> <span class="n">ArgumentException</span><span class="p">(</span><span class="s">$&#34;{nameof(end)} must be greater than {nameof(start)}&#34;</span><span class="p">);</span>
+
+    <span class="k">return</span> <span class="n">alphabetSubsetImplementation</span><span class="p">();</span>
+
+    <span class="n">IEnumerable</span><span class="p">&lt;</span><span class="kt">char</span><span class="p">&gt;</span> <span class="n">alphabetSubsetImplementation</span><span class="p">()</span>
+    <span class="p">{</span>
+        <span class="k">for</span> <span class="p">(</span><span class="kt">var</span> <span class="n">c</span> <span class="p">=</span> <span class="n">start</span><span class="p">;</span> <span class="n">c</span> <span class="p">&lt;</span> <span class="n">end</span><span class="p">;</span> <span class="n">c</span><span class="p">++)</span>
+            <span class="k">yield</span> <span class="k">return</span> <span class="n">c</span><span class="p">;</span>
+    <span class="p">}</span>
+<span class="p">}</span>
+</code></pre></td></tr></table>
+</div>
+</div><h3 id="更多的expression-bodied成员">更多的expression-bodied成员</h3>
+<p>该功能可以让一些函数写成表达式的形式，非常的方便。</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><code><span class="lnt"> 1
+</span><span class="lnt"> 2
+</span><span class="lnt"> 3
+</span><span class="lnt"> 4
+</span><span class="lnt"> 5
+</span><span class="lnt"> 6
+</span><span class="lnt"> 7
+</span><span class="lnt"> 8
+</span><span class="lnt"> 9
+</span><span class="lnt">10
+</span><span class="lnt">11
+</span><span class="lnt">12
+</span><span class="lnt">13
+</span><span class="lnt">14
+</span></code></pre></td>
+<td class="lntd">
+<pre class="chroma"><code class="language-C#" data-lang="C#"><span class="c1">// Expression-bodied constructor
+</span><span class="c1"></span><span class="k">public</span> <span class="n">ExpressionMembersExample</span><span class="p">(</span><span class="kt">string</span> <span class="n">label</span><span class="p">)</span> <span class="p">=&gt;</span> <span class="k">this</span><span class="p">.</span><span class="n">Label</span> <span class="p">=</span> <span class="n">label</span><span class="p">;</span>
+
+<span class="c1">// Expression-bodied finalizer
+</span><span class="c1"></span><span class="p">~</span><span class="n">ExpressionMembersExample</span><span class="p">()</span> <span class="p">=&gt;</span> <span class="n">Console</span><span class="p">.</span><span class="n">Error</span><span class="p">.</span><span class="n">WriteLine</span><span class="p">(</span><span class="s">&#34;Finalized!&#34;</span><span class="p">);</span>
+
+<span class="k">private</span> <span class="kt">string</span> <span class="n">label</span><span class="p">;</span>
+
+<span class="c1">// Expression-bodied get / set accessors.
+</span><span class="c1"></span><span class="k">public</span> <span class="kt">string</span> <span class="n">Label</span>
+<span class="p">{</span>
+    <span class="k">get</span> <span class="p">=&gt;</span> <span class="n">label</span><span class="p">;</span>
+    <span class="k">set</span> <span class="p">=&gt;</span> <span class="k">this</span><span class="p">.</span><span class="n">label</span> <span class="p">=</span> <span class="k">value</span> <span class="p">??</span> <span class="s">&#34;Default label&#34;</span><span class="p">;</span>
+<span class="p">}</span>
+</code></pre></td></tr></table>
+</div>
+</div><h3 id="ref-局部变量和返回结果">Ref 局部变量和返回结果</h3>
+<p>此功能允许使用并返回对变量的引用的算法，这些变量在其他位置定义。 一个示例是使用大型矩阵并查找具有某些特征的单个位置。 <br />
+这个功能主要是为了提高值类型的性能，让它真正发挥其作用。C++就有类似的功能。</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><code><span class="lnt"> 1
+</span><span class="lnt"> 2
+</span><span class="lnt"> 3
+</span><span class="lnt"> 4
+</span><span class="lnt"> 5
+</span><span class="lnt"> 6
+</span><span class="lnt"> 7
+</span><span class="lnt"> 8
+</span><span class="lnt"> 9
+</span><span class="lnt">10
+</span><span class="lnt">11
+</span><span class="lnt">12
+</span></code></pre></td>
+<td class="lntd">
+<pre class="chroma"><code class="language-C#" data-lang="C#"><span class="k">public</span> <span class="k">static</span> <span class="k">ref</span> <span class="kt">int</span> <span class="n">Find</span><span class="p">(</span><span class="kt">int</span><span class="p">[,]</span> <span class="n">matrix</span><span class="p">,</span> <span class="n">Func</span><span class="p">&lt;</span><span class="kt">int</span><span class="p">,</span> <span class="kt">bool</span><span class="p">&gt;</span> <span class="n">predicate</span><span class="p">)</span>
+<span class="p">{</span>
+    <span class="k">for</span> <span class="p">(</span><span class="kt">int</span> <span class="n">i</span> <span class="p">=</span> <span class="m">0</span><span class="p">;</span> <span class="n">i</span> <span class="p">&lt;</span> <span class="n">matrix</span><span class="p">.</span><span class="n">GetLength</span><span class="p">(</span><span class="m">0</span><span class="p">);</span> <span class="n">i</span><span class="p">++)</span>
+        <span class="k">for</span> <span class="p">(</span><span class="kt">int</span> <span class="n">j</span> <span class="p">=</span> <span class="m">0</span><span class="p">;</span> <span class="n">j</span> <span class="p">&lt;</span> <span class="n">matrix</span><span class="p">.</span><span class="n">GetLength</span><span class="p">(</span><span class="m">1</span><span class="p">);</span> <span class="n">j</span><span class="p">++)</span>
+            <span class="k">if</span> <span class="p">(</span><span class="n">predicate</span><span class="p">(</span><span class="n">matrix</span><span class="p">[</span><span class="n">i</span><span class="p">,</span> <span class="n">j</span><span class="p">]))</span>
+                <span class="k">return</span> <span class="k">ref</span> <span class="n">matrix</span><span class="p">[</span><span class="n">i</span><span class="p">,</span> <span class="n">j</span><span class="p">];</span>
+    <span class="k">throw</span> <span class="k">new</span> <span class="n">InvalidOperationException</span><span class="p">(</span><span class="s">&#34;Not found&#34;</span><span class="p">);</span>
+<span class="p">}</span>
+<span class="k">ref</span> <span class="kt">var</span> <span class="n">item</span> <span class="p">=</span> <span class="k">ref</span> <span class="n">MatrixSearch</span><span class="p">.</span><span class="n">Find</span><span class="p">(</span><span class="n">matrix</span><span class="p">,</span> <span class="p">(</span><span class="n">val</span><span class="p">)</span> <span class="p">=&gt;</span> <span class="n">val</span> <span class="p">==</span> <span class="m">42</span><span class="p">);</span>
+<span class="n">Console</span><span class="p">.</span><span class="n">WriteLine</span><span class="p">(</span><span class="n">item</span><span class="p">);</span>
+<span class="n">item</span> <span class="p">=</span> <span class="m">24</span><span class="p">;</span>
+<span class="n">Console</span><span class="p">.</span><span class="n">WriteLine</span><span class="p">(</span><span class="n">matrix</span><span class="p">[</span><span class="m">4</span><span class="p">,</span> <span class="m">2</span><span class="p">]);</span>
+</code></pre></td></tr></table>
+</div>
+</div><h3 id="弃元">弃元</h3>
+<p>通常，在进行元组解构或使用out参数调用方法时，必须定义一个其值无关紧要且你不打算使用的变量。 为处理此情况，C#增添了对弃元的支持 。 弃元是一个名为_的只写变量，可向单个变量赋予要放弃的所有值。 弃元类似于未赋值的变量；不可在代码中使用弃元（赋值语句除外）。</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><code><span class="lnt"> 1
+</span><span class="lnt"> 2
+</span><span class="lnt"> 3
+</span><span class="lnt"> 4
+</span><span class="lnt"> 5
+</span><span class="lnt"> 6
+</span><span class="lnt"> 7
+</span><span class="lnt"> 8
+</span><span class="lnt"> 9
+</span><span class="lnt">10
+</span><span class="lnt">11
+</span><span class="lnt">12
+</span><span class="lnt">13
+</span><span class="lnt">14
+</span><span class="lnt">15
+</span><span class="lnt">16
+</span><span class="lnt">17
+</span><span class="lnt">18
+</span><span class="lnt">19
+</span><span class="lnt">20
+</span><span class="lnt">21
+</span><span class="lnt">22
+</span><span class="lnt">23
+</span><span class="lnt">24
+</span><span class="lnt">25
+</span><span class="lnt">26
+</span><span class="lnt">27
+</span><span class="lnt">28
+</span><span class="lnt">29
+</span><span class="lnt">30
+</span><span class="lnt">31
+</span><span class="lnt">32
+</span><span class="lnt">33
+</span><span class="lnt">34
+</span><span class="lnt">35
+</span><span class="lnt">36
+</span></code></pre></td>
+<td class="lntd">
+<pre class="chroma"><code class="language-C#" data-lang="C#"><span class="k">using</span> <span class="nn">System</span><span class="p">;</span>
+<span class="k">using</span> <span class="nn">System.Collections.Generic</span><span class="p">;</span>
+
+<span class="k">public</span> <span class="k">class</span> <span class="nc">Example</span>
+<span class="p">{</span>
+    <span class="k">public</span> <span class="k">static</span> <span class="k">void</span> <span class="n">Main</span><span class="p">()</span>
+    <span class="p">{</span>
+        <span class="kt">var</span> <span class="p">(</span><span class="n">_</span><span class="p">,</span> <span class="n">_</span><span class="p">,</span> <span class="n">_</span><span class="p">,</span> <span class="n">pop1</span><span class="p">,</span> <span class="n">_</span><span class="p">,</span> <span class="n">pop2</span><span class="p">)</span> <span class="p">=</span> <span class="n">QueryCityDataForYears</span><span class="p">(</span><span class="s">&#34;New York City&#34;</span><span class="p">,</span> <span class="m">1960</span><span class="p">,</span> <span class="m">2010</span><span class="p">);</span>
+
+        <span class="n">Console</span><span class="p">.</span><span class="n">WriteLine</span><span class="p">(</span><span class="s">$&#34;Population change, 1960 to 2010: {pop2 - pop1:N0}&#34;</span><span class="p">);</span>
+    <span class="p">}</span>
+
+    <span class="k">private</span> <span class="k">static</span> <span class="p">(</span><span class="kt">string</span><span class="p">,</span> <span class="kt">double</span><span class="p">,</span> <span class="kt">int</span><span class="p">,</span> <span class="kt">int</span><span class="p">,</span> <span class="kt">int</span><span class="p">,</span> <span class="kt">int</span><span class="p">)</span> <span class="n">QueryCityDataForYears</span><span class="p">(</span><span class="kt">string</span> <span class="n">name</span><span class="p">,</span> <span class="kt">int</span> <span class="n">year1</span><span class="p">,</span> <span class="kt">int</span> <span class="n">year2</span><span class="p">)</span>
+    <span class="p">{</span>
+        <span class="kt">int</span> <span class="n">population1</span> <span class="p">=</span> <span class="m">0</span><span class="p">,</span> <span class="n">population2</span> <span class="p">=</span> <span class="m">0</span><span class="p">;</span>
+        <span class="kt">double</span> <span class="n">area</span> <span class="p">=</span> <span class="m">0</span><span class="p">;</span>
+
+        <span class="k">if</span> <span class="p">(</span><span class="n">name</span> <span class="p">==</span> <span class="s">&#34;New York City&#34;</span><span class="p">)</span>
+        <span class="p">{</span>
+            <span class="n">area</span> <span class="p">=</span> <span class="m">468.48</span><span class="p">;</span> 
+            <span class="k">if</span> <span class="p">(</span><span class="n">year1</span> <span class="p">==</span> <span class="m">1960</span><span class="p">)</span>
+            <span class="p">{</span>
+                <span class="n">population1</span> <span class="p">=</span> <span class="m">7781984</span><span class="p">;</span>
+            <span class="p">}</span>
+            <span class="k">if</span> <span class="p">(</span><span class="n">year2</span> <span class="p">==</span> <span class="m">2010</span><span class="p">)</span>
+            <span class="p">{</span>
+                <span class="n">population2</span> <span class="p">=</span> <span class="m">8175133</span><span class="p">;</span>
+            <span class="p">}</span>
+            <span class="k">return</span> <span class="p">(</span><span class="n">name</span><span class="p">,</span> <span class="n">area</span><span class="p">,</span> <span class="n">year1</span><span class="p">,</span> <span class="n">population1</span><span class="p">,</span> <span class="n">year2</span><span class="p">,</span> <span class="n">population2</span><span class="p">);</span>
+        <span class="p">}</span>
+
+        <span class="k">return</span> <span class="p">(</span><span class="s">&#34;&#34;</span><span class="p">,</span> <span class="m">0</span><span class="p">,</span> <span class="m">0</span><span class="p">,</span> <span class="m">0</span><span class="p">,</span> <span class="m">0</span><span class="p">,</span> <span class="m">0</span><span class="p">);</span>
+    <span class="p">}</span>
+<span class="p">}</span>
+<span class="c1">// The example displays the following output:
+</span><span class="c1">//      Population change, 1960 to 2010: 393,149
+</span></code></pre></td></tr></table>
+</div>
+</div><h3 id="二进制文本和数字分隔符">二进制文本和数字分隔符</h3>
+<p>这个用于使数字和二进制更可读。</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><code><span class="lnt"> 1
+</span><span class="lnt"> 2
+</span><span class="lnt"> 3
+</span><span class="lnt"> 4
+</span><span class="lnt"> 5
+</span><span class="lnt"> 6
+</span><span class="lnt"> 7
+</span><span class="lnt"> 8
+</span><span class="lnt"> 9
+</span><span class="lnt">10
+</span></code></pre></td>
+<td class="lntd">
+<pre class="chroma"><code class="language-C#" data-lang="C#"><span class="c1">// 二进制文本：
+</span><span class="c1"></span><span class="k">public</span> <span class="k">const</span> <span class="kt">int</span> <span class="n">Sixteen</span> <span class="p">=</span>   <span class="m">0</span><span class="n">b0001_0000</span><span class="p">;</span>
+<span class="k">public</span> <span class="k">const</span> <span class="kt">int</span> <span class="n">ThirtyTwo</span> <span class="p">=</span> <span class="m">0</span><span class="n">b0010_0000</span><span class="p">;</span>
+<span class="k">public</span> <span class="k">const</span> <span class="kt">int</span> <span class="n">SixtyFour</span> <span class="p">=</span> <span class="m">0</span><span class="n">b0100_0000</span><span class="p">;</span>
+<span class="k">public</span> <span class="k">const</span> <span class="kt">int</span> <span class="n">OneHundredTwentyEight</span> <span class="p">=</span> <span class="m">0</span><span class="n">b1000_0000</span><span class="p">;</span>
+
+<span class="c1">// 数字分隔符：
+</span><span class="c1"></span><span class="k">public</span> <span class="k">const</span> <span class="kt">long</span> <span class="n">BillionsAndBillions</span> <span class="p">=</span> <span class="m">100</span><span class="n">_000_000_000</span><span class="p">;</span>
+<span class="k">public</span> <span class="k">const</span> <span class="kt">double</span> <span class="n">AvogadroConstant</span> <span class="p">=</span> <span class="m">6.022</span><span class="n">_140_857_747_474e23</span><span class="p">;</span>
+<span class="k">public</span> <span class="k">const</span> <span class="kt">decimal</span> <span class="n">GoldenRatio</span> <span class="p">=</span> <span class="m">1.618</span><span class="n">_033_988_749_894_848_204_586_834_365_638_117_720_309_179M</span><span class="p">;</span>
+</code></pre></td></tr></table>
+</div>
+</div><h3 id="throw表达式">throw表达式</h3>
+<p>throw之前必须是一个语句，因此有时不得不写更多的代码来完成所需功能。但7.0提供了throw表达式来使代码更简洁，阅读更轻松。</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><code><span class="lnt"> 1
+</span><span class="lnt"> 2
+</span><span class="lnt"> 3
+</span><span class="lnt"> 4
+</span><span class="lnt"> 5
+</span><span class="lnt"> 6
+</span><span class="lnt"> 7
+</span><span class="lnt"> 8
+</span><span class="lnt"> 9
+</span><span class="lnt">10
+</span><span class="lnt">11
+</span><span class="lnt">12
+</span></code></pre></td>
+<td class="lntd">
+<pre class="chroma"><code class="language-C#" data-lang="C#"><span class="k">void</span> <span class="n">Main</span><span class="p">()</span>
+<span class="p">{</span>
+    <span class="c1">// You can now throw expressions in expressions clauses.
+</span><span class="c1"></span>    <span class="c1">// This is useful in conditional expressions:
+</span><span class="c1"></span>
+    <span class="kt">string</span> <span class="n">result</span> <span class="p">=</span> <span class="k">new</span> <span class="n">Random</span><span class="p">().</span><span class="n">Next</span><span class="p">(</span><span class="m">2</span><span class="p">)</span> <span class="p">==</span> <span class="m">0</span> <span class="p">?</span> <span class="s">&#34;Good&#34;</span> <span class="p">:</span> <span class="k">throw</span> <span class="k">new</span> <span class="n">Exception</span> <span class="p">(</span><span class="s">&#34;Bad&#34;</span><span class="p">);</span>
+    <span class="n">result</span><span class="p">.</span><span class="n">Dump</span><span class="p">();</span>
+
+    <span class="n">Foo</span><span class="p">().</span><span class="n">Dump</span><span class="p">();</span>
+<span class="p">}</span>
+
+<span class="k">public</span> <span class="kt">string</span> <span class="n">Foo</span><span class="p">()</span> <span class="p">=&gt;</span> <span class="k">throw</span> <span class="k">new</span> <span class="n">NotImplementedException</span><span class="p">();</span>
+</code></pre></td></tr></table>
+</div>
+</div><h2 id="c-80-版---2019">C# 8.0 版 - 2019</h2>
+<h3 id="readonly-成员">Readonly 成员</h3>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span></code></pre></td>
+<td class="lntd">
+<pre class="chroma"><code class="language-C#" data-lang="C#"><span class="k">public</span> <span class="k">readonly</span> <span class="k">override</span> <span class="kt">string</span> <span class="n">ToString</span><span class="p">()</span> <span class="p">=&gt;</span>
+    <span class="s">$&#34;({X}, {Y}) is {Distance} from the origin&#34;</span><span class="p">;</span>
+</code></pre></td></tr></table>
+</div>
+</div><h3 id="默认接口方法">默认接口方法</h3>
+<p>接口中也能定义方法了，这个新功能经常受到争论。但想想，有时是先定义接口，而实现接口需要实现很多相关、但又繁琐的功能，如ASP.NET Core中的ILogger，谁用谁知道，特别多需要实现的方法，但又都差不多。因此所以这个功能其实很有必要。</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><code><span class="lnt"> 1
+</span><span class="lnt"> 2
+</span><span class="lnt"> 3
+</span><span class="lnt"> 4
+</span><span class="lnt"> 5
+</span><span class="lnt"> 6
+</span><span class="lnt"> 7
+</span><span class="lnt"> 8
+</span><span class="lnt"> 9
+</span><span class="lnt">10
+</span><span class="lnt">11
+</span><span class="lnt">12
+</span><span class="lnt">13
+</span><span class="lnt">14
+</span><span class="lnt">15
+</span><span class="lnt">16
+</span><span class="lnt">17
+</span><span class="lnt">18
+</span><span class="lnt">19
+</span><span class="lnt">20
+</span><span class="lnt">21
+</span></code></pre></td>
+<td class="lntd">
+<pre class="chroma"><code class="language-C#" data-lang="C#"><span class="k">void</span> <span class="n">Main</span><span class="p">()</span>
+<span class="p">{</span>
+    <span class="n">ILogger</span> <span class="n">foo</span> <span class="p">=</span> <span class="k">new</span> <span class="n">Logger</span><span class="p">();</span>
+    <span class="n">foo</span><span class="p">.</span><span class="n">Log</span> <span class="p">(</span><span class="k">new</span> <span class="n">Exception</span> <span class="p">(</span><span class="s">&#34;test&#34;</span><span class="p">));</span>   
+<span class="p">}</span>
+
+<span class="k">class</span> <span class="nc">Logger</span> <span class="p">:</span> <span class="n">ILogger</span>
+<span class="p">{</span>   
+    <span class="k">public</span> <span class="k">void</span> <span class="n">Log</span> <span class="p">(</span><span class="kt">string</span> <span class="n">message</span><span class="p">)</span> <span class="p">=&gt;</span> <span class="n">Console</span><span class="p">.</span><span class="n">WriteLine</span> <span class="p">(</span><span class="n">message</span><span class="p">);</span>
+<span class="p">}</span>
+
+<span class="k">interface</span> <span class="n">ILogger</span>
+<span class="p">{</span>
+    <span class="k">void</span> <span class="n">Log</span> <span class="p">(</span><span class="kt">string</span> <span class="n">message</span><span class="p">);</span>  
+
+    <span class="c1">// Adding a new member to an interface need not break implementors:
+</span><span class="c1"></span>    <span class="k">public</span> <span class="k">void</span> <span class="n">Log</span> <span class="p">(</span><span class="n">Exception</span> <span class="n">ex</span><span class="p">)</span> <span class="p">=&gt;</span> <span class="n">Log</span> <span class="p">(</span><span class="n">ExceptionHeader</span> <span class="p">+</span> <span class="n">ex</span><span class="p">.</span><span class="n">Message</span><span class="p">);</span>
+
+    <span class="c1">// The static modifier (and other modifiers) are now allowed:
+</span><span class="c1"></span>    <span class="k">static</span> <span class="kt">string</span> <span class="n">ExceptionHeader</span> <span class="p">=</span> <span class="s">&#34;Exception: &#34;</span><span class="p">;</span>
+<span class="p">}</span>
+</code></pre></td></tr></table>
+</div>
+</div><h3 id="模式匹配增强">模式匹配增强</h3>
+<p>这个是为简化代码、函数式编程而生的，我个人非常喜欢。</p>
+<h3 id="属性模式">属性模式</h3>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span><span class="lnt">3
+</span><span class="lnt">4
+</span><span class="lnt">5
+</span><span class="lnt">6
+</span><span class="lnt">7
+</span><span class="lnt">8
+</span><span class="lnt">9
+</span></code></pre></td>
+<td class="lntd">
+<pre class="chroma"><code class="language-C#" data-lang="C#"><span class="k">public</span> <span class="k">static</span> <span class="kt">decimal</span> <span class="n">ComputeSalesTax</span><span class="p">(</span><span class="n">Address</span> <span class="n">location</span><span class="p">,</span> <span class="kt">decimal</span> <span class="n">salePrice</span><span class="p">)</span> <span class="p">=&gt;</span>
+    <span class="n">location</span> <span class="k">switch</span>
+    <span class="p">{</span>
+        <span class="p">{</span> <span class="n">State</span><span class="p">:</span> <span class="s">&#34;WA&#34;</span> <span class="p">}</span> <span class="p">=&gt;</span> <span class="n">salePrice</span> <span class="p">*</span> <span class="m">0.06</span><span class="n">M</span><span class="p">,</span>
+        <span class="p">{</span> <span class="n">State</span><span class="p">:</span> <span class="s">&#34;MN&#34;</span> <span class="p">}</span> <span class="p">=&gt;</span> <span class="n">salePrice</span> <span class="p">*</span> <span class="m">0.75</span><span class="n">M</span><span class="p">,</span>
+        <span class="p">{</span> <span class="n">State</span><span class="p">:</span> <span class="s">&#34;MI&#34;</span> <span class="p">}</span> <span class="p">=&gt;</span> <span class="n">salePrice</span> <span class="p">*</span> <span class="m">0.05</span><span class="n">M</span><span class="p">,</span>
+        <span class="c1">// other cases removed for brevity...
+</span><span class="c1"></span>        <span class="n">_</span> <span class="p">=&gt;</span> <span class="m">0</span><span class="n">M</span>
+    <span class="p">};</span>
+</code></pre></td></tr></table>
+</div>
+</div><h3 id="tuple模式">Tuple模式</h3>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><code><span class="lnt"> 1
+</span><span class="lnt"> 2
+</span><span class="lnt"> 3
+</span><span class="lnt"> 4
+</span><span class="lnt"> 5
+</span><span class="lnt"> 6
+</span><span class="lnt"> 7
+</span><span class="lnt"> 8
+</span><span class="lnt"> 9
+</span><span class="lnt">10
+</span><span class="lnt">11
+</span></code></pre></td>
+<td class="lntd">
+<pre class="chroma"><code class="language-C#" data-lang="C#"><span class="k">public</span> <span class="k">static</span> <span class="kt">string</span> <span class="n">RockPaperScissors</span><span class="p">(</span><span class="kt">string</span> <span class="n">first</span><span class="p">,</span> <span class="kt">string</span> <span class="n">second</span><span class="p">)</span>
+    <span class="p">=&gt;</span> <span class="p">(</span><span class="n">first</span><span class="p">,</span> <span class="n">second</span><span class="p">)</span> <span class="k">switch</span>
+    <span class="p">{</span>
+        <span class="p">(</span><span class="s">&#34;rock&#34;</span><span class="p">,</span> <span class="s">&#34;paper&#34;</span><span class="p">)</span> <span class="p">=&gt;</span> <span class="s">&#34;rock is covered by paper. Paper wins.&#34;</span><span class="p">,</span>
+        <span class="p">(</span><span class="s">&#34;rock&#34;</span><span class="p">,</span> <span class="s">&#34;scissors&#34;</span><span class="p">)</span> <span class="p">=&gt;</span> <span class="s">&#34;rock breaks scissors. Rock wins.&#34;</span><span class="p">,</span>
+        <span class="p">(</span><span class="s">&#34;paper&#34;</span><span class="p">,</span> <span class="s">&#34;rock&#34;</span><span class="p">)</span> <span class="p">=&gt;</span> <span class="s">&#34;paper covers rock. Paper wins.&#34;</span><span class="p">,</span>
+        <span class="p">(</span><span class="s">&#34;paper&#34;</span><span class="p">,</span> <span class="s">&#34;scissors&#34;</span><span class="p">)</span> <span class="p">=&gt;</span> <span class="s">&#34;paper is cut by scissors. Scissors wins.&#34;</span><span class="p">,</span>
+        <span class="p">(</span><span class="s">&#34;scissors&#34;</span><span class="p">,</span> <span class="s">&#34;rock&#34;</span><span class="p">)</span> <span class="p">=&gt;</span> <span class="s">&#34;scissors is broken by rock. Rock wins.&#34;</span><span class="p">,</span>
+        <span class="p">(</span><span class="s">&#34;scissors&#34;</span><span class="p">,</span> <span class="s">&#34;paper&#34;</span><span class="p">)</span> <span class="p">=&gt;</span> <span class="s">&#34;scissors cuts paper. Scissors wins.&#34;</span><span class="p">,</span>
+        <span class="p">(</span><span class="n">_</span><span class="p">,</span> <span class="n">_</span><span class="p">)</span> <span class="p">=&gt;</span> <span class="s">&#34;tie&#34;</span>
+    <span class="p">};</span>
+</code></pre></td></tr></table>
+</div>
+</div><h3 id="位置模式">位置模式</h3>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><code><span class="lnt"> 1
+</span><span class="lnt"> 2
+</span><span class="lnt"> 3
+</span><span class="lnt"> 4
+</span><span class="lnt"> 5
+</span><span class="lnt"> 6
+</span><span class="lnt"> 7
+</span><span class="lnt"> 8
+</span><span class="lnt"> 9
+</span><span class="lnt">10
+</span></code></pre></td>
+<td class="lntd">
+<pre class="chroma"><code class="language-C#" data-lang="C#"><span class="k">static</span> <span class="n">Quadrant</span> <span class="n">GetQuadrant</span><span class="p">(</span><span class="n">Point</span> <span class="n">point</span><span class="p">)</span> <span class="p">=&gt;</span> <span class="n">point</span> <span class="k">switch</span>
+<span class="p">{</span>
+    <span class="p">(</span><span class="m">0</span><span class="p">,</span> <span class="m">0</span><span class="p">)</span> <span class="p">=&gt;</span> <span class="n">Quadrant</span><span class="p">.</span><span class="n">Origin</span><span class="p">,</span>
+    <span class="kt">var</span> <span class="p">(</span><span class="n">x</span><span class="p">,</span> <span class="n">y</span><span class="p">)</span> <span class="n">when</span> <span class="n">x</span> <span class="p">&gt;</span> <span class="m">0</span> <span class="p">&amp;&amp;</span> <span class="n">y</span> <span class="p">&gt;</span> <span class="m">0</span> <span class="p">=&gt;</span> <span class="n">Quadrant</span><span class="p">.</span><span class="n">One</span><span class="p">,</span>
+    <span class="kt">var</span> <span class="p">(</span><span class="n">x</span><span class="p">,</span> <span class="n">y</span><span class="p">)</span> <span class="n">when</span> <span class="n">x</span> <span class="p">&lt;</span> <span class="m">0</span> <span class="p">&amp;&amp;</span> <span class="n">y</span> <span class="p">&gt;</span> <span class="m">0</span> <span class="p">=&gt;</span> <span class="n">Quadrant</span><span class="p">.</span><span class="n">Two</span><span class="p">,</span>
+    <span class="kt">var</span> <span class="p">(</span><span class="n">x</span><span class="p">,</span> <span class="n">y</span><span class="p">)</span> <span class="n">when</span> <span class="n">x</span> <span class="p">&lt;</span> <span class="m">0</span> <span class="p">&amp;&amp;</span> <span class="n">y</span> <span class="p">&lt;</span> <span class="m">0</span> <span class="p">=&gt;</span> <span class="n">Quadrant</span><span class="p">.</span><span class="n">Three</span><span class="p">,</span>
+    <span class="kt">var</span> <span class="p">(</span><span class="n">x</span><span class="p">,</span> <span class="n">y</span><span class="p">)</span> <span class="n">when</span> <span class="n">x</span> <span class="p">&gt;</span> <span class="m">0</span> <span class="p">&amp;&amp;</span> <span class="n">y</span> <span class="p">&lt;</span> <span class="m">0</span> <span class="p">=&gt;</span> <span class="n">Quadrant</span><span class="p">.</span><span class="n">Four</span><span class="p">,</span>
+    <span class="kt">var</span> <span class="p">(</span><span class="n">_</span><span class="p">,</span> <span class="n">_</span><span class="p">)</span> <span class="p">=&gt;</span> <span class="n">Quadrant</span><span class="p">.</span><span class="n">OnBorder</span><span class="p">,</span>
+    <span class="n">_</span> <span class="p">=&gt;</span> <span class="n">Quadrant</span><span class="p">.</span><span class="n">Unknown</span>
+<span class="p">};</span>
+</code></pre></td></tr></table>
+</div>
+</div><h3 id="switch表达式">switch表达式</h3>
+<p>这个功能能使代码从大量的if/else或switch/case变成“一行代码”，符合函数式编程的思想，非常好用！</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><code><span class="lnt"> 1
+</span><span class="lnt"> 2
+</span><span class="lnt"> 3
+</span><span class="lnt"> 4
+</span><span class="lnt"> 5
+</span><span class="lnt"> 6
+</span><span class="lnt"> 7
+</span><span class="lnt"> 8
+</span><span class="lnt"> 9
+</span><span class="lnt">10
+</span><span class="lnt">11
+</span><span class="lnt">12
+</span></code></pre></td>
+<td class="lntd">
+<pre class="chroma"><code class="language-C#" data-lang="C#"><span class="k">public</span> <span class="k">static</span> <span class="n">RGBColor</span> <span class="n">FromRainbow</span><span class="p">(</span><span class="n">Rainbow</span> <span class="n">colorBand</span><span class="p">)</span> <span class="p">=&gt;</span>
+    <span class="n">colorBand</span> <span class="k">switch</span>
+    <span class="p">{</span>
+        <span class="n">Rainbow</span><span class="p">.</span><span class="n">Red</span>    <span class="p">=&gt;</span> <span class="k">new</span> <span class="n">RGBColor</span><span class="p">(</span><span class="m">0</span><span class="n">xFF</span><span class="p">,</span> <span class="m">0</span><span class="n">x00</span><span class="p">,</span> <span class="m">0</span><span class="n">x00</span><span class="p">),</span>
+        <span class="n">Rainbow</span><span class="p">.</span><span class="n">Orange</span> <span class="p">=&gt;</span> <span class="k">new</span> <span class="n">RGBColor</span><span class="p">(</span><span class="m">0</span><span class="n">xFF</span><span class="p">,</span> <span class="m">0</span><span class="n">x7F</span><span class="p">,</span> <span class="m">0</span><span class="n">x00</span><span class="p">),</span>
+        <span class="n">Rainbow</span><span class="p">.</span><span class="n">Yellow</span> <span class="p">=&gt;</span> <span class="k">new</span> <span class="n">RGBColor</span><span class="p">(</span><span class="m">0</span><span class="n">xFF</span><span class="p">,</span> <span class="m">0</span><span class="n">xFF</span><span class="p">,</span> <span class="m">0</span><span class="n">x00</span><span class="p">),</span>
+        <span class="n">Rainbow</span><span class="p">.</span><span class="n">Green</span>  <span class="p">=&gt;</span> <span class="k">new</span> <span class="n">RGBColor</span><span class="p">(</span><span class="m">0</span><span class="n">x00</span><span class="p">,</span> <span class="m">0</span><span class="n">xFF</span><span class="p">,</span> <span class="m">0</span><span class="n">x00</span><span class="p">),</span>
+        <span class="n">Rainbow</span><span class="p">.</span><span class="n">Blue</span>   <span class="p">=&gt;</span> <span class="k">new</span> <span class="n">RGBColor</span><span class="p">(</span><span class="m">0</span><span class="n">x00</span><span class="p">,</span> <span class="m">0</span><span class="n">x00</span><span class="p">,</span> <span class="m">0</span><span class="n">xFF</span><span class="p">),</span>
+        <span class="n">Rainbow</span><span class="p">.</span><span class="n">Indigo</span> <span class="p">=&gt;</span> <span class="k">new</span> <span class="n">RGBColor</span><span class="p">(</span><span class="m">0</span><span class="n">x4B</span><span class="p">,</span> <span class="m">0</span><span class="n">x00</span><span class="p">,</span> <span class="m">0</span><span class="n">x82</span><span class="p">),</span>
+        <span class="n">Rainbow</span><span class="p">.</span><span class="n">Violet</span> <span class="p">=&gt;</span> <span class="k">new</span> <span class="n">RGBColor</span><span class="p">(</span><span class="m">0</span><span class="n">x94</span><span class="p">,</span> <span class="m">0</span><span class="n">x00</span><span class="p">,</span> <span class="m">0</span><span class="n">xD3</span><span class="p">),</span>
+        <span class="n">_</span>              <span class="p">=&gt;</span> <span class="k">throw</span> <span class="k">new</span> <span class="n">ArgumentException</span><span class="p">(</span><span class="n">message</span><span class="p">:</span> <span class="s">&#34;invalid enum value&#34;</span><span class="p">,</span> <span class="n">paramName</span><span class="p">:</span> <span class="n">nameof</span><span class="p">(</span><span class="n">colorBand</span><span class="p">)),</span>
+    <span class="p">};</span>
+</code></pre></td></tr></table>
+</div>
+</div><h3 id="using声明">using声明</h3>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><code><span class="lnt"> 1
+</span><span class="lnt"> 2
+</span><span class="lnt"> 3
+</span><span class="lnt"> 4
+</span><span class="lnt"> 5
+</span><span class="lnt"> 6
+</span><span class="lnt"> 7
+</span><span class="lnt"> 8
+</span><span class="lnt"> 9
+</span><span class="lnt">10
+</span><span class="lnt">11
+</span><span class="lnt">12
+</span><span class="lnt">13
+</span><span class="lnt">14
+</span><span class="lnt">15
+</span><span class="lnt">16
+</span><span class="lnt">17
+</span><span class="lnt">18
+</span><span class="lnt">19
+</span><span class="lnt">20
+</span></code></pre></td>
+<td class="lntd">
+<pre class="chroma"><code class="language-C#" data-lang="C#"><span class="k">static</span> <span class="kt">int</span> <span class="n">WriteLinesToFile</span><span class="p">(</span><span class="n">IEnumerable</span><span class="p">&lt;</span><span class="kt">string</span><span class="p">&gt;</span> <span class="n">lines</span><span class="p">)</span>
+<span class="p">{</span>
+    <span class="k">using</span> <span class="nn">var</span> <span class="n">file</span> <span class="p">=</span> <span class="k">new</span> <span class="n">System</span><span class="p">.</span><span class="n">IO</span><span class="p">.</span><span class="n">StreamWriter</span><span class="p">(</span><span class="s">&#34;WriteLines2.txt&#34;</span><span class="p">);</span>
+    <span class="c1">// Notice how we declare skippedLines after the using statement.
+</span><span class="c1"></span>    <span class="kt">int</span> <span class="n">skippedLines</span> <span class="p">=</span> <span class="m">0</span><span class="p">;</span>
+    <span class="k">foreach</span> <span class="p">(</span><span class="kt">string</span> <span class="n">line</span> <span class="k">in</span> <span class="n">lines</span><span class="p">)</span>
+    <span class="p">{</span>
+        <span class="k">if</span> <span class="p">(!</span><span class="n">line</span><span class="p">.</span><span class="n">Contains</span><span class="p">(</span><span class="s">&#34;Second&#34;</span><span class="p">))</span>
+        <span class="p">{</span>
+            <span class="n">file</span><span class="p">.</span><span class="n">WriteLine</span><span class="p">(</span><span class="n">line</span><span class="p">);</span>
+        <span class="p">}</span>
+        <span class="k">else</span>
+        <span class="p">{</span>
+            <span class="n">skippedLines</span><span class="p">++;</span>
+        <span class="p">}</span>
+    <span class="p">}</span>
+    <span class="c1">// Notice how skippedLines is in scope here.
+</span><span class="c1"></span>    <span class="k">return</span> <span class="n">skippedLines</span><span class="p">;</span>
+    <span class="c1">// file is disposed here
+</span><span class="c1"></span><span class="p">}</span>
+</code></pre></td></tr></table>
+</div>
+</div><h3 id="静态本地函数">静态本地函数</h3>
+<p>相比非静态本地函数，静态本地函数没有闭包，因此生成的代码更少，性能也更容易控制。</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span><span class="lnt">3
+</span><span class="lnt">4
+</span><span class="lnt">5
+</span><span class="lnt">6
+</span><span class="lnt">7
+</span><span class="lnt">8
+</span></code></pre></td>
+<td class="lntd">
+<pre class="chroma"><code class="language-C#" data-lang="C#"><span class="kt">int</span> <span class="n">M</span><span class="p">()</span>
+<span class="p">{</span>
+    <span class="kt">int</span> <span class="n">y</span> <span class="p">=</span> <span class="m">5</span><span class="p">;</span>
+    <span class="kt">int</span> <span class="n">x</span> <span class="p">=</span> <span class="m">7</span><span class="p">;</span>
+    <span class="k">return</span> <span class="n">Add</span><span class="p">(</span><span class="n">x</span><span class="p">,</span> <span class="n">y</span><span class="p">);</span>
+
+    <span class="k">static</span> <span class="kt">int</span> <span class="n">Add</span><span class="p">(</span><span class="kt">int</span> <span class="n">left</span><span class="p">,</span> <span class="kt">int</span> <span class="n">right</span><span class="p">)</span> <span class="p">=&gt;</span> <span class="n">left</span> <span class="p">+</span> <span class="n">right</span><span class="p">;</span>
+<span class="p">}</span>
+</code></pre></td></tr></table>
+</div>
+</div><h3 id="异步流">异步流</h3>
+<p>这个功能和IEnumerable<T>、Task<T>对应，一个经典的表格如下：</p>
+<table>
+<thead>
+<tr>
+<th></th>
+<th>单值</th>
+<th>多值</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>同步</td>
+<td>T</td>
+<td>IEnumerable</td>
+</tr>
+<tr>
+<td>异步</td>
+<td>Task</td>
+<td>?</td>
+</tr>
+</tbody>
+</table>
+<p>其中，这个问号?终于有了答案，它就叫异步流——IAsyncEnumerable<T>：</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span><span class="lnt">3
+</span><span class="lnt">4
+</span><span class="lnt">5
+</span><span class="lnt">6
+</span><span class="lnt">7
+</span><span class="lnt">8
+</span></code></pre></td>
+<td class="lntd">
+<pre class="chroma"><code class="language-C#" data-lang="C#"><span class="k">public</span> <span class="k">static</span> <span class="k">async</span> <span class="n">System</span><span class="p">.</span><span class="n">Collections</span><span class="p">.</span><span class="n">Generic</span><span class="p">.</span><span class="n">IAsyncEnumerable</span><span class="p">&lt;</span><span class="kt">int</span><span class="p">&gt;</span> <span class="n">GenerateSequence</span><span class="p">()</span>
+<span class="p">{</span>
+    <span class="k">for</span> <span class="p">(</span><span class="kt">int</span> <span class="n">i</span> <span class="p">=</span> <span class="m">0</span><span class="p">;</span> <span class="n">i</span> <span class="p">&lt;</span> <span class="m">20</span><span class="p">;</span> <span class="n">i</span><span class="p">++)</span>
+    <span class="p">{</span>
+        <span class="k">await</span> <span class="n">Task</span><span class="p">.</span><span class="n">Delay</span><span class="p">(</span><span class="m">100</span><span class="p">);</span>
+        <span class="k">yield</span> <span class="k">return</span> <span class="n">i</span><span class="p">;</span>
+    <span class="p">}</span>
+<span class="p">}</span>
+</code></pre></td></tr></table>
+</div>
+</div><p>不像IEnumerable<T>，IAsyncEnumerable<T>系统还没有内置扩展方法，因此可能没有IEnumerable<T>方便，但是可以通过安装NuGet包f来实现和IEnumerable<T>一样（或者更爽）的效果。</p>
+<h3 id="索引和范围">索引和范围</h3>
+<p>和Python中的切片器一样，只是-用^代替了。</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><code><span class="lnt"> 1
+</span><span class="lnt"> 2
+</span><span class="lnt"> 3
+</span><span class="lnt"> 4
+</span><span class="lnt"> 5
+</span><span class="lnt"> 6
+</span><span class="lnt"> 7
+</span><span class="lnt"> 8
+</span><span class="lnt"> 9
+</span><span class="lnt">10
+</span><span class="lnt">11
+</span><span class="lnt">12
+</span><span class="lnt">13
+</span><span class="lnt">14
+</span><span class="lnt">15
+</span><span class="lnt">16
+</span><span class="lnt">17
+</span><span class="lnt">18
+</span><span class="lnt">19
+</span></code></pre></td>
+<td class="lntd">
+<pre class="chroma"><code class="language-C#" data-lang="C#"><span class="kt">var</span> <span class="n">words</span> <span class="p">=</span> <span class="k">new</span> <span class="kt">string</span><span class="p">[]</span>
+<span class="p">{</span>
+                <span class="c1">// index from start    index from end
+</span><span class="c1"></span>    <span class="s">&#34;The&#34;</span><span class="p">,</span>      <span class="c1">// 0                   ^9
+</span><span class="c1"></span>    <span class="s">&#34;quick&#34;</span><span class="p">,</span>    <span class="c1">// 1                   ^8
+</span><span class="c1"></span>    <span class="s">&#34;brown&#34;</span><span class="p">,</span>    <span class="c1">// 2                   ^7
+</span><span class="c1"></span>    <span class="s">&#34;fox&#34;</span><span class="p">,</span>      <span class="c1">// 3                   ^6
+</span><span class="c1"></span>    <span class="s">&#34;jumped&#34;</span><span class="p">,</span>   <span class="c1">// 4                   ^5
+</span><span class="c1"></span>    <span class="s">&#34;over&#34;</span><span class="p">,</span>     <span class="c1">// 5                   ^4
+</span><span class="c1"></span>    <span class="s">&#34;the&#34;</span><span class="p">,</span>      <span class="c1">// 6                   ^3
+</span><span class="c1"></span>    <span class="s">&#34;lazy&#34;</span><span class="p">,</span>     <span class="c1">// 7                   ^2
+</span><span class="c1"></span>    <span class="s">&#34;dog&#34;</span>       <span class="c1">// 8                   ^1
+</span><span class="c1"></span><span class="p">};</span>              <span class="c1">// 9 (or words.Length) ^0
+</span><span class="c1"></span>
+<span class="kt">var</span> <span class="n">quickBrownFox</span> <span class="p">=</span> <span class="n">words</span><span class="p">[</span><span class="m">1.</span><span class="p">.</span><span class="m">4</span><span class="p">];</span>
+<span class="kt">var</span> <span class="n">lazyDog</span> <span class="p">=</span> <span class="n">words</span><span class="p">[^</span><span class="m">2.</span><span class="p">.^</span><span class="m">0</span><span class="p">];</span>
+<span class="kt">var</span> <span class="n">allWords</span> <span class="p">=</span> <span class="n">words</span><span class="p">[..];</span> <span class="c1">// contains &#34;The&#34; through &#34;dog&#34;.
+</span><span class="c1"></span><span class="kt">var</span> <span class="n">firstPhrase</span> <span class="p">=</span> <span class="n">words</span><span class="p">[..</span><span class="m">4</span><span class="p">];</span> <span class="c1">// contains &#34;The&#34; through &#34;fox&#34;
+</span><span class="c1"></span><span class="kt">var</span> <span class="n">lastPhrase</span> <span class="p">=</span> <span class="n">words</span><span class="p">[</span><span class="m">6.</span><span class="p">.];</span> <span class="c1">// contains &#34;the&#34;, &#34;lazy&#34; and &#34;dog&#34;
+</span></code></pre></td></tr></table>
+</div>
+</div><h3 id="null合并赋值">Null合并赋值</h3>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span><span class="lnt">3
+</span><span class="lnt">4
+</span><span class="lnt">5
+</span><span class="lnt">6
+</span><span class="lnt">7
+</span><span class="lnt">8
+</span><span class="lnt">9
+</span></code></pre></td>
+<td class="lntd">
+<pre class="chroma"><code class="language-C#" data-lang="C#"><span class="n">List</span><span class="p">&lt;</span><span class="kt">int</span><span class="p">&gt;</span> <span class="n">numbers</span> <span class="p">=</span> <span class="k">null</span><span class="p">;</span>
+<span class="kt">int?</span> <span class="n">i</span> <span class="p">=</span> <span class="k">null</span><span class="p">;</span>
+
+<span class="n">numbers</span> <span class="p">??=</span> <span class="k">new</span> <span class="n">List</span><span class="p">&lt;</span><span class="kt">int</span><span class="p">&gt;();</span>
+<span class="n">numbers</span><span class="p">.</span><span class="n">Add</span><span class="p">(</span><span class="n">i</span> <span class="p">??=</span> <span class="m">17</span><span class="p">);</span>
+<span class="n">numbers</span><span class="p">.</span><span class="n">Add</span><span class="p">(</span><span class="n">i</span> <span class="p">??=</span> <span class="m">20</span><span class="p">);</span>
+
+<span class="n">Console</span><span class="p">.</span><span class="n">WriteLine</span><span class="p">(</span><span class="kt">string</span><span class="p">.</span><span class="n">Join</span><span class="p">(</span><span class="s">&#34; &#34;</span><span class="p">,</span> <span class="n">numbers</span><span class="p">));</span>  <span class="c1">// output: 17 17
+</span><span class="c1"></span><span class="n">Console</span><span class="p">.</span><span class="n">WriteLine</span><span class="p">(</span><span class="n">i</span><span class="p">);</span>  <span class="c1">// output: 17
+</span></code></pre></td></tr></table>
+</div>
+</div><h3 id="非托管构造类型">非托管构造类型</h3>
+<p>与任何非托管类型一样，可以创建指向此类型的变量的指针，或针对此类型的实例在堆栈上分配内存块。</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span><span class="lnt">3
+</span><span class="lnt">4
+</span><span class="lnt">5
+</span><span class="lnt">6
+</span></code></pre></td>
+<td class="lntd">
+<pre class="chroma"><code class="language-C#" data-lang="C#"><span class="n">Span</span><span class="p">&lt;</span><span class="n">Coords</span><span class="p">&lt;</span><span class="kt">int</span><span class="p">&gt;&gt;</span> <span class="n">coordinates</span> <span class="p">=</span> <span class="k">stackalloc</span><span class="p">[]</span>
+<span class="p">{</span>
+    <span class="k">new</span> <span class="n">Coords</span><span class="p">&lt;</span><span class="kt">int</span><span class="p">&gt;</span> <span class="p">{</span> <span class="n">X</span> <span class="p">=</span> <span class="m">0</span><span class="p">,</span> <span class="n">Y</span> <span class="p">=</span> <span class="m">0</span> <span class="p">},</span>
+    <span class="k">new</span> <span class="n">Coords</span><span class="p">&lt;</span><span class="kt">int</span><span class="p">&gt;</span> <span class="p">{</span> <span class="n">X</span> <span class="p">=</span> <span class="m">0</span><span class="p">,</span> <span class="n">Y</span> <span class="p">=</span> <span class="m">3</span> <span class="p">},</span>
+    <span class="k">new</span> <span class="n">Coords</span><span class="p">&lt;</span><span class="kt">int</span><span class="p">&gt;</span> <span class="p">{</span> <span class="n">X</span> <span class="p">=</span> <span class="m">4</span><span class="p">,</span> <span class="n">Y</span> <span class="p">=</span> <span class="m">0</span> <span class="p">}</span>
+<span class="p">};</span>
+</code></pre></td></tr></table>
+</div>
+</div><h3 id="嵌套表达式中的-stackalloc">嵌套表达式中的 stackalloc</h3>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span><span class="lnt">3
+</span></code></pre></td>
+<td class="lntd">
+<pre class="chroma"><code class="language-C#" data-lang="C#"><span class="n">Span</span><span class="p">&lt;</span><span class="kt">int</span><span class="p">&gt;</span> <span class="n">numbers</span> <span class="p">=</span> <span class="k">stackalloc</span><span class="p">[]</span> <span class="p">{</span> <span class="m">1</span><span class="p">,</span> <span class="m">2</span><span class="p">,</span> <span class="m">3</span><span class="p">,</span> <span class="m">4</span><span class="p">,</span> <span class="m">5</span><span class="p">,</span> <span class="m">6</span> <span class="p">};</span>
+<span class="kt">var</span> <span class="n">ind</span> <span class="p">=</span> <span class="n">numbers</span><span class="p">.</span><span class="n">IndexOfAny</span><span class="p">(</span><span class="k">stackalloc</span><span class="p">[]</span> <span class="p">{</span> <span class="m">2</span><span class="p">,</span> <span class="m">4</span><span class="p">,</span> <span class="m">6</span> <span class="p">,</span><span class="m">8</span> <span class="p">});</span>
+<span class="n">Console</span><span class="p">.</span><span class="n">WriteLine</span><span class="p">(</span><span class="n">ind</span><span class="p">);</span>  <span class="c1">// output: 1
 </span></code></pre></td></tr></table>
 </div>
 </div>
@@ -2681,6 +3771,65 @@ document.addEventListener('DOMContentLoaded', function () {
         <li><a href="#表达式树">表达式树</a></li>
         <li><a href="#扩展方法">扩展方法</a></li>
         <li><a href="#var">var</a></li>
+        <li><a href="#分部方法">分部方法</a></li>
+        <li><a href="#对象和集合初始值设定项">对象和集合初始值设定项</a></li>
+      </ul>
+    </li>
+    <li><a href="#c-40版---2010">C# 4.0版 - 2010</a>
+      <ul>
+        <li><a href="#dynamic">dynamic</a></li>
+        <li><a href="#命名参数可选参数">命名参数/可选参数</a></li>
+        <li><a href="#泛型中的协变和逆变">泛型中的协变和逆变</a></li>
+        <li><a href="#类型等效内置互操作类型">类型等效、内置互操作类型</a></li>
+      </ul>
+    </li>
+    <li><a href="#c-50版---2012">C# 5.0版 - 2012</a>
+      <ul>
+        <li><a href="#asyncawait">async/await</a></li>
+        <li><a href="#调用方信息">调用方信息</a></li>
+      </ul>
+    </li>
+    <li><a href="#c-60版---2015">C# 6.0版 - 2015</a>
+      <ul>
+        <li><a href="#静态导入">静态导入</a></li>
+        <li><a href="#异常筛选器">异常筛选器</a></li>
+        <li><a href="#自动初始化表达式">自动初始化表达式</a></li>
+        <li><a href="#expression-bodied-函数成员">Expression-bodied 函数成员</a></li>
+        <li><a href="#null传播器">Null传播器</a></li>
+        <li><a href="#字符串内插">字符串内插</a></li>
+        <li><a href="#nameof表达式">nameof表达式</a></li>
+        <li><a href="#索引初始值设定项">索引初始值设定项</a></li>
+      </ul>
+    </li>
+    <li><a href="#c-70版本---2017">C# 7.0版本 - 2017</a>
+      <ul>
+        <li><a href="#out变量">out变量</a></li>
+        <li><a href="#元组和解构">元组和解构</a></li>
+        <li><a href="#模式匹配">模式匹配</a></li>
+        <li><a href="#本地函数">本地函数</a></li>
+        <li><a href="#更多的expression-bodied成员">更多的expression-bodied成员</a></li>
+        <li><a href="#ref-局部变量和返回结果">Ref 局部变量和返回结果</a></li>
+        <li><a href="#弃元">弃元</a></li>
+        <li><a href="#二进制文本和数字分隔符">二进制文本和数字分隔符</a></li>
+        <li><a href="#throw表达式">throw表达式</a></li>
+      </ul>
+    </li>
+    <li><a href="#c-80-版---2019">C# 8.0 版 - 2019</a>
+      <ul>
+        <li><a href="#readonly-成员">Readonly 成员</a></li>
+        <li><a href="#默认接口方法">默认接口方法</a></li>
+        <li><a href="#模式匹配增强">模式匹配增强</a></li>
+        <li><a href="#属性模式">属性模式</a></li>
+        <li><a href="#tuple模式">Tuple模式</a></li>
+        <li><a href="#位置模式">位置模式</a></li>
+        <li><a href="#switch表达式">switch表达式</a></li>
+        <li><a href="#using声明">using声明</a></li>
+        <li><a href="#静态本地函数">静态本地函数</a></li>
+        <li><a href="#异步流">异步流</a></li>
+        <li><a href="#索引和范围">索引和范围</a></li>
+        <li><a href="#null合并赋值">Null合并赋值</a></li>
+        <li><a href="#非托管构造类型">非托管构造类型</a></li>
+        <li><a href="#嵌套表达式中的-stackalloc">嵌套表达式中的 stackalloc</a></li>
       </ul>
     </li>
   </ul>
