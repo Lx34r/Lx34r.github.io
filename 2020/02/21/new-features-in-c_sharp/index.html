@@ -5,15 +5,18 @@
     <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <title> – Lx34r&#39;s Blog</title>
+    <title>C# 各版本新功能列表 – Lx34r&#39;s Blog</title>
     
+
+
+  
+  <script defer src="/js/fuse.min.c4bee9a8d44273d6154fe86006923d4131eb2e8069d8897687137c6f37f553e3.js"></script>
+
 
 
 <script src="/js/enquire.min.aa37bdcb743826eecdae5c5d177fc7d6552340f1b4378ffaa9c82b2c6111400b.js"></script>
 
 <script defer src="/js/lazysizes.min.5e11d056075a05065b9c0bfec44084a113fc2976c2952ec804dedb61c7662db9.js"></script>
-
-<script defer src="/js/fuse.min.c4bee9a8d44273d6154fe86006923d4131eb2e8069d8897687137c6f37f553e3.js"></script>
 
 <script defer src="/js/helper/getParents.min.1618c696be7c98933f9a92677f518b512a74e55bdbb976b09936b4182e93181b.js"></script>
 
@@ -529,12 +532,20 @@
           }
         }
 
-        var utterances = document.querySelector('iframe');
+        var utterances = document.getElementById('utterances');
         if (utterances) {
-          utterances.contentWindow.postMessage({
+          utterances.querySelector('iframe').contentWindow.postMessage({
             type: 'set-theme',
             theme: selectedThemeVariant === "dark" || selectedThemeVariant === "hacker" ? 'photon-dark' : selectedThemeVariant === 'kimbie' ? 'github-dark-orange' : 'github-light',
           }, 'https://utteranc.es');
+        }
+
+        var twitterCards = document.querySelectorAll('.twitter-timeline');
+        if (twitterCards) {
+          window.postMessage({
+            type: 'set-twitter-theme',
+            theme: selectedThemeVariant === 'light' || selectedThemeVariant === 'solarized' ? 'light' : 'dark',
+          });
         }
       });
     }) : null;
@@ -543,11 +554,15 @@
 
   
     
+    var baseurl = JSON.parse("\"https://lx34r.cn\"");
+    
     var permalink = JSON.parse("\"https://lx34r.cn/2020/02/21/new-features-in-c_sharp/\"");
     var searchResults = null;
     var searchMenu = null;
     var searchText = null;
     
+    
+    var enableSearch = JSON.parse("true");
     
     var enableSearchHighlight = JSON.parse("true");
     
@@ -556,31 +571,33 @@
     var sectionType = JSON.parse("\"note\"");
 
     var fuse = null;
-
-    (function initFuse() {
-      var xhr = new XMLHttpRequest();
-      xhr.open('GET', permalink + "index.json");
-      xhr.setRequestHeader('Content-Type', 'application/json; charset=utf-8');
-      xhr.onload = function () {
-        if (xhr.status === 200) {
-          fuse = new Fuse(JSON.parse(xhr.response.toString('utf-8')), {
-            keys: sectionType.includes('publication') ? ['title', 'abstract'] : ['title', 'description', 'content'],
-            includeMatches: enableSearchHighlight,
-            shouldSort: true,
-            threshold: 0.4,
-            location: 0,
-            distance: 100,
-            maxPatternLength: 32,
-            minMatchCharLength: 1,
-          });
-          window.fuse = fuse;
-        }
-        else {
-          console.error('[' + xhr.status + ']Error:', xhr.statusText);
-        }
-      };
-      xhr.send();
-    })();
+    
+    if (enableSearch) {
+      (function initFuse() {
+        var xhr = new XMLHttpRequest();
+        xhr.open('GET', baseurl + "/index.json");
+        xhr.setRequestHeader('Content-Type', 'application/json; charset=utf-8');
+        xhr.onload = function () {
+          if (xhr.status === 200) {
+            fuse = new Fuse(JSON.parse(xhr.response.toString('utf-8')), {
+              keys: sectionType.includes('publication') ? ['title', 'abstract'] : ['title', 'description', 'content'],
+              includeMatches: enableSearchHighlight,
+              shouldSort: true,
+              threshold: 0.4,
+              location: 0,
+              distance: 100,
+              maxPatternLength: 32,
+              minMatchCharLength: 1,
+            });
+            window.fuse = fuse;
+          }
+          else {
+            console.error('[' + xhr.status + ']Error:', xhr.statusText);
+          }
+        };
+        xhr.send();
+      })();
+    }
 
     function makeLi(ulElem, obj) {
       var li = document.createElement('li');
@@ -1208,7 +1225,7 @@
 
 
 <meta property="og:site_name" content="Lx34r&#39;s Blog">
-<meta property="og:title" content="">
+<meta property="og:title" content="C# 各版本新功能列表">
 <meta property="og:url" content="https://lx34r.cn/2020/02/21/new-features-in-c_sharp/">
 <meta property="og:type" content="article">
 <meta property="og:description" content="基于官网的C#发展历史，通过非常简短的代码将每个新特性演示出来。">
@@ -1218,7 +1235,7 @@
     <meta property="og:image:url" content="https://lx34r.cn/images/note/new-features-in-C_Sharp/icon.png">
     <meta name="twitter:card" content="summary_large_image">
     <meta name="twitter:app:name:iphone" content="Lx34r&#39;s Blog">
-    <meta property="twitter:title" content="Lx34r&#39;s Blog">
+    <meta property="twitter:title" content="C# 各版本新功能列表">
     <meta property="twitter:description" content="基于官网的C#发展历史，通过非常简短的代码将每个新特性演示出来。">
   
 
@@ -1257,7 +1274,7 @@
   {
     "@context": "https://schema.org",
     "@type": "WebPage",
-    "headline": "",
+    "headline": "C# 各版本新功能列表",
     "datePublished": "2020-02-21T11:20:05+09:00",
     "dateModified": "2020-02-21T11:20:05+09:00",
     "url" : "https://lx34r.cn/2020/02/21/new-features-in-c_sharp/",
@@ -1292,7 +1309,7 @@
   <script>
     var dataLayer = window.dataLayer = window.dataLayer || [];
     dataLayer.push({
-      page:'',
+      page:'C# 各版本新功能列表',
       categories:'only examples about your dataLayer'
     });
   </script>
@@ -1450,19 +1467,19 @@
     
       <li class="navbarm__menu--item ">
         <a href="/tags" class="navbarm__menu--term" data-index="0">
-          tags
+          标签
         </a>
       </li>
     
       <li class="navbarm__menu--item ">
         <a href="/categories" class="navbarm__menu--term" data-index="1">
-          categories
+          分类
         </a>
       </li>
     
       <li class="navbarm__menu--item ">
         <a href="/series" class="navbarm__menu--term" data-index="2">
-          series
+          系列
         </a>
       </li>
     
@@ -1569,7 +1586,7 @@
   
   <li  class="is-active" >
     
-      <a href="https://lx34r.cn/2020/02/21/new-features-in-c_sharp/" class="capitalize">Lx34r&#39;s Blog</a>
+      <span>C# 各版本新功能列表</span>
     
   </li>
   
@@ -1581,7 +1598,7 @@
   <div class="single ">
     <div class="single__nojs">Please enable Javascript to view the contents</div>
     <script>document.querySelector('.single').classList.remove('hide'); document.querySelector('.single__nojs').classList.add('hide');</script>
-    <h2 class="single__title" data-ani="true"></h2>
+    <h2 class="single__title" data-ani="true">C# 各版本新功能列表</h2>
     <div class="single__meta">
       
 <div class="single__infos">
@@ -2415,7 +2432,7 @@
 </div><h3 id="索引初始值设定项">索引初始值设定项</h3>
 <div class="alert alert-info" role="alert" data-dir="ltr">使集合初始化更容易的另一个功能是对 Add 方法使用扩展方法 。 添加此功能的目的是进行 Visual Basic 的奇偶校验。 如果自定义集合类的方法具有通过语义方式添加新项的名称，则此功能非常有用。</div>
 
-<h2 id="c-70版本---2017">C# 7.0版本 - 2017</h2>
+<h2 id="c-70版---2017">C# 7.0版 - 2017</h2>
 <h3 id="out变量">out变量</h3>
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
@@ -3801,7 +3818,7 @@ document.addEventListener('DOMContentLoaded', function () {
         <li><a href="#索引初始值设定项">索引初始值设定项</a></li>
       </ul>
     </li>
-    <li><a href="#c-70版本---2017">C# 7.0版本 - 2017</a>
+    <li><a href="#c-70版---2017">C# 7.0版 - 2017</a>
       <ul>
         <li><a href="#out变量">out变量</a></li>
         <li><a href="#元组和解构">元组和解构</a></li>

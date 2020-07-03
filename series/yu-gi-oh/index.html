@@ -9,11 +9,14 @@
     
 
 
+  
+  <script defer src="/js/fuse.min.c4bee9a8d44273d6154fe86006923d4131eb2e8069d8897687137c6f37f553e3.js"></script>
+
+
+
 <script src="/js/enquire.min.aa37bdcb743826eecdae5c5d177fc7d6552340f1b4378ffaa9c82b2c6111400b.js"></script>
 
 <script defer src="/js/lazysizes.min.5e11d056075a05065b9c0bfec44084a113fc2976c2952ec804dedb61c7662db9.js"></script>
-
-<script defer src="/js/fuse.min.c4bee9a8d44273d6154fe86006923d4131eb2e8069d8897687137c6f37f553e3.js"></script>
 
 <script defer src="/js/helper/getParents.min.1618c696be7c98933f9a92677f518b512a74e55bdbb976b09936b4182e93181b.js"></script>
 
@@ -529,12 +532,20 @@
           }
         }
 
-        var utterances = document.querySelector('iframe');
+        var utterances = document.getElementById('utterances');
         if (utterances) {
-          utterances.contentWindow.postMessage({
+          utterances.querySelector('iframe').contentWindow.postMessage({
             type: 'set-theme',
             theme: selectedThemeVariant === "dark" || selectedThemeVariant === "hacker" ? 'photon-dark' : selectedThemeVariant === 'kimbie' ? 'github-dark-orange' : 'github-light',
           }, 'https://utteranc.es');
+        }
+
+        var twitterCards = document.querySelectorAll('.twitter-timeline');
+        if (twitterCards) {
+          window.postMessage({
+            type: 'set-twitter-theme',
+            theme: selectedThemeVariant === 'light' || selectedThemeVariant === 'solarized' ? 'light' : 'dark',
+          });
         }
       });
     }) : null;
@@ -543,11 +554,15 @@
 
   
     
+    var baseurl = JSON.parse("\"https://lx34r.cn\"");
+    
     var permalink = JSON.parse("\"https://lx34r.cn/series/yu-gi-oh/\"");
     var searchResults = null;
     var searchMenu = null;
     var searchText = null;
     
+    
+    var enableSearch = JSON.parse("true");
     
     var enableSearchHighlight = JSON.parse("true");
     
@@ -556,31 +571,33 @@
     var sectionType = JSON.parse("\"series\"");
 
     var fuse = null;
-
-    (function initFuse() {
-      var xhr = new XMLHttpRequest();
-      xhr.open('GET', permalink + "index.json");
-      xhr.setRequestHeader('Content-Type', 'application/json; charset=utf-8');
-      xhr.onload = function () {
-        if (xhr.status === 200) {
-          fuse = new Fuse(JSON.parse(xhr.response.toString('utf-8')), {
-            keys: sectionType.includes('publication') ? ['title', 'abstract'] : ['title', 'description', 'content'],
-            includeMatches: enableSearchHighlight,
-            shouldSort: true,
-            threshold: 0.4,
-            location: 0,
-            distance: 100,
-            maxPatternLength: 32,
-            minMatchCharLength: 1,
-          });
-          window.fuse = fuse;
-        }
-        else {
-          console.error('[' + xhr.status + ']Error:', xhr.statusText);
-        }
-      };
-      xhr.send();
-    })();
+    
+    if (enableSearch) {
+      (function initFuse() {
+        var xhr = new XMLHttpRequest();
+        xhr.open('GET', baseurl + "/index.json");
+        xhr.setRequestHeader('Content-Type', 'application/json; charset=utf-8');
+        xhr.onload = function () {
+          if (xhr.status === 200) {
+            fuse = new Fuse(JSON.parse(xhr.response.toString('utf-8')), {
+              keys: sectionType.includes('publication') ? ['title', 'abstract'] : ['title', 'description', 'content'],
+              includeMatches: enableSearchHighlight,
+              shouldSort: true,
+              threshold: 0.4,
+              location: 0,
+              distance: 100,
+              maxPatternLength: 32,
+              minMatchCharLength: 1,
+            });
+            window.fuse = fuse;
+          }
+          else {
+            console.error('[' + xhr.status + ']Error:', xhr.statusText);
+          }
+        };
+        xhr.send();
+      })();
+    }
 
     function makeLi(ulElem, obj) {
       var li = document.createElement('li');
@@ -1437,19 +1454,19 @@
     
       <li class="navbarm__menu--item ">
         <a href="/tags" class="navbarm__menu--term" data-index="0">
-          tags
+          标签
         </a>
       </li>
     
       <li class="navbarm__menu--item ">
         <a href="/categories" class="navbarm__menu--term" data-index="1">
-          categories
+          分类
         </a>
       </li>
     
       <li class="navbarm__menu--item active">
         <a href="/series" class="navbarm__menu--term" data-index="2">
-          series
+          系列
         </a>
       </li>
     
@@ -1549,7 +1566,7 @@
   
   <li >
     
-      <a href="https://lx34r.cn/series/" class="capitalize">series</a>
+      <a href="https://lx34r.cn/series/" class="capitalize">系列</a>
     
   </li>
   
@@ -1564,7 +1581,7 @@
   
 </nav>
     <header class="list__header">
-      <h5 class="list__header--title capitalize h5">Yu-Gi-Oh!</h5>
+      <h5 class="h3 terms__title">Yu-Gi-Oh!</h5>
     </header>
     
     <div class="list__header--desc p2">
@@ -1587,7 +1604,7 @@
 
     <div class="summary-classic__content">
       <header>
-        <h5 class="title h5"><a href='https://lx34r.cn/2020/04/19/gamedesign_yu-gi-ohroundprocess/'> 游戏王中的回合流程</a> </h5>
+        <h5 class="title h5"><a href='https://lx34r.cn/2020/04/19/gamedesign_yu-gi-ohroundprocess/'>游戏王中的回合流程</a> </h5>
         <h6 class="subtitle caption">
           <time title="创建日期" dir="ltr">📅&nbsp;2020年04月19日 </time>
           
@@ -1664,9 +1681,23 @@
     <section>
         <span class="title p2">
             <a href="/tags/" class="taxo__title">
-                tags
+                标签
             </a>
         </span>
+        
+        
+        
+            <span class="tag">
+                <a href="/tags/2d/" class="is-tags taxo__link" data-dir="ltr">
+                    <span class="taxo__text">
+                        2D
+                    </span>
+                    <span class="taxo__num" dir="auto">
+                        1
+                    </span>
+                </a>
+            </span>
+        
         
         
             <span class="tag">
@@ -1686,6 +1717,19 @@
                 <a href="/tags/deskbuild/" class="is-tags taxo__link" data-dir="ltr">
                     <span class="taxo__text">
                         deskBuild
+                    </span>
+                    <span class="taxo__num" dir="auto">
+                        1
+                    </span>
+                </a>
+            </span>
+        
+        
+        
+            <span class="tag">
+                <a href="/tags/dungeon/" class="is-tags taxo__link" data-dir="ltr">
+                    <span class="taxo__text">
+                        Dungeon
                     </span>
                     <span class="taxo__num" dir="auto">
                         1
@@ -1761,9 +1805,48 @@
         
         
             <span class="tag">
+                <a href="/tags/roguelike/" class="is-tags taxo__link" data-dir="ltr">
+                    <span class="taxo__text">
+                        Roguelike
+                    </span>
+                    <span class="taxo__num" dir="auto">
+                        1
+                    </span>
+                </a>
+            </span>
+        
+        
+        
+            <span class="tag">
                 <a href="/tags/seo/" class="is-tags taxo__link" data-dir="ltr">
                     <span class="taxo__text">
                         SEO
+                    </span>
+                    <span class="taxo__num" dir="auto">
+                        1
+                    </span>
+                </a>
+            </span>
+        
+        
+        
+            <span class="tag">
+                <a href="/tags/topdown/" class="is-tags taxo__link" data-dir="ltr">
+                    <span class="taxo__text">
+                        TopDown
+                    </span>
+                    <span class="taxo__num" dir="auto">
+                        1
+                    </span>
+                </a>
+            </span>
+        
+        
+        
+            <span class="tag">
+                <a href="/tags/unity/" class="is-tags taxo__link" data-dir="ltr">
+                    <span class="taxo__text">
+                        Unity
                     </span>
                     <span class="taxo__num" dir="auto">
                         1
@@ -1806,9 +1889,10 @@
     <section>
         <span class="title p2">
             <a href="/categories/" class="taxo__title">
-                categories
+                分类
             </a>
         </span>
+        
         
         
             <span class="tag">
@@ -1818,6 +1902,19 @@
                     </span>
                     <span class="taxo__num" dir="auto">
                         2
+                    </span>
+                </a>
+            </span>
+        
+        
+        
+            <span class="tag">
+                <a href="/categories/game-development/" class="is-categories taxo__link" data-dir="ltr">
+                    <span class="taxo__text">
+                        Game Development
+                    </span>
+                    <span class="taxo__num" dir="auto">
+                        1
                     </span>
                 </a>
             </span>
@@ -1870,9 +1967,10 @@
     <section>
         <span class="title p2">
             <a href="/series/" class="taxo__title">
-                series
+                系列
             </a>
         </span>
+        
         
         
             <span class="tag">
