@@ -1239,7 +1239,7 @@
     <meta property="twitter:description" content="使用docx&#43;regex从Word获取特定内容">
   
 
-<meta name="generator" content="Hugo 0.69.0-DEV" />
+<meta name="generator" content="Hugo 0.73.0" />
 <meta name="msapplication-TileColor" content="#fff">
 
 <meta name="theme-color" content="#fff">
@@ -1616,11 +1616,11 @@
   🏷️
   
 
-  <li><a href="https://lx34r.cn/tags/regexp/" class="single__tag" title="regexp">#regexp</a></li>
-
   <li><a href="https://lx34r.cn/tags/python/" class="single__tag" title="python">#python</a></li>
 
   <li><a href="https://lx34r.cn/tags/word/" class="single__tag" title="word">#word</a></li>
+
+  <li><a href="https://lx34r.cn/tags/regexp/" class="single__tag" title="regexp">#regexp</a></li>
 
 </ul>
     </div>
@@ -1649,7 +1649,7 @@
 <h3 id="读取word">读取word</h3>
 <p>这里我使用<code>Python-docx</code>模块来操作word。</p>
 
-<div id="5f3c848fa68df499" class="codetab">
+<div id="aa481ddaf8ab76ce" class="codetab">
   <div class="codetab__links">
     
       <button class="codetab__link" aria-label="Tab link">使用pip安装</button>
@@ -1689,7 +1689,7 @@
 <script>
   'use strict';
 
-  var containerId = JSON.parse("\"5f3c848fa68df499\"");
+  var containerId = JSON.parse("\"aa481ddaf8ab76ce\"");
   var containerElem = document.getElementById(containerId);
   var codetabLinks = null;
   var codetabContents = null;
@@ -1743,15 +1743,15 @@
 <pre class="chroma"><code class="language-python" data-lang="python"><span class="kn">from</span> <span class="nn">docx</span> <span class="kn">import</span> <span class="n">Document</span>
 <span class="kn">from</span> <span class="nn">docx.shared</span> <span class="kn">import</span> <span class="n">Inches</span>
 
-<span class="n">document</span> <span class="o">=</span> <span class="n">Document</span><span class="p">(</span><span class="s1">&#39;demo.docx&#39;</span><span class="p">)</span>  <span class="c1">#打开文件demo.docx</span>
+<span class="n">document</span> <span class="o">=</span> <span class="n">Document</span><span class="p">(</span><span class="s1">&#39;demo.docx&#39;</span><span class="p">)</span>  <span class="c1">#打开文件demo.docx</span>
 <span class="k">for</span> <span class="n">paragraph</span> <span class="ow">in</span> <span class="n">document</span><span class="o">.</span><span class="n">paragraphs</span><span class="p">:</span>
-    <span class="k">print</span><span class="p">(</span><span class="n">paragraph</span><span class="o">.</span><span class="n">text</span><span class="p">)</span>  <span class="c1">#打印各段落内容文本</span>
+    <span class="k">print</span><span class="p">(</span><span class="n">paragraph</span><span class="o">.</span><span class="n">text</span><span class="p">)</span>  <span class="c1">#打印各段落内容文本</span>
 
 <span class="n">document</span><span class="o">.</span><span class="n">add_paragraph</span><span class="p">(</span>
     <span class="s1">&#39;Add new paragraph&#39;</span><span class="p">,</span> <span class="n">style</span><span class="o">=</span><span class="s1">&#39;ListNumber&#39;</span>
-<span class="p">)</span>    <span class="c1">#添加新段落</span>
+<span class="p">)</span>    <span class="c1">#添加新段落</span>
 
-<span class="n">document</span><span class="o">.</span><span class="n">save</span><span class="p">(</span><span class="s1">&#39;demo.docx&#39;</span><span class="p">)</span> <span class="c1">#保存文档</span>
+<span class="n">document</span><span class="o">.</span><span class="n">save</span><span class="p">(</span><span class="s1">&#39;demo.docx&#39;</span><span class="p">)</span> <span class="c1">#保存文档</span>
 </code></pre></td></tr></table>
 </div>
 </div><h3 id="获取特定文本">获取特定文本</h3>
@@ -1852,19 +1852,19 @@
 </span><span class="lnt">53
 </span></code></pre></td>
 <td class="lntd">
-<pre class="chroma"><code class="language-python" data-lang="python"><span class="ch">#!/usr/bin/env python3</span>
-<span class="c1"># -*- coding: utf-8 -*-</span>
+<pre class="chroma"><code class="language-python" data-lang="python"><span class="ch">#!/usr/bin/env python3</span>
+<span class="c1"># -*- coding: utf-8 -*-</span>
 <span class="kn">import</span> <span class="nn">re</span>
 <span class="kn">import</span> <span class="nn">os</span>
-<span class="kn">import</span> <span class="nn">importlib</span><span class="o">,</span><span class="nn">sys</span>                      <span class="c1"># Python 3.4 之后弃用imp</span>
-<span class="n">importlib</span><span class="o">.</span><span class="n">reload</span><span class="p">(</span><span class="n">sys</span><span class="p">)</span>                     <span class="c1"># 处理windows与其他os的路径中的\/</span>
+<span class="kn">import</span> <span class="nn">importlib</span><span class="o">,</span><span class="nn">sys</span>                      <span class="c1"># Python 3.4 之后弃用imp</span>
+<span class="n">importlib</span><span class="o">.</span><span class="n">reload</span><span class="p">(</span><span class="n">sys</span><span class="p">)</span>                     <span class="c1"># 处理windows与其他os的路径中的\/</span>
 <span class="kn">from</span> <span class="nn">pathlib</span> <span class="kn">import</span> <span class="n">Path</span>
 <span class="kn">from</span> <span class="nn">docx</span> <span class="kn">import</span> <span class="n">Document</span>
 
 <span class="n">data_files</span><span class="o">=</span><span class="p">[(</span><span class="s2">&#34;&#34;</span><span class="p">,[</span><span class="s2">&#34;MSVCR100.dll&#34;</span><span class="p">])]</span>
 
-<span class="n">file_path</span> <span class="o">=</span> <span class="n">Path</span><span class="p">(</span><span class="n">sys</span><span class="o">.</span><span class="n">path</span><span class="p">[</span><span class="mi">0</span><span class="p">])</span>                 <span class="c1"># 调试使用脚本路径</span>
-<span class="c1">#file_path = Path(os.getcwd())                # 打包使用程序路径</span>
+<span class="n">file_path</span> <span class="o">=</span> <span class="n">Path</span><span class="p">(</span><span class="n">sys</span><span class="o">.</span><span class="n">path</span><span class="p">[</span><span class="mi">0</span><span class="p">])</span>                 <span class="c1"># 调试使用脚本路径</span>
+<span class="c1">#file_path = Path(os.getcwd())                # 打包使用程序路径</span>
 
 <span class="n">document</span> <span class="o">=</span> <span class="n">Document</span><span class="p">()</span>
 
@@ -1875,7 +1875,7 @@
 <span class="k">def</span> <span class="nf">searchFiles</span><span class="p">():</span>
 
     <span class="n">word_dir</span> <span class="o">=</span> <span class="n">os</span><span class="o">.</span><span class="n">listdir</span><span class="p">(</span><span class="n">file_path</span> <span class="o">/</span> <span class="s2">&#34;word&#34;</span><span class="p">)</span>
-    <span class="c1"># 文件放置在当前目录下的word文件夹中</span>
+    <span class="c1"># 文件放置在当前目录下的word文件夹中</span>
 	
     <span class="n">i</span> <span class="o">=</span> <span class="mi">0</span>
     <span class="k">for</span> <span class="n">s</span> <span class="ow">in</span> <span class="n">word_dir</span><span class="p">:</span>
@@ -1891,7 +1891,7 @@
     <span class="nb">file</span> <span class="o">=</span> <span class="n">Document</span><span class="p">(</span><span class="n">wordName</span><span class="p">)</span>
     <span class="k">for</span> <span class="n">para</span> <span class="ow">in</span> <span class="nb">file</span><span class="o">.</span><span class="n">paragraphs</span><span class="p">:</span>
         <span class="n">template</span> <span class="o">=</span> <span class="n">template</span> <span class="o">+</span> <span class="n">para</span><span class="o">.</span><span class="n">text</span>
-    <span class="c1">#    print( para.text )</span>
+    <span class="c1">#    print( para.text )</span>
         <span class="n">slotList</span> <span class="o">=</span> <span class="n">RegularEx</span><span class="p">(</span><span class="n">template</span><span class="p">)</span>
 
     <span class="k">for</span> <span class="n">slot</span> <span class="ow">in</span> <span class="n">slotList</span><span class="p">:</span>

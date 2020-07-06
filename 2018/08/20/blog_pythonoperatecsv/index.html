@@ -1239,7 +1239,7 @@
     <meta property="twitter:description" content="python处理csv文件经常用到的方法">
   
 
-<meta name="generator" content="Hugo 0.69.0-DEV" />
+<meta name="generator" content="Hugo 0.73.0" />
 <meta name="msapplication-TileColor" content="#fff">
 
 <meta name="theme-color" content="#fff">
@@ -1668,7 +1668,7 @@
 <pre class="chroma"><code class="language-python" data-lang="python"><span class="kn">import</span> <span class="nn">csv</span>
 
 <span class="k">def</span> <span class="nf">read_csv_file</span><span class="p">(</span><span class="n">path</span><span class="p">):</span>
-    <span class="k">with</span> <span class="nb">open</span><span class="p">(</span><span class="n">path</span><span class="p">,</span> <span class="s1">&#39;rb&#39;</span><span class="p">)</span> <span class="k">as</span> <span class="n">f</span><span class="p">:</span>  <span class="c1"># r表示读取，b表示读取的文件</span>
+    <span class="k">with</span> <span class="nb">open</span><span class="p">(</span><span class="n">path</span><span class="p">,</span> <span class="s1">&#39;rb&#39;</span><span class="p">)</span> <span class="k">as</span> <span class="n">f</span><span class="p">:</span>  <span class="c1"># r表示读取，b表示读取的文件</span>
         <span class="n">reader</span> <span class="o">=</span> <span class="n">csv</span><span class="o">.</span><span class="n">reader</span><span class="p">(</span><span class="n">f</span><span class="p">)</span>
         <span class="k">for</span> <span class="n">row</span> <span class="ow">in</span> <span class="n">reader</span><span class="p">:</span>
             <span class="k">print</span> <span class="n">row</span>
@@ -1699,7 +1699,7 @@
     <span class="n">data_lines</span> <span class="o">=</span> <span class="p">[]</span>
     <span class="k">with</span> <span class="nb">open</span><span class="p">(</span><span class="n">path</span><span class="p">,</span> <span class="s1">&#39;rb&#39;</span><span class="p">)</span> <span class="k">as</span> <span class="n">f</span><span class="p">:</span>
         <span class="n">reader</span> <span class="o">=</span> <span class="n">csv</span><span class="o">.</span><span class="n">reader</span><span class="p">(</span><span class="n">f</span><span class="p">)</span>
-        <span class="n">fields</span> <span class="o">=</span> <span class="n">reader</span><span class="o">.</span><span class="n">next</span><span class="p">()</span>  <span class="c1"># 过滤掉表头(如果有的话)</span>
+        <span class="n">fields</span> <span class="o">=</span> <span class="n">reader</span><span class="o">.</span><span class="n">next</span><span class="p">()</span>  <span class="c1"># 过滤掉表头(如果有的话)</span>
         <span class="k">for</span> <span class="n">row</span> <span class="ow">in</span> <span class="n">reader</span><span class="p">:</span>
             <span class="n">items</span> <span class="o">=</span> <span class="nb">dict</span><span class="p">(</span><span class="nb">zip</span><span class="p">(</span><span class="n">fields</span><span class="p">,</span> <span class="n">row</span><span class="p">))</span>
             <span class="n">data_lines</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">items</span><span class="p">)</span>
@@ -1727,13 +1727,13 @@
 <pre class="chroma"><code class="language-python" data-lang="python"><span class="kn">import</span> <span class="nn">csv</span>
 
 <span class="k">def</span> <span class="nf">write_csv_file</span><span class="p">(</span><span class="n">path</span><span class="p">)</span>
-    <span class="k">with</span> <span class="nb">open</span><span class="p">(</span><span class="n">path</span><span class="p">,</span> <span class="s1">&#39;wb&#39;</span><span class="p">)</span> <span class="k">as</span> <span class="n">f</span><span class="p">:</span>  <span class="c1"># w表示写入，b表示写入文件</span>
+    <span class="k">with</span> <span class="nb">open</span><span class="p">(</span><span class="n">path</span><span class="p">,</span> <span class="s1">&#39;wb&#39;</span><span class="p">)</span> <span class="k">as</span> <span class="n">f</span><span class="p">:</span>  <span class="c1"># w表示写入，b表示写入文件</span>
         <span class="n">writer</span> <span class="o">=</span> <span class="n">csv</span><span class="o">.</span><span class="n">writer</span><span class="p">(</span><span class="n">f</span><span class="p">)</span>
-        <span class="n">writer</span><span class="o">.</span><span class="n">writerow</span><span class="p">([</span><span class="s1">&#39;name&#39;</span><span class="p">,</span> <span class="s1">&#39;address&#39;</span><span class="p">,</span> <span class="s1">&#39;age&#39;</span><span class="p">])</span>  <span class="c1"># writerow是写入一行数据</span>
+        <span class="n">writer</span><span class="o">.</span><span class="n">writerow</span><span class="p">([</span><span class="s1">&#39;name&#39;</span><span class="p">,</span> <span class="s1">&#39;address&#39;</span><span class="p">,</span> <span class="s1">&#39;age&#39;</span><span class="p">])</span>  <span class="c1"># writerow是写入一行数据</span>
         <span class="n">data</span> <span class="o">=</span> <span class="p">[</span>
                 <span class="p">(</span> <span class="s1">&#39;ych &#39;</span><span class="p">,</span><span class="s1">&#39;china&#39;</span><span class="p">,</span><span class="s1">&#39;25&#39;</span><span class="p">),</span>
                 <span class="p">(</span> <span class="s1">&#39;Lily&#39;</span><span class="p">,</span> <span class="s1">&#39;USA&#39;</span><span class="p">,</span> <span class="s1">&#39;24&#39;</span><span class="p">)]</span>
-        <span class="n">writer</span><span class="o">.</span><span class="n">writerows</span><span class="p">(</span><span class="n">data</span><span class="p">)</span>  <span class="c1"># writerows是写入多行数据</span>
+        <span class="n">writer</span><span class="o">.</span><span class="n">writerows</span><span class="p">(</span><span class="n">data</span><span class="p">)</span>  <span class="c1"># writerows是写入多行数据</span>
 
     <span class="n">f</span><span class="o">.</span><span class="n">close</span><span class="p">()</span>
 </code></pre></td></tr></table>
@@ -1799,11 +1799,11 @@
 <pre class="chroma"><code class="language-python" data-lang="python"><span class="kn">import</span> <span class="nn">sys</span>
 <span class="kn">import</span> <span class="nn">csv</span>
 
-<span class="c1"># try to fix &#39;_csv.Error: field larger than field limit (131072)&#39;</span>
+<span class="c1"># try to fix &#39;_csv.Error: field larger than field limit (131072)&#39;</span>
 <span class="n">csv</span><span class="o">.</span><span class="n">field_size_limit</span><span class="p">(</span><span class="n">sys</span><span class="o">.</span><span class="n">maxint</span><span class="p">)</span>
 
-<span class="c1"># write to common csv file with delimiter &#39;,&#39;</span>
-<span class="c1"># output the rows with matched id in id_list to a new csv file</span>
+<span class="c1"># write to common csv file with delimiter &#39;,&#39;</span>
+<span class="c1"># output the rows with matched id in id_list to a new csv file</span>
 <span class="k">def</span> <span class="nf">csv_match</span><span class="p">(</span><span class="n">id_list</span><span class="p">,</span><span class="n">key</span><span class="p">,</span><span class="n">input_file</span><span class="p">,</span><span class="n">output_file</span><span class="p">):</span>
     <span class="k">with</span> <span class="nb">open</span><span class="p">(</span><span class="n">input_file</span><span class="p">,</span> <span class="s1">&#39;rb&#39;</span><span class="p">)</span> <span class="k">as</span> <span class="n">f</span><span class="p">:</span>
         <span class="n">reader</span> <span class="o">=</span> <span class="n">csv</span><span class="o">.</span><span class="n">DictReader</span><span class="p">(</span><span class="n">f</span><span class="p">)</span>
@@ -1847,7 +1847,7 @@
 </span><span class="lnt">13
 </span></code></pre></td>
 <td class="lntd">
-<pre class="chroma"><code class="language-python" data-lang="python"><span class="c1"># output the rows with not matched id in id_list to a new csv file</span>
+<pre class="chroma"><code class="language-python" data-lang="python"><span class="c1"># output the rows with not matched id in id_list to a new csv file</span>
 <span class="k">def</span> <span class="nf">csv_not_match</span><span class="p">(</span><span class="n">id_list</span><span class="p">,</span> <span class="n">key</span><span class="p">,</span> <span class="n">input_file</span><span class="p">,</span> <span class="n">output_file</span><span class="p">):</span>
     <span class="k">with</span> <span class="nb">open</span><span class="p">(</span><span class="n">input_file</span><span class="p">,</span> <span class="s1">&#39;rb&#39;</span><span class="p">)</span> <span class="k">as</span> <span class="n">f</span><span class="p">:</span>
         <span class="n">reader</span> <span class="o">=</span> <span class="n">csv</span><span class="o">.</span><span class="n">DictReader</span><span class="p">(</span><span class="n">f</span><span class="p">)</span>
@@ -1883,10 +1883,10 @@
 </span><span class="lnt">16
 </span></code></pre></td>
 <td class="lntd">
-<pre class="chroma"><code class="language-python" data-lang="python"><span class="c1"># output the rows with matched key1 or key2 in refer_list to a new csv file</span>
-<span class="c1"># @params</span>
-<span class="c1"># refer_list: the list referred to</span>
-<span class="c1"># key,key2: column name of csv file to check the value in the refer_list or not</span>
+<pre class="chroma"><code class="language-python" data-lang="python"><span class="c1"># output the rows with matched key1 or key2 in refer_list to a new csv file</span>
+<span class="c1"># @params</span>
+<span class="c1"># refer_list: the list referred to</span>
+<span class="c1"># key,key2: column name of csv file to check the value in the refer_list or not</span>
 <span class="k">def</span> <span class="nf">csv_match2</span><span class="p">(</span><span class="n">refer_list</span><span class="p">,</span> <span class="n">key1</span><span class="p">,</span> <span class="n">key2</span><span class="p">,</span> <span class="n">input_file</span><span class="p">,</span> <span class="n">output_file</span><span class="p">):</span>
     <span class="k">with</span> <span class="nb">open</span><span class="p">(</span><span class="n">input_file</span><span class="p">,</span> <span class="s1">&#39;rb&#39;</span><span class="p">)</span> <span class="k">as</span> <span class="n">f</span><span class="p">:</span>
         <span class="n">reader</span> <span class="o">=</span> <span class="n">csv</span><span class="o">.</span><span class="n">DictReader</span><span class="p">(</span><span class="n">f</span><span class="p">)</span>
@@ -1917,7 +1917,7 @@
 </span></code></pre></td>
 <td class="lntd">
 <pre class="chroma"><code class="language-python" data-lang="python"><span class="kn">import</span> <span class="nn">csv</span>
-<span class="c1"># reorder the column of the csv file to what you want</span>
+<span class="c1"># reorder the column of the csv file to what you want</span>
 <span class="k">def</span> <span class="nf">csv_reorder</span><span class="p">(</span><span class="n">in_file</span><span class="p">,</span> <span class="n">out_file</span><span class="p">,</span><span class="n">lst_order</span><span class="p">):</span>
     <span class="k">with</span> <span class="nb">open</span><span class="p">(</span><span class="n">in_file</span><span class="p">,</span> <span class="s1">&#39;rb&#39;</span><span class="p">)</span> <span class="k">as</span> <span class="n">infile</span><span class="p">,</span> <span class="nb">open</span><span class="p">(</span><span class="n">out_file</span><span class="p">,</span> <span class="s1">&#39;wb&#39;</span><span class="p">)</span> <span class="k">as</span> <span class="n">outfile</span><span class="p">:</span>
         <span class="n">fieldnames</span><span class="o">=</span><span class="n">lst_order</span>
@@ -1972,7 +1972,7 @@ premier-league,1992,22
 </span><span class="lnt">10
 </span></code></pre></td>
 <td class="lntd">
-<pre class="chroma"><code class="language-python" data-lang="python"><span class="c1"># get certain column value of csv(for common csv file(&#39;,&#39;))</span>
+<pre class="chroma"><code class="language-python" data-lang="python"><span class="c1"># get certain column value of csv(for common csv file(&#39;,&#39;))</span>
 <span class="k">def</span> <span class="nf">get_origin_column_value</span><span class="p">(</span><span class="nb">file</span><span class="p">,</span> <span class="n">column_name</span><span class="p">):</span>
     <span class="k">with</span> <span class="nb">open</span><span class="p">(</span><span class="nb">file</span><span class="p">,</span> <span class="s1">&#39;rb&#39;</span><span class="p">)</span> <span class="k">as</span> <span class="n">f</span><span class="p">:</span>
         <span class="n">role_list</span> <span class="o">=</span> <span class="p">[]</span>
@@ -2000,7 +2000,7 @@ premier-league,1992,22
 </span><span class="lnt">11
 </span></code></pre></td>
 <td class="lntd">
-<pre class="chroma"><code class="language-python" data-lang="python"><span class="c1"># get certain column value of csv(for common csv file(&#39;,&#39;)),and judge if it&#39;s repeated</span>
+<pre class="chroma"><code class="language-python" data-lang="python"><span class="c1"># get certain column value of csv(for common csv file(&#39;,&#39;)),and judge if it&#39;s repeated</span>
 <span class="k">def</span> <span class="nf">get_column_value2</span><span class="p">(</span><span class="nb">file</span><span class="p">,</span> <span class="n">column_name</span><span class="p">):</span>
     <span class="k">with</span> <span class="nb">open</span><span class="p">(</span><span class="nb">file</span><span class="p">,</span> <span class="s1">&#39;rb&#39;</span><span class="p">)</span> <span class="k">as</span> <span class="n">f</span><span class="p">:</span>
         <span class="n">role_list</span> <span class="o">=</span> <span class="p">[]</span>
@@ -2027,13 +2027,13 @@ premier-league,1992,22
 </span></code></pre></td>
 <td class="lntd">
 <pre class="chroma"><code class="language-python" data-lang="python"><span class="kn">import</span> <span class="nn">csv</span>
-<span class="c1"># extract certain column from csv file according to the column#</span>
+<span class="c1"># extract certain column from csv file according to the column#</span>
 <span class="k">def</span> <span class="nf">column_extract</span><span class="p">(</span><span class="n">file_in</span><span class="p">,</span><span class="n">file_out</span><span class="p">,</span><span class="n">index</span><span class="p">):</span>
     <span class="k">with</span> <span class="nb">open</span><span class="p">(</span><span class="n">file_in</span><span class="p">,</span><span class="s1">&#39;r&#39;</span><span class="p">)</span> <span class="k">as</span> <span class="n">f_in</span><span class="p">:</span>
         <span class="k">with</span> <span class="nb">open</span><span class="p">(</span><span class="n">file_out</span><span class="p">,</span><span class="s1">&#39;w&#39;</span><span class="p">)</span> <span class="k">as</span> <span class="n">f_out</span><span class="p">:</span>
             <span class="k">for</span> <span class="n">line</span> <span class="ow">in</span> <span class="n">f_in</span><span class="p">:</span>
                 <span class="n">f_out</span><span class="o">.</span><span class="n">write</span><span class="p">(</span><span class="n">line</span><span class="o">.</span><span class="n">split</span><span class="p">(</span><span class="s1">&#39;,&#39;</span><span class="p">)[</span><span class="n">index</span><span class="p">])</span>
-                <span class="n">f_out</span><span class="o">.</span><span class="n">write</span><span class="p">(</span><span class="s1">&#39;</span><span class="se">\n</span><span class="s1">&#39;</span><span class="p">)</span> <span class="c1"># comment if a new line already exists</span>
+                <span class="n">f_out</span><span class="o">.</span><span class="n">write</span><span class="p">(</span><span class="s1">&#39;</span><span class="se">\n</span><span class="s1">&#39;</span><span class="p">)</span> <span class="c1"># comment if a new line already exists</span>
 </code></pre></td></tr></table>
 </div>
 </div><h2 id="除去完全重复的记录">🌊除去完全重复的记录</h2>
@@ -2051,12 +2051,12 @@ premier-league,1992,22
 </span><span class="lnt">10
 </span></code></pre></td>
 <td class="lntd">
-<pre class="chroma"><code class="language-python" data-lang="python"><span class="c1"># eliminated the completely repeated record in repeated file for further analysis</span>
+<pre class="chroma"><code class="language-python" data-lang="python"><span class="c1"># eliminated the completely repeated record in repeated file for further analysis</span>
 <span class="k">def</span> <span class="nf">eliminate_repeated_row</span><span class="p">(</span><span class="n">in_file</span><span class="p">,</span><span class="n">out_file</span><span class="p">):</span>
     <span class="k">with</span> <span class="nb">open</span><span class="p">(</span><span class="n">in_file</span><span class="p">,</span><span class="s1">&#39;rb&#39;</span><span class="p">)</span> <span class="k">as</span> <span class="n">in_file</span><span class="p">,</span><span class="nb">open</span><span class="p">(</span><span class="n">out_file</span><span class="p">,</span><span class="s1">&#39;wb&#39;</span><span class="p">)</span><span class="k">as</span> <span class="n">out_file</span><span class="p">:</span>
         <span class="n">seen</span><span class="o">=</span><span class="nb">set</span><span class="p">()</span>
         <span class="k">for</span> <span class="n">line</span> <span class="ow">in</span> <span class="n">in_file</span><span class="p">:</span>
-            <span class="c1"># print line</span>
+            <span class="c1"># print line</span>
             <span class="k">if</span> <span class="n">line</span> <span class="ow">in</span> <span class="n">seen</span><span class="p">:</span><span class="k">continue</span>
 
             <span class="n">seen</span><span class="o">.</span><span class="n">add</span><span class="p">(</span><span class="n">line</span><span class="p">)</span>
@@ -2077,14 +2077,14 @@ premier-league,1992,22
 </span><span class="lnt">9
 </span></code></pre></td>
 <td class="lntd">
-<pre class="chroma"><code class="language-python" data-lang="python"><span class="c1"># sort the csv file by certain column to put the similar record together for further analysis</span>
+<pre class="chroma"><code class="language-python" data-lang="python"><span class="c1"># sort the csv file by certain column to put the similar record together for further analysis</span>
 <span class="k">def</span> <span class="nf">sort_csv_byColumn</span><span class="p">(</span><span class="n">in_file</span><span class="p">,</span> <span class="n">out_file</span><span class="p">,</span><span class="n">column_name</span><span class="p">):</span>
     <span class="k">with</span> <span class="nb">open</span><span class="p">(</span><span class="n">in_file</span><span class="p">,</span> <span class="s1">&#39;rb&#39;</span><span class="p">)</span> <span class="k">as</span> <span class="n">f</span><span class="p">:</span>
         <span class="n">reader</span> <span class="o">=</span> <span class="n">csv</span><span class="o">.</span><span class="n">reader</span><span class="p">(</span><span class="n">f</span><span class="p">,</span> <span class="n">delimiter</span><span class="o">=</span><span class="s1">&#39;,&#39;</span><span class="p">)</span>
         <span class="n">fieldnames</span> <span class="o">=</span> <span class="nb">next</span><span class="p">(</span><span class="n">reader</span><span class="p">)</span>
         <span class="n">reader</span> <span class="o">=</span> <span class="n">csv</span><span class="o">.</span><span class="n">DictReader</span><span class="p">(</span><span class="n">f</span><span class="p">,</span> <span class="n">fieldnames</span><span class="o">=</span><span class="n">fieldnames</span><span class="p">,</span> <span class="n">delimiter</span><span class="o">=</span><span class="s1">&#39;,&#39;</span><span class="p">)</span>
         <span class="n">sorted_list</span> <span class="o">=</span> <span class="nb">sorted</span><span class="p">(</span><span class="n">reader</span><span class="p">,</span> <span class="n">key</span><span class="o">=</span><span class="k">lambda</span> <span class="n">row</span><span class="p">:</span> <span class="n">row</span><span class="p">[</span><span class="n">column_name</span><span class="p">],</span> <span class="n">reverse</span><span class="o">=</span><span class="bp">True</span><span class="p">)</span>
-        <span class="c1"># print sorted_list</span>
+        <span class="c1"># print sorted_list</span>
         <span class="n">csv_converter</span><span class="o">.</span><span class="n">nestedlist2csv</span><span class="p">(</span><span class="n">sorted_list</span><span class="p">,</span> <span class="n">out_file</span><span class="p">)</span>
 </code></pre></td></tr></table>
 </div>
@@ -2127,7 +2127,7 @@ premier-league,1992,22
 </span><span class="lnt">6
 </span></code></pre></td>
 <td class="lntd">
-<pre class="chroma"><code class="language-python" data-lang="python"><span class="c1"># return a dict with the same value in original as new key and keys as value</span>
+<pre class="chroma"><code class="language-python" data-lang="python"><span class="c1"># return a dict with the same value in original as new key and keys as value</span>
 <span class="k">def</span> <span class="nf">dict_same_value</span><span class="p">(</span><span class="n">original_dict</span><span class="p">):</span>
     <span class="n">new_dict</span><span class="o">=</span><span class="p">{}</span>
     <span class="k">for</span> <span class="n">k</span><span class="p">,</span><span class="n">v</span> <span class="ow">in</span> <span class="n">original_dict</span><span class="o">.</span><span class="n">iteritems</span><span class="p">():</span>
