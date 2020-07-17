@@ -9,11 +9,14 @@
     
 
 
+  
+  <script defer src="/js/fuse.min.c4bee9a8d44273d6154fe86006923d4131eb2e8069d8897687137c6f37f553e3.js"></script>
+
+
+
 <script src="/js/enquire.min.aa37bdcb743826eecdae5c5d177fc7d6552340f1b4378ffaa9c82b2c6111400b.js"></script>
 
 <script defer src="/js/lazysizes.min.5e11d056075a05065b9c0bfec44084a113fc2976c2952ec804dedb61c7662db9.js"></script>
-
-<script defer src="/js/fuse.min.c4bee9a8d44273d6154fe86006923d4131eb2e8069d8897687137c6f37f553e3.js"></script>
 
 <script defer src="/js/helper/getParents.min.1618c696be7c98933f9a92677f518b512a74e55bdbb976b09936b4182e93181b.js"></script>
 
@@ -551,11 +554,15 @@
 
   
     
+    var baseurl = JSON.parse("\"https://lx34r.cn\"");
+    
     var permalink = JSON.parse("\"https://lx34r.cn/2020/04/12/blog_2d_topdown_dungeon_projectroguelike/\"");
     var searchResults = null;
     var searchMenu = null;
     var searchText = null;
     
+    
+    var enableSearch = JSON.parse("true");
     
     var enableSearchHighlight = JSON.parse("true");
     
@@ -564,31 +571,33 @@
     var sectionType = JSON.parse("\"post\"");
 
     var fuse = null;
-
-    (function initFuse() {
-      var xhr = new XMLHttpRequest();
-      xhr.open('GET', permalink + "index.json");
-      xhr.setRequestHeader('Content-Type', 'application/json; charset=utf-8');
-      xhr.onload = function () {
-        if (xhr.status === 200) {
-          fuse = new Fuse(JSON.parse(xhr.response.toString('utf-8')), {
-            keys: sectionType.includes('publication') ? ['title', 'abstract'] : ['title', 'description', 'content'],
-            includeMatches: enableSearchHighlight,
-            shouldSort: true,
-            threshold: 0.4,
-            location: 0,
-            distance: 100,
-            maxPatternLength: 32,
-            minMatchCharLength: 1,
-          });
-          window.fuse = fuse;
-        }
-        else {
-          console.error('[' + xhr.status + ']Error:', xhr.statusText);
-        }
-      };
-      xhr.send();
-    })();
+    
+    if (enableSearch) {
+      (function initFuse() {
+        var xhr = new XMLHttpRequest();
+        xhr.open('GET', baseurl + "/index.json");
+        xhr.setRequestHeader('Content-Type', 'application/json; charset=utf-8');
+        xhr.onload = function () {
+          if (xhr.status === 200) {
+            fuse = new Fuse(JSON.parse(xhr.response.toString('utf-8')), {
+              keys: sectionType.includes('publication') ? ['title', 'abstract'] : ['title', 'description', 'content'],
+              includeMatches: enableSearchHighlight,
+              shouldSort: true,
+              threshold: 0.4,
+              location: 0,
+              distance: 100,
+              maxPatternLength: 32,
+              minMatchCharLength: 1,
+            });
+            window.fuse = fuse;
+          }
+          else {
+            console.error('[' + xhr.status + ']Error:', xhr.statusText);
+          }
+        };
+        xhr.send();
+      })();
+    }
 
     function makeLi(ulElem, obj) {
       var li = document.createElement('li');
@@ -1230,7 +1239,7 @@
     <meta property="twitter:description" content="记录一下ProjectRoguelike的设计与开发">
   
 
-<meta name="generator" content="Hugo 0.69.0-DEV" />
+<meta name="generator" content="Hugo 0.73.0" />
 <meta name="msapplication-TileColor" content="#fff">
 
 <meta name="theme-color" content="#fff">
@@ -1633,11 +1642,11 @@ if (!doNotTrack) {
 
   <li><a href="https://lx34r.cn/tags/2d/" class="single__tag" title="2D">#2D</a></li>
 
+  <li><a href="https://lx34r.cn/tags/topdown/" class="single__tag" title="TopDown">#TopDown</a></li>
+
   <li><a href="https://lx34r.cn/tags/dungeon/" class="single__tag" title="Dungeon">#Dungeon</a></li>
 
   <li><a href="https://lx34r.cn/tags/roguelike/" class="single__tag" title="Roguelike">#Roguelike</a></li>
-
-  <li><a href="https://lx34r.cn/tags/topdown/" class="single__tag" title="TopDown">#TopDown</a></li>
 
 </ul>
     </div>
@@ -1654,6 +1663,9 @@ if (!doNotTrack) {
 
 <h2 id="写在前面">📝写在前面</h2>
 <p>先挖坑，完成了核心战斗再写。</p>
+<ul>
+<li>qwer四个技能，可build</li>
+</ul>
     </article>
     
     <script>
