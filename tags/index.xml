@@ -14,13 +14,67 @@
     <managingEditor>zyssmart@live.com (Lx34r)</managingEditor>
     <webMaster>zyssmart@live.com (Lx34r)</webMaster>
     <copyright>&amp;copy;{year},Lx34r, All Rights Reserved</copyright>
-    <lastBuildDate>Fri, 19 Jun 2020 20:10:43 +0900</lastBuildDate>
+    <lastBuildDate>Wed, 08 Jul 2020 20:31:08 +0900</lastBuildDate>
     
         <atom:link href="https://lx34r.cn/tags/index.xml" rel="self" type="application/rss+xml" />
     
     
     
 
+      
+      <item>
+        <title>Linux</title>
+        <link>https://lx34r.cn/tags/linux/</link>
+        <pubDate>Wed, 08 Jul 2020 20:31:08 +0900</pubDate>
+        <author>zyssmart@live.com (Lx34r)</author>
+        
+        <guid>https://lx34r.cn/tags/linux/</guid>
+        <description></description>
+        
+        <dc:creator>Lx34r</dc:creator>
+        
+        
+        
+        
+        
+        
+      </item>
+      
+      <item>
+        <title>word</title>
+        <link>https://lx34r.cn/tags/word/</link>
+        <pubDate>Wed, 08 Jul 2020 20:31:08 +0900</pubDate>
+        <author>zyssmart@live.com (Lx34r)</author>
+        
+        <guid>https://lx34r.cn/tags/word/</guid>
+        <description></description>
+        
+        <dc:creator>Lx34r</dc:creator>
+        
+        
+        
+        
+        
+        
+      </item>
+      
+      <item>
+        <title>Wordpress</title>
+        <link>https://lx34r.cn/tags/wordpress/</link>
+        <pubDate>Wed, 08 Jul 2020 20:31:08 +0900</pubDate>
+        <author>zyssmart@live.com (Lx34r)</author>
+        
+        <guid>https://lx34r.cn/tags/wordpress/</guid>
+        <description></description>
+        
+        <dc:creator>Lx34r</dc:creator>
+        
+        
+        
+        
+        
+        
+      </item>
       
       <item>
         <title>Unity</title>
@@ -245,24 +299,6 @@
         <author>zyssmart@live.com (Lx34r)</author>
         
         <guid>https://lx34r.cn/tags/python/</guid>
-        <description></description>
-        
-        <dc:creator>Lx34r</dc:creator>
-        
-        
-        
-        
-        
-        
-      </item>
-      
-      <item>
-        <title>word</title>
-        <link>https://lx34r.cn/tags/word/</link>
-        <pubDate>Sun, 08 Dec 2019 12:00:06 +0900</pubDate>
-        <author>zyssmart@live.com (Lx34r)</author>
-        
-        <guid>https://lx34r.cn/tags/word/</guid>
         <description></description>
         
         <dc:creator>Lx34r</dc:creator>
