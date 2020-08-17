@@ -557,8 +557,6 @@
     var baseurl = JSON.parse("\"https://lx34r.cn\"");
     
     var permalink = JSON.parse("\"https://lx34r.cn/2020/06/19/blog_downloadunityoriginaledition/\"");
-    
-    var langprefix = JSON.parse("\"\"");
     var searchResults = null;
     var searchMenu = null;
     var searchText = null;
@@ -571,20 +569,13 @@
     var searchResultPosition = JSON.parse("\"main\"");
     
     var sectionType = JSON.parse("\"post\"");
-    
-    var kind = JSON.parse("\"page\"");
-    
-    var fuse = null;
 
+    var fuse = null;
+    
     if (enableSearch) {
       (function initFuse() {
         var xhr = new XMLHttpRequest();
-        if (sectionType === "publication" && kind !== "page") {
-          xhr.open('GET', permalink + "index.json");
-        } else {
-          xhr.open('GET', baseurl + langprefix + "/index.json");
-        }
-        
+        xhr.open('GET', baseurl + "/index.json");
         xhr.setRequestHeader('Content-Type', 'application/json; charset=utf-8');
         xhr.onload = function () {
           if (xhr.status === 200) {
@@ -3028,9 +3019,6 @@ document.addEventListener('DOMContentLoaded', function () {
 
 
     
-    document.querySelectorAll("mjx-container").forEach(function (x) {
-      x.parentElement.classList += 'has-jax'
-    });
     
 
 

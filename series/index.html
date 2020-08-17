@@ -557,8 +557,6 @@
     var baseurl = JSON.parse("\"https://lx34r.cn\"");
     
     var permalink = JSON.parse("\"https://lx34r.cn/series/\"");
-    
-    var langprefix = JSON.parse("\"\"");
     var searchResults = null;
     var searchMenu = null;
     var searchText = null;
@@ -571,20 +569,13 @@
     var searchResultPosition = JSON.parse("\"main\"");
     
     var sectionType = JSON.parse("\"series\"");
-    
-    var kind = JSON.parse("\"taxonomyTerm\"");
-    
-    var fuse = null;
 
+    var fuse = null;
+    
     if (enableSearch) {
       (function initFuse() {
         var xhr = new XMLHttpRequest();
-        if (sectionType === "publication" && kind !== "page") {
-          xhr.open('GET', permalink + "index.json");
-        } else {
-          xhr.open('GET', baseurl + langprefix + "/index.json");
-        }
-        
+        xhr.open('GET', baseurl + "/index.json");
         xhr.setRequestHeader('Content-Type', 'application/json; charset=utf-8');
         xhr.onload = function () {
           if (xhr.status === 200) {
@@ -1226,9 +1217,9 @@
 <meta name="description" content="没有什么技术含量" />
 
 
-<meta name="created" content="2020-04-19T15:28:52&#43;0900">
-<meta name="modified" content="2020-04-19T15:28:52&#43;0900">
-<meta property="article:published_time" content="2020-04-19T15:28:52&#43;0900">
+<meta name="created" content="2020-06-05T10:40:43&#43;0900">
+<meta name="modified" content="2020-06-05T10:40:43&#43;0900">
+<meta property="article:published_time" content="2020-06-05T10:40:43&#43;0900">
 
 <meta name="author" content="Lx34r">
 
@@ -1584,6 +1575,24 @@ if (!doNotTrack) {
 </header>
 <main class="terms main">  
   <div class="terms__list">
+    
+    
+      <a href="/series/projectplatformer/" class="terms__item is-small">
+        <span class="terms__series">
+          ProjectPlatformer
+        </span>
+        <span class="terms__len">(1)</span>
+      </a>
+    
+    
+    
+      <a href="/series/projectroguelike/" class="terms__item is-small">
+        <span class="terms__series">
+          ProjectRoguelike
+        </span>
+        <span class="terms__len">(1)</span>
+      </a>
+    
     
     
       <a href="/series/yu-gi-oh/" class="terms__item is-small">

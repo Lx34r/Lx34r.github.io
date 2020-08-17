@@ -557,8 +557,6 @@
     var baseurl = JSON.parse("\"https://lx34r.cn\"");
     
     var permalink = JSON.parse("\"https://lx34r.cn/tags/hugo/\"");
-    
-    var langprefix = JSON.parse("\"\"");
     var searchResults = null;
     var searchMenu = null;
     var searchText = null;
@@ -571,20 +569,13 @@
     var searchResultPosition = JSON.parse("\"main\"");
     
     var sectionType = JSON.parse("\"tags\"");
-    
-    var kind = JSON.parse("\"taxonomy\"");
-    
-    var fuse = null;
 
+    var fuse = null;
+    
     if (enableSearch) {
       (function initFuse() {
         var xhr = new XMLHttpRequest();
-        if (sectionType === "publication" && kind !== "page") {
-          xhr.open('GET', permalink + "index.json");
-        } else {
-          xhr.open('GET', baseurl + langprefix + "/index.json");
-        }
-        
+        xhr.open('GET', baseurl + "/index.json");
         xhr.setRequestHeader('Content-Type', 'application/json; charset=utf-8');
         xhr.onload = function () {
           if (xhr.status === 200) {
@@ -1986,7 +1977,7 @@ if (!doNotTrack) {
                         Game Development
                     </span>
                     <span class="taxo__num" dir="auto">
-                        1
+                        2
                     </span>
                 </a>
             </span>
@@ -2020,19 +2011,6 @@ if (!doNotTrack) {
         
         
             <span class="tag">
-                <a href="/categories/projectplatformer/" class="is-categories taxo__link" data-dir="ltr">
-                    <span class="taxo__text">
-                        ProjectPlatformer
-                    </span>
-                    <span class="taxo__num" dir="auto">
-                        1
-                    </span>
-                </a>
-            </span>
-        
-        
-        
-            <span class="tag">
                 <a href="/categories/tool/" class="is-categories taxo__link" data-dir="ltr">
                     <span class="taxo__text">
                         tool
@@ -2055,6 +2033,32 @@ if (!doNotTrack) {
                 系列
             </a>
         </span>
+        
+        
+        
+            <span class="tag">
+                <a href="/series/projectplatformer/" class="is-series taxo__link" data-dir="ltr">
+                    <span class="taxo__text">
+                        ProjectPlatformer
+                    </span>
+                    <span class="taxo__num" dir="auto">
+                        1
+                    </span>
+                </a>
+            </span>
+        
+        
+        
+            <span class="tag">
+                <a href="/series/projectroguelike/" class="is-series taxo__link" data-dir="ltr">
+                    <span class="taxo__text">
+                        ProjectRoguelike
+                    </span>
+                    <span class="taxo__num" dir="auto">
+                        1
+                    </span>
+                </a>
+            </span>
         
         
         
